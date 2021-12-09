@@ -1,0 +1,126 @@
+// Search Off-Canvas
+.off-canvas-wrapper {
+	.site-search {
+		background-color: v(dropdown-bg-color);
+		color: v(dropdown-text-color);
+		&.position-right
+		{
+				top: 0;
+		    right: 0;
+		    width: 550px;
+		    height: 100%;
+		    transform: translateX(550px);
+		    position: fixed;
+		    z-index: 9999;
+		    transition: transform 0.5s ease;
+		    backface-visibility: hidden;
+				@include breakpoint(medium down)
+				{
+					width: 350px;
+					transform: translateX(350px);
+				}
+		    @import 'header-search';
+
+		    &.is-open
+			{
+		    	transform: translateX(0);
+		    }
+
+		    .header-search
+		    {
+		    	width: 100%;
+		    	padding-right: 3%;
+		    	position: relative;
+		    	padding-top: rem-calc(60);
+
+			    @each $breakpoint, $padding in $content-padding {
+
+					@include breakpoint($breakpoint) {
+						padding-left: rem-calc($padding);
+						padding-right: rem-calc($padding);
+					}
+				}
+
+				.search-form
+				{
+					width: 100%;
+					max-width: 100%;
+				}
+					.select2-dropdown {
+						background-color: v(dropdown-border-color);
+					}
+					.select2-container--default .select2-results__option[aria-selected=true], .select2-container--default .select2-results__option[data-selected=true] {
+						background-color: v(dropdown-accent-color);
+					}
+		    	.header_search_form .select2 .select2-selection .select2-selection__rendered
+		    	{
+		    		height: 100%;
+		    		line-height: 3.8em;
+		    	}
+
+		    	.header_search_form .header_search_input_wrapper .header_search_input,
+		    	.select2 .select2-selection__rendered,
+		    	.header_search_form .select2-dropdown .select2-results ul li
+		    	{
+		    		font-size: 0.9em !important;
+		    	}
+					.select2-container .select2-results__option.select2-results__option--highlighted[aria-selected] {
+						background-color: v(dropdown-accent-color);
+					}
+					.select2 .select2-selection .select2-selection__arrow {
+						margin-right: 0;
+						margin-left: $form-spacing*2;
+					}
+		    	.close-button
+		    	{
+		    		font-size: 0;
+		    		position: absolute;
+				    right: 15px;
+				    top: 15px;
+				    left: auto;
+				    background-color: transparent;
+						color: v(dropdown-text-color);
+		    		padding: 0;
+						@include rotate_close_btn();
+						svg {
+							width: 15px;
+							height: 15px;
+						}
+		    	}
+		    }
+		}
+	}
+	.js-off-canvas-overlay {
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  z-index: 999;
+	  width: 100%;
+	  height: 100%;
+	  transition: opacity 0.5s ease, visibility 0.5s ease;
+	  background: rgba(0, 0, 0, 0.2);
+	  opacity: 0;
+	  visibility: hidden;
+	  overflow: hidden;
+		&.is-visible {
+	    opacity: 1;
+	    visibility: visible;
+		}
+		&.is-closable {
+	    cursor: pointer;
+		}
+		&.is-overlay-fixed {
+	    position: fixed;
+		}
+	}
+}
+.admin-bar .site-search.position-right {
+	@include breakpoint(large up)
+	{
+		padding-top:32px;
+	}
+	@include breakpoint(medium down)
+	{
+		padding-top:46px;
+	}
+}

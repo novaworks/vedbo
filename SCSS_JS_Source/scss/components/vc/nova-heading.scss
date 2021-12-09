@@ -1,0 +1,31 @@
+.nova-header-shortcode {
+  text-align: center;
+  &__inner {
+    max-width: rem-calc(750);
+    margin: 0 auto;
+    h1 {
+      position: relative;
+      font-size: rem-calc(30);
+      margin-top: rem-calc(10);
+      @include breakpoint (medium) {
+        font-size: rem-calc(60);
+      }
+      &:before {
+        position: absolute;
+        content: '';
+        top: -10px;
+        left: calc(50% - 20px);
+        width: 40px;
+        height: 7px;
+        background-color: v(site-accent-color);
+        border-radius: 7px;
+      }
+    }
+    p {
+      font-size: rem-calc(14);
+      @include breakpoint (medium) {
+        font-size: rem-calc(20);
+      }
+    }
+  }
+}

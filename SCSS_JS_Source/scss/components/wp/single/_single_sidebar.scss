@@ -1,0 +1,43 @@
+.site-sidebar--blog {
+  .blog-sidebar-right & {
+    padding-left: rem-calc(40);
+    @include breakpoint(1550px down) {
+      padding-left: 30px;
+    }
+    @include breakpoint(medium down) {
+      padding-left: 0;
+    }
+  }
+
+  .blog-sidebar-left & {
+    padding-right: rem-calc(40);
+    @include breakpoint(1550px down) {
+      padding-right: 15px;
+    }
+    @include breakpoint(medium down) {
+      padding-right: 0;
+    }
+  }
+}
+.single.blog-sidebar-right {
+  .site-sidebar--blog {
+    @include breakpoint(medium down) {
+      padding-right: 0;
+    }
+  }
+}
+.single.blog-sidebar-left {
+  .site-main-content {
+    padding-left: rem-calc(40);
+    @include breakpoint(medium down) {
+      padding-left: 0;
+    }
+  }
+}
+.single-blog-sidebar-active {
+  .entry-content .alignwide {
+    padding: 0;
+    margin: 0;
+    width: auto;
+  }
+}

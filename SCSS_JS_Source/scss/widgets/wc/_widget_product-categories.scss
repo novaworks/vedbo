@@ -1,0 +1,8 @@
+@mixin widget_product_categories {
+  li {
+    &.cat-item {
+      padding: 0;
+      border-bottom: none;
+    }
+  }
+}

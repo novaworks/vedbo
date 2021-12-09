@@ -1,0 +1,140 @@
+.site-wrapper {
+  position: relative;
+
+  .site-content-wrapper {
+    position: relative;
+    .site-content {
+      @each $breakpoint, $padding in $content-padding {
+        @include breakpoint($breakpoint) {
+          padding: rem-calc($padding*1.35) 0;
+        }
+        .single-product & {
+          padding-bottom: 0;
+        }
+        .woocommerce-account & {
+          padding-bottom: rem-calc($padding*2.35);
+        }
+      }
+
+      &:after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+
+      body.page-without-title & {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+
+      body.content-layout-boxed & {
+        position: relative;
+      }
+    }
+
+    .site-wide-layout {
+      display: flex;
+      align-items: center;
+      position: relative;
+      max-width: 100%;
+      @each $breakpoint, $padding in $content-padding {
+        @include breakpoint($breakpoint) {
+          padding-left: rem-calc($padding);
+          padding-right: rem-calc($padding);
+        }
+      }
+      @include large_side_paddings;
+
+      .site-content {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+    }
+  }
+}
+.nova-container-fluid {
+    margin-left: rem-calc(65);
+    margin-right: rem-calc(65);
+    padding-left: rem-calc(15);
+    padding-right: rem-calc(15);
+    width: auto;
+    @each $breakpoint, $padding in $nova-content-padding {
+      @include breakpoint($breakpoint) {
+        margin-left: rem-calc($padding);
+        margin-right: rem-calc($padding);
+      }
+    }
+    .nova-sidebar {
+      &.sidebar-left{
+        padding-right: rem-calc(30);
+        @include breakpoint(xlarge) {
+          padding-right: rem-calc(60);
+        }
+      }
+      &.sidebar-right {
+        padding-left: rem-calc(30);
+        @include breakpoint(xlarge) {
+          padding-left: rem-calc(60);
+        }
+      }
+    }
+}
+.nova-container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: rem-calc(30);
+    padding-right: rem-calc(30);
+    @include breakpoint(medium down) {
+      padding-left: rem-calc(15);
+      padding-right: rem-calc(15);
+    }
+    max-width: v(site-width);
+    .nova-sidebar {
+      &.sidebar-left{
+        padding-right: rem-calc(30);
+      }
+      &.sidebar-right {
+        padding-left: rem-calc(30);
+      }
+    }
+}
+.nova-row {
+  display: flex;
+  align-items: center;
+  position: relative;
+  max-width: 100%;
+  @each $breakpoint, $padding in $content-padding {
+    @include breakpoint($breakpoint) {
+      padding-left: rem-calc($padding);
+      padding-right: rem-calc($padding);
+    }
+    @include large_side_paddings;
+  }
+}
+.nova-wide-space {
+  @each $breakpoint, $padding in $content-padding {
+    @include breakpoint($breakpoint) {
+      padding-left: rem-calc($padding);
+      padding-right: rem-calc($padding);
+    }
+    @include large_side_paddings;
+  }
+}
+.row-grid {
+  margin-left: rem-calc(-15);
+  margin-right: rem-calc(-15);
+}
+.site-content {
+  a:not(.button) {
+    color: v(site-link-color);
+
+    &:hover {
+      color: v(site-link-hover-color);
+    }
+  }
+}
+.elementor-page {
+  .site-wrapper {
+    overflow: hidden;
+  }
+}

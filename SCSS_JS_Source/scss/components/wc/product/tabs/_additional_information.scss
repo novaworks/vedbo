@@ -1,0 +1,36 @@
+.shop_attributes
+{
+	font-size: rem-calc(14);
+	max-width: rem-calc(500);
+	tr
+	{
+		border: none;
+		vertical-align: text-top;
+
+		th
+		{
+			color: v(site-heading-color);
+			font-weight: 600;
+			width: 50%;
+		}
+
+		td,
+		th
+		{
+			padding-top: 0;
+			padding-bottom: rem-calc(16);
+		}
+
+		&:last-child
+		{
+			td,
+			th
+			{
+				&:last-of-type
+				{
+					padding-bottom: 0;
+				}
+			}
+		}
+	}
+}

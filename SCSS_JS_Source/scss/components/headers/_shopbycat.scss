@@ -1,0 +1,126 @@
+.shopbycat-wrap {
+  margin-right: rem-calc(30);
+  @include breakpoint(xxlarge) {
+      min-width: rem-calc(264);
+  }
+  .shopbycat-button {
+    background-color: v(site-header-accent-color);
+    color: #fff;
+    padding: rem-calc(18) rem-calc(15);
+    cursor: pointer;
+    @include breakpoint(xxlarge) {
+        padding: rem-calc(18) rem-calc(24);
+    }
+    .svg-icon {
+      position: relative;
+      top: 3px;
+      width: 27px;
+      height: 14px;
+      @include breakpoint(xxlarge) {
+          margin-right: rem-calc(20);
+      }
+    }
+    span {
+      display: none;
+      padding-right: rem-calc(20);
+      font-size: rem-calc(14);
+      @include breakpoint(xxlarge) {
+        display: inline-block;
+      }
+    }
+    &:after {
+      display: none;
+      @include nova_icon('\ea02');
+      font-size: rem-calc(13);
+      transition: all .7s;
+      @include breakpoint(xxlarge) {
+        display: inline-block;
+      }
+    }
+  }
+  .shopbycat__dropdown {
+    width: 100% !important;
+    left: 0 !important;
+    padding: rem-calc(30);
+    .shopbycat__dropdown-wrap {
+      max-width: var(--site-width);
+      margin: 0 auto;
+      @each $breakpoint, $padding in $content-padding {
+        @include breakpoint($breakpoint) {
+          padding-left: rem-calc($padding);
+          padding-right: rem-calc($padding);
+        }
+      }
+    }
+    .shopbycat-item_list {
+  		a {
+  			display: inline-block;
+  			color: v(dropdown-text-color);
+  			&:hover {
+  				color: v(dropdown-accent-color);
+  			}
+  		}
+  		.shopbycat-item {
+  			margin-bottom: rem-calc(40);
+  			opacity: 0;
+  			animation: megamenu_categories;
+  			animation-duration: 0.4s;
+  			animation-fill-mode: forwards;
+  			@for $i from 1 through 30 {
+  				&:nth-child(#{$i}) {
+  					animation-delay: (0.1s * $i);
+  				}
+  			}
+
+  			> a {
+  				margin-bottom: rem-calc(10);
+  				width: 100%;
+          font-size: rem-calc(14);
+  				font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+  				&:hover {
+  					.megamenu_thumbnail {
+  						transform: scale(0.975);
+  					}
+  				}
+
+  				.megamenu_thumbnail {
+  					margin-bottom: rem-calc(16);
+  					height: 140px;
+  					width: 100%;
+  					background-size: cover;
+  					background-position: center center;
+  					background-repeat: no-repeat;
+  					display: inline-block;
+  					transition: transform 0.3s ease-in-out;
+  					will-change: transform;
+  				}
+
+  				> .count {
+  					font-size: rem-calc(12);
+  					color: v(dropdown-grey-color);
+  				}
+  			}
+
+  			.shopbycat_subcategory_list {
+  				> div > a {
+  					color: v(dropdown-secondary-color);
+  					font-size: rem-calc(14);
+  					margin-bottom: rem-calc(5);
+  					line-height: 1.4;
+
+  					> .count {
+  						font-size: rem-calc(12);
+  						color: v(dropdown-grey-color);
+  					}
+
+  					&:hover {
+  						color: v(dropdown-accent-color);
+  					}
+  				}
+  			}
+  		}
+  	}
+  }
+}

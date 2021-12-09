@@ -1,0 +1,90 @@
+.nova-testimonials {
+
+	.nova-testimonials__icon {
+		font-size: 40px;
+		text-align: center;
+		margin: 5px;
+
+		.nova-testimonials__icon-inner {
+			i {
+				font-size: 40px;
+				color: v(site-heading-color);
+			}
+		}
+	}
+
+	.nova-testimonials__title {
+		font-size: 20px;
+		color: black;
+		margin: 5px;
+	}
+
+	.nova-testimonials__comment {
+		font-size: rem-calc(18);
+		margin: 5px;
+	}
+	&__figure {
+		padding-right: rem-calc(10);
+	}
+	&__desc {
+		display: flex;
+	}
+
+	.nova-testimonials__name {
+		font-family: v(site-secondary-font);
+		font-size: 13px;
+		color: v(site-heading-color);
+		font-weight: bold;
+		margin: 5px;
+		text-transform: uppercase;
+	}
+
+	.nova-testimonials__position {
+		margin: 5px;
+		font-size: 16px;
+		color: v(site-text-color);
+	}
+
+	.nova-arrow {
+		width: 36px;
+		height: 36px;
+		border-radius: 18px;
+		margin-top: -18px;
+		color: #fff;
+		background-color: v(site-heading-color);
+
+		&:before {
+			font-size: 23px;
+		}
+
+		&.prev-arrow {
+			left: 20px;
+		}
+
+		&.next-arrow {
+			right: 20px;
+		}
+	}
+
+	.nova-slick-dots {
+		margin: 20px 0 0 0;
+
+		li {
+			&.slick-active {
+				span {
+					background-color: #61ce70;
+				}
+			}
+
+			&:hover {
+				span {
+					background-color: #6ec1e4;
+				}
+			}
+
+			span {
+				background-color: #7a7a7a;
+			}
+		}
+	}
+}

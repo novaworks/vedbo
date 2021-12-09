@@ -1,0 +1,57 @@
+@import "globals/_quantity";
+@import "globals/_star_ratings";
+@import "globals/_pagination";
+@import "globals/_quick_view";
+@import "globals/_price";
+@import "globals/_breadcrumbs";
+@import "globals/_store_notice";
+
+.woocommerce {
+  table tbody th,
+  table tbody td,
+  table tr {
+    border: none;
+  }
+  table tbody th {
+    background-color: transparent;
+  }
+  .blockUI.blockOverlay {
+    position: relative;
+    @include wc_loader();
+  }
+}
+.product-size-guide-btn {
+  display: inline-block;
+  font-size: rem-calc(13);
+  color: v(site-accent-color);
+  padding: rem-calc(5) rem-calc(10);
+  border: solid 1px v(site-accent-color);
+  margin-bottom: rem-calc(24);
+}
+.shopping_cart_status_menu {
+  display: flex;
+  margin: 0;
+  list-style: none;
+  border-bottom: solid 1px v(site-border-color);
+  margin-bottom: rem-calc(48);
+  @include breakpoint(medium-ex down) {
+    display: none;
+  }
+
+  li {
+    position: relative;
+    top: 1px;
+    font-size: rem-calc(16);
+    padding: rem-calc(25) rem-calc(115);
+    margin-bottom: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.18px;
+    @include breakpoint(xlarge down) {
+      padding: rem-calc(25) rem-calc(50);
+    }
+    &.active {
+      border-bottom: solid 1px v(site-heading-color);
+      color: v(site-heading-color);
+    }
+  }
+}

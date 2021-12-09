@@ -1,0 +1,56 @@
+.woocommerce-message {
+  @include site_notice($success-color, '\ea26');
+  padding: rem-calc(25) 0;
+
+  &:before {
+    position: relative;
+    font-size: rem-calc(18);
+  }
+
+  .restore-item {
+    padding-bottom: 0;
+    line-height: 19px;
+  }
+
+  .button,
+  a,
+  button {
+    background: none;
+    color: #FFF !important;
+    display: inline;
+    width: auto;
+    line-height: 19px;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 1px solid;
+    padding: 0;
+
+    &:after {
+      content: none;
+      width: 100%;
+      height: 1px;
+      display: block;
+    }
+
+    &:hover {
+      border-bottom: 1px solid transparent;
+      background-color: transparent;
+      color: #FFF !important;
+    }
+
+    &:active,
+    &:focus {
+      background-color: transparent;
+    }
+    @include breakpoint(medium) {
+      border-bottom: 2px solid;
+      position: absolute;
+      right: 32px;
+
+      &:hover {
+        border-bottom: 2px solid transparent;
+      }
+    }
+  }
+}

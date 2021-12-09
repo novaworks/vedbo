@@ -1,0 +1,16 @@
+.woocommerce-breadcrumb {
+  font-size: rem-calc(14);
+  margin-bottom: rem-calc(35);
+  color: v(site-heading-color);
+
+  .delimiter {
+    font-size: 0;
+    margin: 0 rem-calc(20);
+
+    &:before {
+      @include nova_icon('\ea04');
+      font-size: rem-calc(8);
+      color: v(site-heading-color);
+    }
+  }
+}

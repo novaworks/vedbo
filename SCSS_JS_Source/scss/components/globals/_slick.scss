@@ -1,0 +1,98 @@
+/* Arrows */
+.slick-prev,
+.slick-next {
+    height: 50px;
+    width: 50px;
+    background-color: v(site-border-color);
+    z-index: 10;
+    &:focus {
+        background: v(site-border-color);
+        &:before {
+            opacity: $slick-opacity-on-hover;
+        }
+    }
+    &.slick-disabled:before {
+        opacity: $slick-opacity-not-active;
+    }
+    &:before {
+        color: v(site-heading-color);
+        opacity: $slick-opacity-default;
+        font-size: rem-calc(14);
+    }
+    &:hover {
+      background-color: v(site-accent-color);
+      &:before {
+        color: #FFF;
+      }
+    }
+}
+
+.slick-prev {
+    left: rem-calc(30);
+    [dir="rtl"] & {
+        left: auto;
+        right: rem-calc(30);
+    }
+}
+
+.slick-next {
+    right: rem-calc(30);
+    [dir="rtl"] & {
+        right: auto;
+        left: rem-calc(30);
+    }
+}
+.arrow-style-style-01 {
+  @include breakpoint(1550px) {
+    .slick-prev,
+    .slick-next {
+      background: transparent;
+      &:before {
+        font-size: rem-calc(24);
+      }
+      &:hover,
+      &:focus {
+        &:before {
+          color: v(site-accent-color);
+        }
+      }
+    }
+    .slick-prev {
+      left: rem-calc(-60);
+      // &:before {
+      //   content: "\ea3a";
+      // }
+    }
+    .slick-next {
+      right: rem-calc(-60);
+      // &:before {
+      //   content: "\ea3b";
+      // }
+    }
+  }
+}
+.slick-dots {
+  position: static;
+  li {
+    width: auto;
+    height: auto;
+    button {
+      width: 6px;
+      height: 6px;
+      padding: 0;
+      background-color: v(site-text-color);
+      border-radius: 50%;
+      transition: all .4s;
+      &::before {
+        display: none;
+      }
+    }
+    &.slick-active {
+      button {
+        background-color: v(site-accent-color);
+        width: 8px;
+        height: 8px;
+      }
+    }
+  }
+}

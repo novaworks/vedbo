@@ -1,0 +1,45 @@
+@import '../../_vendor/foundation/scss/foundation';
+.kitify-nova-menu {
+  &__mobile-trigger {
+    display: none;
+    .kitify-nova-menu__mobile-trigger-icon {
+      font-size: rem-calc(21);
+    }
+  }
+  &.kitify-nova-menu--style-default {
+    .main-navigation > ul > li > a:after,
+    .main-navigation > ul > li > a:before {
+      display: none;
+    }
+  }
+  &.kitify-nova-menu--style-bottom-line {
+    .main-navigation > ul > li > a:before {
+      top: auto;
+      bottom: 0;
+    }
+  }
+  .main-navigation {
+    display: flex;
+    .nav-menu {
+      position: static;
+    }
+    > ul > li > a {
+      display: flex;
+      align-items: center;
+    }
+  }
+  .main-navigation ul > li > a:hover {
+    color: var(--site-accent-color);
+  }
+  .main-navigation .sub-menu li a:before {
+    display: none;
+  }
+  &.kitify-active--mbmenu {
+    .kitify-nova-menu__mobile-trigger {
+      display: flex;
+    }
+    .main-navigation {
+      display: none;
+    }
+  }
+}

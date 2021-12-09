@@ -1,0 +1,38 @@
+&.summary {
+	position: relative;
+	font-size: rem-calc(14);
+	z-index: 1;
+	@include breakpoint(large) {
+		margin-left: rem-calc(15);
+	}
+	@include breakpoint(medium down) {
+		display: flex;
+		flex-direction: column;
+
+		.woocommerce-product-details__short-description {
+			order: 5;
+		}
+
+		.stock {
+			order: 6;
+		}
+
+		.woocommerce-product-details__add-to-cart,
+		.cart {
+			order: 7;
+		}
+
+		.yith-wcwl-add-to-wishlist {
+			order: 8;
+		}
+		.product_meta {
+			order: 9;
+		}
+		.woocommerce-product-details__share-box {
+			order: 10;
+		}
+		.nova-product-info-mn {
+			order: 11;
+		}
+	}
+}

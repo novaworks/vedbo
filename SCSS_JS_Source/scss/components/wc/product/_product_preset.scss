@@ -1,0 +1,37 @@
+.product-single-layout-style_2 {
+  .woocommerce-product-gallery {
+    @include breakpoint(xlarge up) {
+      position: relative;
+      padding-left: 120px;
+
+      .flex-control-thumbs {
+        display: block !important;
+        margin:  0 !important;
+        padding-right: 20px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 120px;
+        height: 100%;
+        overflow: hidden;
+        li {
+          margin: 0 0 20px 0 !important;
+          &:last-child {
+            margin: 0 !important;
+          }
+        }
+      }
+    }
+  }
+}
+.product-single-layout-style_3 {
+  position: relative;
+  .woocommerce-product-gallery__image {
+    width: 50%;
+    float: left;
+    border: 5px solid transparent;
+    &:nth-child(2n+1) {
+      clear: left;
+    }
+  }
+}

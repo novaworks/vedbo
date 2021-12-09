@@ -1,0 +1,9 @@
+.price {
+	@include product_price(26, 0);
+	font-weight: 600;
+	color: v(site-accent-color);
+
+	del:before {
+		border-top-width: 2px;
+	}
+}

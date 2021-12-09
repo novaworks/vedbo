@@ -1,0 +1,38 @@
+.add_to_cart_inline {
+  border: none !important;
+
+  .added_to_cart,
+  .button {
+    margin: 0 rem-calc(16);
+
+    &.product_type_variable {
+      &:before {
+        @include nova_icon('\ea29');
+      }
+    }
+
+    &.product_type_grouped {
+      &:before {
+        @include nova_icon('\ea29');
+      }
+    }
+
+    .tooltip {
+      background: none;
+    }
+
+    i {
+      font-style: normal;
+
+      .tooltip {
+        background: none;
+      }
+    }
+
+    &.added_to_cart {
+      .tooltip {
+        background: none;
+      }
+    }
+  }
+}

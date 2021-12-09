@@ -1,0 +1,53 @@
+.entry-content {
+  font-size:  rem-calc(16);
+
+  @include breakpoint(large) {
+    //max-width: rem-calc(800);
+    margin: 0 auto;
+    margin-bottom: rem-calc(60);
+  }
+  margin-bottom: rem-calc(30);
+  .blog-sidebar-active & {
+    padding: 0 rem-calc(48);
+  }
+  .post-password-form {
+    max-width: rem-calc(400);
+    margin: 0 auto;
+  }
+  .page-links {
+    display: flex;
+    justify-content: center;
+    font-size: rem-calc(13);
+    clear: both;
+
+    > .pages {
+      display: none;
+    }
+
+    .post-page-numbers {
+      margin-right: rem-calc(15);
+      padding: rem-calc(10) rem-calc(15);
+      border: solid 1px v(site-border-color);
+      &:hover {
+        color: v(site-heading-color);
+        border-color: v(site-heading-color);
+      }
+      &.current {
+        background-color: v(site-accent-color);
+        border-color: v(site-accent-color);
+        color: #fff;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .entry-tags {
+    clear: both;
+    padding-top: 1px;
+  }
+  p:not([class]) {
+    line-height: 2;
+  }
+}

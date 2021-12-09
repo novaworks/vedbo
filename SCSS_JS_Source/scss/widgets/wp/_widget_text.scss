@@ -1,0 +1,27 @@
+@mixin widget_text() {
+  .textwidget {
+    p {
+      margin-bottom: 16px;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+
+    ul:not([class]) {
+      margin-left: 1.25rem;
+      list-style: inherit;
+    }
+
+    dl,
+    ol,
+    ul {
+      margin-bottom: 2rem;
+      list-style-position: outside;
+
+      li {
+        margin: 0 0 8px;
+      }
+    }
+  }
+}

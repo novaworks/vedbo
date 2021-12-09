@@ -1,0 +1,37 @@
+html.mobile-reveal-open {
+  position: static !important;
+  overflow-y: scroll !important;
+}
+.nova_nl-popup {
+  width: rem-calc(780);
+  padding: 0;
+  border: none;
+  .close-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    font-size: 0;
+    padding: rem-calc(5);
+    color: v(site-heading-color);
+    outline: none;
+    @include rotate_close_btn();
+    z-index: 9;
+    svg {
+      width: 15px;
+      height: 15px;
+    }
+  }
+  .popup_show_again {
+    padding: 0 rem-calc(15);
+  }
+  .nova-subscribe-form__message {
+    top: -10px;
+    font-size: rem-calc(14);
+  }
+}
+.disable--mobile {
+  @include breakpoint(medium down) {
+    display: none !important;
+  }
+}

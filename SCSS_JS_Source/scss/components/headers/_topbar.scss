@@ -1,0 +1,109 @@
+.nova-topbar {
+	display: none;
+	position: relative;
+	background-color: v(site-top-bar-bg-color);
+	color: v(site-top-bar-heading-color);
+	font-size: v(site-top-bar-font-size);
+	border-bottom: solid 1px v(site-top-bar-border-color);
+	@include breakpoint(xlarge up) {
+		display: block;
+	}
+
+	.nova-topbar__inner {
+		display: flex;
+		align-items: center;
+		position: relative;
+		min-height: 3em;
+
+		.topbar-builder {
+			width: 100%;
+		}
+		.nova-topbar__left {
+			display: flex;
+			flex: 1;
+			align-items: center;
+			.nova-topbar__left--switcher {
+				margin-right: rem-calc(8);
+				.select2 {
+					margin-bottom: 0;
+					.select2-selection {
+						border: 0;
+						.select2-selection__rendered {
+							font-size: v(site-top-bar-font-size);
+						}
+					}
+				}
+				.select2-container .select2-dropdown .select2-results ul li {
+					font-size: v(site-top-bar-font-size);
+				}
+				.select2 .select2-selection .select2-selection__arrow:after {
+					font-size: 10px;
+				}
+			}
+			.navigation-foundation {
+				> ul {
+					margin: 0 rem-calc(-10);
+					> li {
+						> a {
+							padding: 0;
+							margin: rem-calc(10);
+							> span {
+								background-color: v(site-top-bar-bg-color);
+								padding: rem-calc(3) 0;
+								&:before {
+									height: 1px;
+									background-color: v(site-top-bar-text-color);
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.nova-topbar__right {
+			display: flex;
+			flex: 1;
+			align-items: center;
+			justify-content: flex-end;
+			&--action {
+				display: flex;
+				align-items: center;
+				margin: 0;
+				list-style: none;
+				li {
+					margin: 0;
+					padding-left: rem-calc(24);
+					&.wishlist-mn {
+						a {
+							display: flex;
+							align-items: center;
+						}
+					}
+					.svg-icon {
+						width: rem-calc(16);
+						height: rem-calc(16);
+						margin-right: rem-calc(3);
+					}
+					.header-cart-box {
+						display: flex;
+						align-items: center;
+						span {
+							margin-right: rem-calc(3);
+						}
+						.count-badge.js_count_bag_item {
+						    display: flex;
+						    align-items: center;
+						    justify-content: center;
+						    background: #000;
+						    width: 20px;
+						    height: 20px;
+						    border-radius: 50%;
+						    color: #fff;
+						}
+					}
+				}
+			}
+		}
+	}
+}

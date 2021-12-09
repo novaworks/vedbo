@@ -1,0 +1,23 @@
+.foundation-hover-dropdown-box {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	top: 100%;
+}
+
+.foundation-mega-menu-content {
+	position: relative;
+	width: 100% !important;
+	height: 100%;
+	left: 0 !important;
+	top: 100% !important;
+	padding: 0;
+	@include wide_dropdowns_shadow();
+
+	a {
+		&:hover {
+			color: v(dropdown-accent-color);
+		}
+	}
+	@import 'megamenu_categories_list';
+}

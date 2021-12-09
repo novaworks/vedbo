@@ -1,0 +1,51 @@
+@import 'product/tawcvs';
+.single-product {
+  @import 'product/product_notices';
+
+  .product {
+    .product-single-top-area {
+      margin-bottom: rem-calc(32);
+    }
+    .entry-summary {
+      @import 'product/product_add_to_wishlist';
+      @import 'product/product_out_of_stock';
+      @import 'product/product_elements_order';
+      @import 'product/product_wishlist';
+      @import 'product/product_info_menu';
+      @import 'product/product_offcavas';
+    }
+    @import 'product/product_breadcrumb';
+    @import 'product/product_title';
+    @import 'product/product_price_rating';
+    @import 'product/product_rating';
+    @import 'product/product_price';
+    @import 'product/product_description';
+    @import 'product/product_add_to_cart';
+    @import 'product/product_share';
+    @import 'product/product_meta';
+    @import 'product/product_gallery';
+    @import 'product/product_badges';
+    // Product Types
+    @import 'product/product_variable';
+    @import 'product/product_external';
+    @import 'product/product_grouped';
+    //Custom Plugins
+    @include tawcvs-style();
+
+  }
+  @import 'product/product_infos';
+  @import 'product/product_tabs';
+  @import 'product/product_related';
+  @import 'product/product_preset';
+}
+@import 'product/product_sidebar';
+.woocommerce .elementor-widget-woocommerce-product-images span.onsale {
+    position: absolute;
+    background: v(site-accent-color);
+    color: #fff;
+    font-size: rem-calc(12);
+    padding: rem-calc(5) rem-calc(10) !important;
+    top: 20px;
+    left: 20px;
+    z-index: 999;
+}

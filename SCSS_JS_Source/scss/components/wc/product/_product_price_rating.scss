@@ -1,0 +1,9 @@
+.nova-custom__price-rating-box {
+  display: flex;
+  text-align: left;
+  margin: 0  0 rem-calc(20) 0;
+  .woocommerce-product-rating {
+    flex: 1;
+    margin-left: rem-calc(24);
+  }
+}

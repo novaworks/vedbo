@@ -1,0 +1,23 @@
+body {
+  .fancybox-bg {
+    background: #000;
+  }
+  .fancybox-is-open .fancybox-bg {
+    opacity: 1;
+  }
+  .fancybox-container {
+    z-index: 99999;
+  }
+  .fancybox-button {
+    background: transparent;
+    color: #fff;
+    border: solid 1px #fff;
+    border-radius: 50%;
+    right: rem-calc(30);
+    top: rem-calc(30);
+    @include rotate_close_btn();
+    &:hover {
+      color: #fff;
+    }
+  }
+}

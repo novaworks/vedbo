@@ -1,0 +1,26 @@
+.support-lists {
+    display: none;
+    position: fixed;
+    top: 50%;
+    right: 5px;
+    list-style: none;
+    width: 60px;
+    background: #FFFFFF;
+    box-shadow: 0 8px 30px 0 rgba(0,0,0,0.16);
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    z-index: 2;
+    @include breakpoint (medium) {
+      display: block;
+    }
+    li {
+      display: block;
+      margin-bottom: 0;
+      a {
+        font-size: 20px;
+        height: 40px;
+        line-height: 40px;
+      }
+    }
+}

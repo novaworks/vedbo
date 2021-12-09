@@ -1,0 +1,7 @@
+@mixin widget_categories() {
+  @include widget_dropdown();
+
+  li {
+    margin-bottom: 8px;
+  }
+}

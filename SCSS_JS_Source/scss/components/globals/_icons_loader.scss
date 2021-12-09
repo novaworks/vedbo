@@ -1,0 +1,96 @@
+.nova-loader-01 div {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  transform: translate(39px,39px) scale(1);
+  background: #e15b64;
+  animation: nova-loader-01 1.5873015873015872s infinite cubic-bezier(0,0.5,0.5,1);
+}
+.nova-loader-01 div:nth-child(1) {
+  background: #f47e60;
+  transform: translate(73px,39px) scale(1);
+  animation: nova-loader-01-r 0.3968253968253968s infinite cubic-bezier(0,0.5,0.5,1), nova-loader-01-c 1.5873015873015872s infinite step-start;
+}.nova-loader-01 div:nth-child(2) {
+  animation-delay: -0.3968253968253968s;
+  background: #e15b64;
+}.nova-loader-01 div:nth-child(3) {
+  animation-delay: -0.7936507936507936s;
+  background: #f47e60;
+}.nova-loader-01 div:nth-child(4) {
+  animation-delay: -1.1904761904761905s;
+  background: #f8b26a;
+}.nova-loader-01 div:nth-child(5) {
+  animation-delay: -1.5873015873015872s;
+  background: #abbd81;
+}
+.loadingio-spinner-ellipsis-9ywjls01pkb {
+  width: 48px;
+  height: 48px;
+  display: inline-block;
+  overflow: hidden;
+  background: #ffffff;
+}
+.nova-loader-01 {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform: translateZ(0) scale(0.48);
+  backface-visibility: hidden;
+  transform-origin: 0 0; /* see note above */
+}
+.nova-loader-01 div { box-sizing: content-box; }
+
+.nova-ring {
+  display: inline-block;
+  position: relative;
+  width: 60px;
+  height: 60px;
+}
+.nova-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 54px;
+  height: 54px;
+  margin: 4px;
+  border: 4px solid v(site-accent-color);
+  border-radius: 50%;
+  animation: nova-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: v(site-accent-color) transparent transparent transparent;
+}
+.nova-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.nova-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.nova-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes nova-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes nova-loader-01 {
+   0% { transform: translate(5px,39px) scale(0); }
+  25% { transform: translate(5px,39px) scale(0); }
+  50% { transform: translate(5px,39px) scale(1); }
+  75% { transform: translate(39px,39px) scale(1); }
+ 100% { transform: translate(73px,39px) scale(1); }
+}
+@keyframes nova-loader-01-r {
+   0% { transform: translate(73px,39px) scale(1); }
+ 100% { transform: translate(73px,39px) scale(0); }
+}
+@keyframes nova-loader-01-c {
+   0% { background: #e15b64 }
+  25% { background: #abbd81 }
+  50% { background: #f8b26a }
+  75% { background: #f47e60 }
+ 100% { background: #e15b64 }
+}

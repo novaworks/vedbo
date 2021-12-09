@@ -1,0 +1,106 @@
+.full-search-reveal {
+	position: fixed;
+	background-color: v(dropdown-bg-color);
+	top: 0;
+	height: 100%;
+	width: 100%;
+	padding: 3%;
+	opacity: 0;
+	z-index: -99999;
+	.close-button {
+		font-size: 0;
+		position: absolute;
+		right: rem-calc(60);
+		top: rem-calc(40);
+		left: auto;
+		background-color: transparent;
+		color: v(dropdown-text-color);
+		border: solid 1px;
+		padding: rem-calc(15);
+		border-radius: 50%;
+		z-index: 99;
+		@include rotate_close_btn();
+
+		svg {
+			width: 15px;
+			height: 15px;
+		}
+		@include breakpoint(large down) {
+			right: rem-calc(30);
+			top: rem-calc(30);
+			padding: 0;
+			border: 0;
+		}
+	}
+	.site-search {
+		background-color: v(dropdown-bg-color);
+		color: v(dropdown-text-color);
+
+		&.full-screen {
+			@import 'header-search';
+
+			.header-search {
+				width: 100%;
+				padding-right: 3%;
+				position: relative;
+				padding-top: rem-calc(60);
+				max-width: rem-calc(830);
+				margin:  0 auto;
+				opacity: 0;
+				&.animate {
+					opacity: 1;
+					animation: FullSearchfadeDown; /* referring directly to the animation's @keyframe declaration */
+					animation-duration: 1s; /* don't forget to set a duration! */
+				}
+				.search-form {
+					width: 100%;
+					max-width: 100%;
+				}
+
+				.select2-dropdown {
+					background-color: v(dropdown-border-color);
+				}
+
+				.select2-container--default .select2-results__option[aria-selected=true],
+				.select2-container--default .select2-results__option[data-selected=true] {
+					background-color: v(dropdown-accent-color);
+				}
+
+				.header_search_form .select2 .select2-selection .select2-selection__rendered {
+					height: 100%;
+					line-height: 3.8em;
+				}
+
+				.header_search_form .header_search_input_wrapper .header_search_input {
+					font-size: rem-calc(24) !important;
+					font-weight: 500;
+					padding-left: 0 !important;
+				}
+
+				.select2-container .select2-results__option.select2-results__option--highlighted[aria-selected] {
+					background-color: v(dropdown-accent-color);
+				}
+
+				.select2 .select2-selection .select2-selection__arrow {
+					margin-right: 0;
+					margin-left: $form-spacing*2;
+				}
+			}
+		}
+	}
+}
+@include breakpoint(medium down) {
+	.reveal.full {
+		top: 0 !important;
+	}
+}
+@keyframes FullSearchfadeDown {
+   0% {
+      opacity: 0;
+      transform: translateY(-60px);
+   }
+   100% {
+      opacity: 1;
+      transform: translateY(0);
+   }
+}

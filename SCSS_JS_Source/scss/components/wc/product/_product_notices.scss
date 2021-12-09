@@ -1,0 +1,6 @@
+.woocommerce-error,
+.woocommerce-message {
+  @include breakpoint(small only) {
+    margin-bottom: 0 !important;
+  }
+}

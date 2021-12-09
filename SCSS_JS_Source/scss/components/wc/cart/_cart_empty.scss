@@ -1,0 +1,26 @@
+.woocommerce {
+  .cart-empty {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto rem-calc(104);
+    text-align: center;
+    font-size: rem-calc(16);
+    line-height: 1.4;
+
+    &:before {
+      @include nova_icon('\ea28');
+      font-size: rem-calc(104);
+      margin-bottom: rem-calc(40);
+    }
+  }
+
+  .product-suggestions-title {
+    display: inline-block;
+    margin-bottom: rem-calc(32);
+  }
+
+  .return-to-shop {
+    display: flex;
+    justify-content: center;
+  }
+}

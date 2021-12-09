@@ -1,0 +1,17 @@
+ul.products {
+  &.products-masonry-2 {
+    li.product {
+      padding: rem-calc(30);
+      border: solid 1px v(site-border-color);
+      margin-bottom: 0;
+      @include breakpoint( large ) {
+        &[data-border_bottom="no"] {
+          border-bottom: 0;
+        }
+        &[data-border_right="no"] {
+          border-right: 0;
+        }
+      }
+    }
+  }
+}

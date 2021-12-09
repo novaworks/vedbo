@@ -1,0 +1,134 @@
+.elementor-nova-banner {
+	&:after {
+		clear: both;
+		width: 100%;
+		display: block;
+		content: '';
+	}
+}
+
+.nova-banner-wrap {
+
+}
+
+.nova-banner {
+	position: relative;
+	overflow: hidden;
+	max-width: 100%;
+	.nova-banner-image.nova-lazyload-image {
+		width: 100%;
+		padding-bottom: 30%;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		overflow: hidden;
+		-webkit-transform: scale(1);
+		-moz-transform: scale(1);
+		-ms-transform: scale(1);
+		-o-transform: scale(1);
+		transform: scale(1);
+		-webkit-transition: all 800ms;
+		-moz-transition: all 800ms;
+		-ms-transition: all 800ms;
+		-o-transition: all 800ms;
+		transition: all 800ms;
+	}
+	img {
+		display: none;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+	}
+
+	* {
+		box-sizing: border-box;
+	}
+
+	&__link {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 2;
+		text-indent: 200%;
+		white-space: nowrap;
+		font-size: 0;
+		opacity: 0;
+	}
+
+	&__content {
+		-webkit-backface-visibility: hidden;
+		backface-visibility: hidden;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 2;
+		text-align: center;
+	}
+
+	&__content-wrap {
+		display: flex;
+		flex-flow: column;
+	}
+
+	.nova-banner__text,
+	.nova-banner__title {
+		margin: 0;
+		padding: 0;
+	}
+
+	.nova-banner__btn-wrap {
+		display: flex;
+		justify-content: center;
+
+		.nova-banner__button {
+			max-width: 150px;
+		}
+	}
+
+	&__overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+		opacity: 0;
+		background: #000;
+		-webkit-backface-visibility: hidden;
+		-webkit-transform: translate3d(0,0,0);
+		transition: opacity 0.35s;
+	}
+
+	&__img {
+		display: block;
+	}
+
+	&:hover {
+		.nova-banner__overlay {
+			opacity: 0.2;
+		}
+	}
+
+	&.nova-effect-none {
+		.nova-banner__content {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+	&:hover {
+		.nova-banner-image.nova-lazyload-image {
+			-webkit-transform: scale(1.05);
+			-moz-transform: scale(1.05);
+			-ms-transform: scale(1.05);
+			-o-transform: scale(1.05);
+			transform: scale(1.05);
+		}
+	}
+}

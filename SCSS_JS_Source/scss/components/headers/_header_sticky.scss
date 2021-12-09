@@ -1,0 +1,77 @@
+.sticky-header-enabled {
+	.headroom {
+		position: absolute;
+	  top: 0;
+	  width: 100%;
+	  z-index: 998;
+	  transition: transform 0.25s ease-in-out;
+	  will-change: transform;
+
+	  &--pinned {
+	    transform: translateY(0);
+	  }
+
+	  &--unpinned {
+	    transform: translateY(-100%);
+	  }
+		&--not-top {
+	    position: fixed !important;
+			background-color: v(site-header-bg-color) !important;
+			border-bottom: solid 1px v(site-header-border-color);
+			box-shadow: 0 0 0;
+	    top: 0 !important;
+	    width: 100%;
+	    z-index: 998;
+			&:after {
+				content: "";
+		    display: block;
+		    position: absolute;
+		    width: 100%;
+		    height: 0;
+		    left: 0;
+		    bottom: 0px;
+		    pointer-events: none;
+			}
+		}
+	}
+	.nova-header.animated {
+	  -webkit-animation-duration: 0.5s;
+	     -moz-animation-duration: 0.5s;
+	       -o-animation-duration: 0.5s;
+	          animation-duration: 0.5s;
+	  -webkit-animation-fill-mode: both;
+	     -moz-animation-fill-mode: both;
+	       -o-animation-fill-mode: both;
+	          animation-fill-mode: both;
+	  will-change: transform, opacity;
+	}
+	.nova-header.animated.slideUp {
+	  -webkit-animation-name: slideUp;
+	  -moz-animation-name: slideUp;
+	  -o-animation-name: slideUp;
+	  animation-name: slideUp;
+	}
+}
+.topbar-enabled {
+	&.sticky-header-enabled {
+		.headroom {
+			top: 35px;
+		}
+	}
+}
+.admin-bar.sticky-header-enabled .headroom--not-top,
+.admin-bar.sticky-header-enabled .header-mobiles-wrapper .header-handheld-header-bar.postion--fixed
+ {
+	@include breakpoint(medium down)
+	{
+		top:0 !important;
+	}
+	@include breakpoint(medium up)
+	{
+		top:46px !important;
+	}
+	@include breakpoint(large up)
+	{
+		top:32px !important;
+	}
+}

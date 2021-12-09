@@ -1,0 +1,86 @@
+.nova-collection {
+	text-align: center;
+
+	&__img {
+		+ .nova-collection__inner {
+			margin-top: rem-calc(76);
+		}
+	}
+
+	&__inner {
+		max-width: rem-calc(750);
+		padding-left: rem-calc(20);
+		padding-right: rem-calc(20);
+		margin: 0 auto;
+
+		+ .nova-collection__img,
+		+ .nova-collection__link {
+			margin-top: rem-calc(76);
+		}
+	}
+	&__link {
+		display: block;
+		position: relative;
+		&:hover .nova-collection__icon {
+			opacity: 1;
+		}
+	}
+
+	&__icon {
+		width: 34px;
+		height: 34px;
+		color: #fff;
+		background-color: v(site-heading-color);
+		text-align: center;
+		vertical-align: middle;
+		border-radius: 50%;
+		padding: 7px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-top: -17px;
+		margin-left: -17px;
+		opacity: 0;
+		transition: all 0.4s ease-out;
+
+		svg.svg-icon {
+			width: 20px;
+			height: 20px;
+		}
+	}
+
+	&__label {
+		width: rem-calc(80);
+		height: rem-calc(80);
+		line-height: rem-calc(80);
+		text-align: center;
+		font-size: rem-calc(30);
+		font-weight: bold;
+		color: #fff;
+		display: inline-block;
+		border-radius: rem-calc(80);
+		background-color: v(site-accent-color);
+	}
+
+	&__title {
+		position: relative;
+		font-size: rem-calc(30);
+		font-weight: normal;
+		line-height: normal;
+		margin-top: rem-calc(35);
+		margin-bottom: 0;
+		@include breakpoint (medium) {
+			font-size: rem-calc(36);
+		}
+	}
+	&__subtitle {
+		font-size: rem-calc(14);
+		margin-bottom: rem-calc(35);
+		@include breakpoint (medium) {
+			font-size: rem-calc(16);
+		}
+	}
+	&__description {
+		margin-bottom: 0;
+	}
+}

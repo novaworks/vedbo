@@ -1,0 +1,14 @@
+.entry-content__readmore {
+  display: inline-block;
+  color: v(site-heading-color);
+  border: solid 1px v(site-heading-color);
+  font-size: rem-calc(12);
+  font-weight: 700;
+  padding: rem-calc(18) rem-calc(35);
+  text-transform: capitalize;
+  &:hover {
+    background-color: v(site-accent-color);
+    border-color: v(site-accent-color);
+    color: #fff;
+  }
+}

@@ -1,0 +1,41 @@
+nav.post-navigation {
+  margin-top: rem-calc(34);
+  .nav-links  {
+    display: flex;
+    a {
+      color: v(site-heading-color);
+      font-size: rem-calc(16);
+      font-weight: 500;
+      div {
+        display: block;
+        width: 100%;
+      }
+      .title {
+        display: inline-block;
+        background-color: v(site-accent-color);
+        color: #fff;
+        font-size: rem-calc(12);
+        padding: rem-calc(5) rem-calc(15);
+        margin-bottom: rem-calc(15);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+      &:hover {
+        .post {
+          opacity: 0.8;
+        }
+      }
+    }
+    .nav-previous {
+      flex: 1;
+      border-right: 1px solid v(site-border-color);
+      padding-right: 30px;
+    }
+    .nav-next {
+      flex: 1;
+      text-align: right;
+      padding-left: 30px;
+
+    }
+  }
+}

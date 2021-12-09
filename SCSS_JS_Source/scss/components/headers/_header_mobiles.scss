@@ -1,0 +1,152 @@
+.header-mobiles-wrapper {
+	@include breakpoint(xlarge) {
+		height: 0;
+		overflow: hidden;
+		visibility: hidden;
+	}
+
+	.header-mobiles {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		min-height: 3.8em;
+		padding-left: rem-calc(30);
+		padding-right: rem-calc(30);
+		background-color: v(mobile-header-bg-color);
+		color: v(mobile-header-text-color);
+		z-index: 10;
+		@include breakpoint(medium down) {
+			min-height: 3.5em;
+			padding-left: rem-calc(15);
+			padding-right: rem-calc(15);
+		}
+
+		.site-logo {
+			img {
+				max-height: 2em;
+				@include breakpoint(small only) {
+					max-width: 140px !important;
+				}
+			}
+		}
+
+		.header-mobiles-menu {
+			display: flex;
+			flex: 1;
+			align-items: center;
+
+			a {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				svg {
+					width: 22px;
+					height: 20px;
+				}
+			}
+
+			&.active {
+				a {
+					&:before {
+						@include nova_icon('\e9c5');
+					}
+				}
+			}
+		}
+
+		.header-mobiles-branding {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 0 1em;
+		}
+
+		.header-mobiles-actions {
+			display: flex;
+			flex: 1;
+			align-items: center;
+
+			ul.header-act {
+				display: flex;
+				align-items: center;
+				list-style: none;
+				padding: 0;
+				margin: 0 0 0 auto;
+
+				li {
+					display: flex;
+					margin: 0;
+
+					> a {
+						padding: 0 0.7em;
+						line-height: 1;
+						white-space: nowrap;
+						position: relative;
+
+						svg {
+							width: 20px;
+							height: 20px;
+						}
+					}
+				}
+			}
+		}
+	}
+	@import 'header-handheld-bar';
+}
+
+.site-canvas-menu {
+	background-color: v(dropdown-bg-color);
+	color: v(dropdown-text-color);
+
+	&.position-left {
+		top: 0;
+		left: 0;
+		width: 300px;
+		height: 100%;
+		transform: translateX(-300px);
+		position: fixed;
+		z-index: 9999;
+		transition: transform 0.5s ease;
+		backface-visibility: hidden;
+
+		&.is-open {
+			transform: translateX(0);
+		}
+
+		.header-mobiles-primary-menu {
+			position: relative;
+			padding: 5rem 0;
+			width: 100%;
+			@include drilldown_navigation(v(dropdown-bg-color),v(dropdown-border-color));
+
+			.close-button {
+				font-size: 0;
+				position: absolute;
+				right: 15px;
+				top: 15px;
+				left: auto;
+				background-color: transparent;
+				color: v(dropdown-text-color);
+				padding: 0;
+				@include rotate_close_btn();
+
+				svg {
+					width: 15px;
+					height: 15px;
+				}
+			}
+		}
+	}
+}
+
+.admin-bar .site-canvas-menu.position-left {
+	@include breakpoint(large up) {
+		padding-top: 32px;
+	}
+	@include breakpoint(medium down) {
+		padding-top: 46px;
+	}
+}

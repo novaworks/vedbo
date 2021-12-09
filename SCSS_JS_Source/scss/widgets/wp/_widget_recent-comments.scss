@@ -1,0 +1,16 @@
+@mixin widget_recent_comments() {
+  .recentcomments {
+    font-size: rem-calc(10);
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: rem-calc(20);
+    .comment-author-link {
+      & + a {
+        display: block !important;
+        font-size: rem-calc(16);
+        font-weight: 400;
+        text-transform: none;
+      }
+    }
+  }
+}

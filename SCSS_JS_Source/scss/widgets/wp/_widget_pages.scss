@@ -1,0 +1,10 @@
+@mixin widget_pages() {
+  ul {
+    .page_item {
+      font-size: rem-calc(14);
+      font-weight: 500;
+      padding: 5px 0;
+      margin: rem-calc(8) 0;
+    }
+  }
+}

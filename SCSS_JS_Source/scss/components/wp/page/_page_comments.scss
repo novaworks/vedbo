@@ -1,0 +1,11 @@
+.single-comments-container {
+  padding-bottom: rem-calc(40);
+  @include breakpoint(large) {
+    padding-bottom: rem-calc(80);
+  }
+  > .row {
+    @include breakpoint(large) {
+      padding-bottom: rem-calc(120);
+    }
+  }
+}

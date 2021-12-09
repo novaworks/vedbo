@@ -1,0 +1,21 @@
+.is-dropdown-submenu {
+  margin-top: 2px;
+  background-color: v(dropdown-bg-color);
+}
+.dropdown-pane {
+  background-color: v(dropdown-bg-color);
+  border-radius: 3px;
+  @include dropdowns_shadow();
+  &.with--arrow:after {
+    position: absolute;
+    right: 10%;
+    transform: translateX(-50%);
+    top: -10px;
+    width: 0;
+    height: 0;
+    content: '';
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #fff;
+}
+}

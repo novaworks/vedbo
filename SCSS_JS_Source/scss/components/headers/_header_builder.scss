@@ -1,0 +1,77 @@
+.elementor-location-header .elementor-top-section {
+  z-index: 5;
+}
+
+.menu-item-link-sub{
+  .kitify-nav-link-text{
+    &:before{
+      content: '';
+      border-left: 0 solid;
+      transition: padding .2s, border-color .2s;
+    }
+  }
+}
+.kitify-nav__item {
+  font-size: rem-calc(14);
+  font-weight: 500;
+  &:hover,
+  &.current-menu-item{
+    > .menu-item-link-sub{
+      color: v(site-accent-color);
+      .kitify-nav-link-text{
+        &:before{
+          border-left-width: .25em;
+          padding-left: .8em;
+        }
+      }
+    }
+  }
+}
+.kitify-nav-wrap{
+  &:not(.kitify-active--mbmenu){
+    .kitify-nav--horizontal{
+      .kitify-nav__sub {
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+        &.kitify-nav-depth-0{
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}
+
+.kitify-nav__sub {
+  padding: 15px;
+  .kitify-nav & {
+    width: 230px;
+  }
+  .kitify-nav-link-text{
+    font-weight: 400;
+  }
+}
+.kitify-site-wrapper .kitify-hamburger-panel__toggle {
+  box-shadow: none;
+}
+.kitify-search__form {
+  background: #fff;
+  padding: 0 rem-calc(20);
+  border-radius: 30px;
+}
+.kitify-search__label {
+  padding: 0;
+}
+.kitify-search__field[type=search] {
+  margin-bottom: 0;
+  border: 0;
+}
+.kitify-search__submit {
+  background: transparent;
+  padding: 0;
+  color: v(site-heading-color);
+  font-size: rem-calc(18);
+  &:hover,
+  &:focus {
+    background: transparent;
+    color: v(site-heading-color);
+  }
+}

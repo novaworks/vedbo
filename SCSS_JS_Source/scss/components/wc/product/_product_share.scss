@@ -1,0 +1,23 @@
+.woocommerce-product-details__share-box {
+	display: inline-block;
+	float: left;
+	font-size: rem-calc(12);
+	text-transform: uppercase;
+
+	a {
+		color: v(site-heading-color);
+		&:hover {
+			color: v(site-accent-color);
+		}
+		&:last-child {
+			i {
+				margin-right: 0;
+			}
+		}
+
+		i {
+			font-size: rem-calc(16);
+			margin-right: rem-calc(15);
+		}
+	}
+}

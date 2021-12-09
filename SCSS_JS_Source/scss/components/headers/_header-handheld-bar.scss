@@ -1,0 +1,123 @@
+.header-handheld-header-bar {
+  position: relative;
+  transition: all 0.5s ease;
+  z-index: 10;
+
+  &.postion--fixed {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }
+
+  &.animated {
+    -webkit-animation-duration: 0.5s;
+    -moz-animation-duration: 0.5s;
+    -o-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+    animation-fill-mode: both;
+    will-change: transform, opacity;
+  }
+
+  &.animated.slideUp {
+    -webkit-animation-name: slideUp;
+    -moz-animation-name: slideUp;
+    -o-animation-name: slideUp;
+    animation-name: slideUp;
+  }
+
+  .header-handheld__inner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: v(mobile-pre-header-bg-color);
+    color: v(mobile-pre-header-text-color);
+    a {
+        color: v(mobile-pre-header-text-color);
+    }
+    .handheld_component {
+      display: flex;
+      flex: 1;
+      align-items: center;
+      margin: 0;
+      padding: 1.2rem 0;
+      line-height: 1;
+      border-left: 1px solid v(mobile-pre-header-border-color);
+
+      .component-target {
+        position: relative;
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+
+        svg {
+          width: 22px;
+          height: 20px;
+          color: v(mobile-pre-header-text-color);
+
+          &.vedbo-wishlist-bar {
+            width: 24px;
+          }
+
+          &.vedbo-bag-bar {
+            width: 20px;
+          }
+        }
+      }
+
+      &.nova_com_action--dropdownmenu {
+        .settings-bar-dropdown {
+          margin: 0;
+          list-style: none;
+          position: absolute;
+          z-index: 11;
+          opacity: 0;
+          visibility: hidden;
+          padding: 2rem;
+          box-shadow: 0 2px 12px 2px rgba(0,0,0,.1);
+          transition: all 250ms ease-out;
+        }
+
+        .settings-bar-dropdown {
+          background-color: v(mobile-pre-header-bg-color);
+          width: 100%;
+          top: 100%;
+          left: 0;
+          opacity: 0;
+          visibility: hidden;
+          @include drilldown_navigation(v(mobile-pre-header-bg-color),v(mobile-pre-header-border-color));
+        }
+
+        &.active {
+          .settings-bar-dropdown {
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+      }
+    }
+  }
+
+  .nova_compt_iem .component-target-badget,
+  .nova_compt_iem .count-badge {
+    position: absolute;
+    font-size: rem-calc(12);
+    font-weight: 600;
+    height: 15px;
+    line-height: 15px;
+    background-color: v(mobile-pre-header-text-color);
+    color: v(mobile-pre-header-bg-color);
+    display: block;
+    top: -2px;
+    right: -7px;
+    min-width: 15px;
+    text-align: center;
+    padding: 0;
+    border-radius: 50%;
+  }
+}

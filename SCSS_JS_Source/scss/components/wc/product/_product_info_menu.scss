@@ -1,0 +1,27 @@
+.nova-product-info-mn {
+  margin: 0;
+  list-style: none;
+  text-align: left;
+  li {
+    border-bottom: solid 1px v(site-border-color);
+    margin: 0;
+    a {
+      position: relative;
+      display: block;
+      font-size: rem-calc(14);
+      font-weight: 600;
+      line-height: rem-calc(60);
+      .panel-icon {
+        margin-right: rem-calc(16);
+      }
+      &:after {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        @include nova_icon('\ea05');
+        font-size: rem-calc(12);
+        transform: translateY(-50%);
+      }
+    }
+  }
+}

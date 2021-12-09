@@ -1,0 +1,46 @@
+.posts_ajax_button {
+  text-align: center;
+  font-size: rem-calc(11);
+  clear: both;
+  margin: 0 auto;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  text-transform: uppercase;
+  > span {
+    padding: 1.5rem 5rem;
+  }
+
+  &.loading {
+    overflow: hidden;
+    filter: contrast(5);
+    cursor: default;
+    > span {
+      background-color: v(site-primary-button-color);
+      color: v(site-primary-button-color);
+      cursor: default;
+      span {
+          @include shuttle_loader(10px,10px,#FFF);
+          position: absolute !important;
+          left: 50% !important;
+          margin-left: -10px;
+          transform: translate(-50%, 0);
+      }
+    }
+  }
+
+  &.disabled {
+    display: none !important;
+  }
+}
+
+body.blog-pagination-infinite_scroll,
+body.blog-pagination-load_more_button {
+  nav.posts-navigation {
+    display: none;
+  }
+
+  .pagination-container {
+    text-align: center;
+  }
+}

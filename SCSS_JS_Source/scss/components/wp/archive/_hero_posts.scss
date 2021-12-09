@@ -1,0 +1,117 @@
+.blog-hero-slider {
+  display: flex;
+
+  &__item {
+    width: 100%;
+  }
+  //Caption
+  &__caption {
+    .swiper-slide {
+      display: flex;
+      align-items: center;
+    }
+
+    .title--display-1 {
+      font-size: 4vw;
+      margin-bottom: 1rem;
+    }
+
+    .description {
+      font-size: 1rem;
+      width: 60%;
+      margin-bottom: 1.87rem;
+    }
+
+    .title--display-1 {
+      .down-up span {
+        transition-duration: 0.4s;
+      }
+    }
+
+    .description {
+      .down-up div {
+        transition-duration: 0.4s;
+      }
+    }
+
+    .swiper-slide-active {
+      .title--display-1 {
+        .down-up span {
+          transition-delay: 0s;
+        }
+      }
+
+      .description {
+        .down-up span {
+          transition-delay: 0.4s;
+        }
+      }
+
+    }
+  }
+  // Image
+  &__image {
+    overflow: hidden;
+    position: relative;
+  }
+  // Control
+  .control-slider {
+    display: flex;
+    position: absolute;
+    z-index: 1;
+
+    &--vertical {
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      height: 100vh;
+      padding: 8.5rem 0 3.1rem;
+      bottom: 0;
+      right: 0;
+      width: 10rem;
+      z-index: 2;
+
+      .swiper-button-next,
+      .swiper-button-prev {
+        display: block;
+      }
+
+      .swiper-button-next {
+        margin-bottom: 1.42rem;
+      }
+    }
+
+    &--bottom {
+      bottom: 0;
+      right: 0;
+    }
+  }
+  // Details
+  &__case-details {
+    height: 7.5rem;
+    padding-left: 4.25rem;
+    padding-right: 4.25rem;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+
+    .item-details {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #fff;
+      overflow: auto;
+    }
+
+    .control-slider {
+      width: 11.25rem;
+    }
+
+    .swiper-button-next {
+      margin-right: 1.42rem;
+    }
+  }
+  .swiper-container.slider-container-details {
+    width: calc(100% - 11.25rem);
+  }
+}

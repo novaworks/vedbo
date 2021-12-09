@@ -1,0 +1,18 @@
+.woocommerce-breadcrumb {
+  text-align: left;
+  margin-bottom: rem-calc(15);
+  font-size: 0;
+
+  > a {
+    font-size: rem-calc(10);
+    line-height: rem-calc(15);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  > span:last-of-type {
+    &:before {
+      display: none;
+    }
+  }
+}

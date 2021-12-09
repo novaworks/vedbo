@@ -1,0 +1,69 @@
+.footer-type-1 {
+  background-color: v(site-footer-bg-color);
+  color: v(site-footer-text-color);
+  a {
+    color: v(site-footer-text-color);
+  }
+  .column {
+    .widget_text {
+      @include breakpoint(large) {
+        float: right;
+      }
+    }
+  }
+  .widget-title {
+    color: v(site-footer-heading-color);
+    font-size: rem-calc(18);
+    border:none;
+    text-transform: none;
+  }
+
+  .nova-footer__content {
+    @each $breakpoint, $padding in $content-padding {
+      @include breakpoint($breakpoint) {
+        padding: rem-calc($padding * 2.25) rem-calc($padding);
+      }
+      @include large_side_paddings;
+    }
+
+    .nova-footer__branding--slogan {
+      max-width: rem-calc(500);
+      width: 100%;
+      margin: 2.5em auto;
+    }
+    @include footer-widget-area();
+
+    .nova-footer__socials {
+      margin: 2.5em 0;
+      @include footer-socials;
+    }
+
+    .nova-footer__payment-method {
+      margin: 2.5em 0;
+      @include footer-payment-method;
+    }
+
+    .nova-footer__navigation {
+      text-align: center;
+      @include footer-navigation;
+    }
+
+    > div:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .nova-footer__copyright-text {
+    @each $breakpoint, $padding in $content-padding {
+      @include breakpoint($breakpoint) {
+        padding: rem-calc(20) rem-calc($padding);
+      }
+      @include large_side_paddings;
+    }
+    text-align: center;
+
+    .footer-text {
+      font-size: rem-calc(13);
+    }
+  }
+}

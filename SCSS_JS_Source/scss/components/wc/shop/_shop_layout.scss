@@ -1,0 +1,212 @@
+.site-wide-layout:not(.no-sidebar) {
+	@include breakpoint(xlarge) {
+		#sidebar_primary {
+			max-width: 330px;
+		}
+		#content_primary {
+			flex: 0 0 100%;
+			max-width: calc( 100% - 330px);
+	    max-width: -moz-calc( 100% - 330px);
+	    max-width: -webkit-calc( 100% - 330px);
+		}
+	}
+}
+.product-grid-items.slick-carousel{
+	display: block;
+}
+.product-grid-items:not(.slick-carousel) {
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.product-grid-items .product-grid-item {
+  display: inline-block;
+  zoom: 1;
+  letter-spacing: normal;
+  word-spacing: normal;
+  vertical-align: top;
+  text-rendering: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+}
+
+.block-grid-1 .product-grid-item {
+  width: 100%;
+}
+
+.block-grid-2 .product-grid-item {
+  width: 50%;
+}
+
+.block-grid-3 .product-grid-item {
+  width: 33.33333%;
+}
+
+.block-grid-4 .product-grid-item {
+  width: 25%;
+}
+
+.block-grid-5 .product-grid-item {
+  width: 20%;
+}
+
+.block-grid-6 .product-grid-item {
+  width: 16.66667%;
+}
+
+.block-grid-7 .product-grid-item {
+  width: 14.28571%;
+}
+
+.block-grid-8 .product-grid-item {
+  width: 12.5%;
+}
+
+.block-grid-9 .product-grid-item {
+  width: 11.11111%;
+}
+
+.block-grid-10 .product-grid-item {
+  width: 10%;
+}
+
+@media (max-width: 1700px) {
+  .laptop-block-grid-1 .product-grid-item {
+    width: 100%;
+  }
+  .laptop-block-grid-2 .product-grid-item {
+    width: 50%;
+  }
+  .laptop-block-grid-3 .product-grid-item {
+    width: 33.33333%;
+  }
+  .laptop-block-grid-4 .product-grid-item {
+    width: 25%;
+  }
+  .laptop-block-grid-5 .product-grid-item {
+    width: 20%;
+  }
+  .laptop-block-grid-6 .product-grid-item {
+    width: 16.66667%;
+  }
+  .laptop-block-grid-7 .product-grid-item {
+    width: 14.28571%;
+  }
+  .laptop-block-grid-8 .product-grid-item {
+    width: 12.5%;
+  }
+  .laptop-block-grid-9 .product-grid-item {
+    width: 11.11111%;
+  }
+  .laptop-block-grid-10 .product-grid-item {
+    width: 10%;
+  }
+}
+
+@media (max-width: 1280px) {
+  .tablet-block-grid-1 .product-grid-item {
+    width: 100%;
+  }
+  .tablet-block-grid-2 .product-grid-item {
+    width: 50%;
+  }
+  .tablet-block-grid-3 .product-grid-item {
+    width: 33.33333%;
+  }
+  .tablet-block-grid-4 .product-grid-item {
+    width: 25%;
+  }
+  .tablet-block-grid-5 .product-grid-item {
+    width: 20%;
+  }
+  .tablet-block-grid-6 .product-grid-item {
+    width: 16.66667%;
+  }
+  .tablet-block-grid-7 .product-grid-item {
+    width: 14.28571%;
+  }
+  .tablet-block-grid-8 .product-grid-item {
+    width: 12.5%;
+  }
+  .tablet-block-grid-9 .product-grid-item {
+    width: 11.11111%;
+  }
+  .tablet-block-grid-10 .product-grid-item {
+    width: 10%;
+  }
+}
+
+@media (max-width: 800px) {
+  .mobile-block-grid-1 .product-grid-item {
+    width: 100%;
+  }
+  .mobile-block-grid-2 .product-grid-item {
+    width: 50%;
+  }
+  .mobile-block-grid-3 .product-grid-item {
+    width: 33.33333%;
+  }
+  .mobile-block-grid-4 .product-grid-item {
+    width: 25%;
+  }
+  .mobile-block-grid-5 .product-grid-item {
+    width: 20%;
+  }
+  .mobile-block-grid-6 .product-grid-item {
+    width: 16.66667%;
+  }
+  .mobile-block-grid-7 .product-grid-item {
+    width: 14.28571%;
+  }
+  .mobile-block-grid-8 .product-grid-item {
+    width: 12.5%;
+  }
+  .mobile-block-grid-9 .product-grid-item {
+    width: 11.11111%;
+  }
+  .mobile-block-grid-10 .product-grid-item {
+    width: 10%;
+  }
+}
+
+@media (max-width: 576px) {
+  .xmobile-block-grid-1 .product-grid-item {
+    width: 100%;
+  }
+  .xmobile-block-grid-2 .product-grid-item {
+    width: 50%;
+  }
+  .xmobile-block-grid-3 .product-grid-item {
+    width: 33.33333%;
+  }
+  .xmobile-block-grid-4 .product-grid-item {
+    width: 25%;
+  }
+  .xmobile-block-grid-5 .product-grid-item {
+    width: 20%;
+  }
+  .xmobile-block-grid-6 .product-grid-item {
+    width: 16.66667%;
+  }
+  .xmobile-block-grid-7 .product-grid-item {
+    width: 14.28571%;
+  }
+  .xmobile-block-grid-8 .product-grid-item {
+    width: 12.5%;
+  }
+  .xmobile-block-grid-9 .product-grid-item {
+    width: 11.11111%;
+  }
+  .xmobile-block-grid-10 .product-grid-item {
+    width: 10%;
+  }
+}

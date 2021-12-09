@@ -1,0 +1,33 @@
+.error404 {
+  section {
+    &.not-found {
+      max-width: rem-calc(500);
+      margin: 0 auto;
+      text-align: center;
+
+      .page-title {
+        padding-top: rem-calc(32);
+
+        h1 {
+          font-size: rem-calc(44);
+          margin-bottom: rem-calc(8);
+          color: v(p404-text-color);
+        }
+        h4 {
+          text-transform: uppercase;
+        }
+      }
+
+      .page-content {
+        color: v(p404-text-color);
+        margin-bottom: rem-calc(40);
+
+        .error-404-description {
+          font-size: rem-calc(16);
+          line-height: rem-calc(24);
+          margin-bottom: rem-calc(48);
+        }
+      }
+    }
+  }
+}

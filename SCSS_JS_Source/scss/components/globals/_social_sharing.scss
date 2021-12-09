@@ -1,0 +1,45 @@
+.social--sharing {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: rem-calc(32);
+    height: rem-calc(32);
+    border: solid 1px v(site-border-color);
+    border-radius: 3px;
+    margin-right: rem-calc(6);
+    &:last-child {
+      margin: 0;
+    }
+    &.facebook {
+      color: #3b5998;
+    }
+    &.twitter {
+      color: #00aced;
+    }
+    &.linkedin {
+      color: #007bb6;
+    }
+    &.tumblr {
+      color: #32506d;
+    }
+    &.pinterest {
+      color: #cb2027;
+    }
+    &.network-line {
+      color: #00c300;
+    }
+    &.vk {
+      color: #45668e;
+    }
+    &.whatsapp {
+      color: #075e54;
+    }
+    &.telegram {
+      color: #0088cc;
+    }
+  }
+}

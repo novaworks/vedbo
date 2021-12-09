@@ -1,0 +1,44 @@
+.woocommerce-info {
+	animation: none;
+	line-height: rem-calc(24);
+}
+
+.woocommerce {
+	form.checkout {
+		margin-top: rem-calc(48);
+		margin-bottom: rem-calc(50);
+		@include breakpoint(large) {
+			margin-bottom: rem-calc(60);
+		}
+
+		&:after {
+			content: "";
+			display: block;
+			clear: both;
+		}
+
+		.col2-set {
+			@include breakpoint(large) {
+				width: 54.5%;
+				float: left;
+				padding-right: rem-calc(65);
+			}
+		}
+
+		#order_review_heading {
+			font-size: rem-calc(14);
+			font-weight: bold;
+			text-transform: uppercase;
+		}
+
+		#order_review_heading,
+		.woocommerce-checkout-review-order {
+			font-family: inherit;
+			@include breakpoint(large) {
+				width: 45.5%;
+				padding-left: rem-calc(60);
+				float: left;
+			}
+		}
+	}
+}

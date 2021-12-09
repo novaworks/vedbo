@@ -1,0 +1,42 @@
+@import "archive/archive_header";
+@import "archive/hero_posts";
+@import "archive/archive_highlighted_posts";
+@import "archive/archive_popular_posts";
+@import "archive/archive_post_animations";
+
+.blog-listing {
+  @import "archive/archive_post_navigation";
+
+  .blog-articles {
+    @import "archive/archive_blog_articles";
+    .post {
+      @import "archive/nova-posts";
+    }
+    .post,
+    .type-page {
+      margin-bottom: rem-calc(40);
+      @include breakpoint(medium) {
+        margin-bottom: rem-calc(64);
+      }
+      @import "archive/archive_post_content";
+      @import "archive/archive_post_more_link";
+
+      &:last-child {
+        //margin-bottom: 0;
+      }
+      &.has-post-thumbnail {
+        @include breakpoint( large  ) {
+          margin-bottom: rem-calc(64);
+        }
+      }
+    }
+  }
+}
+.no-results {
+  margin-bottom: rem-calc(24);
+}
+@import "archive/blog_style_1";
+@import "archive/blog_style_2";
+@import "archive/blog_style_3";
+@import "archive/blog_style_4";
+@import "archive/blog_style_5";

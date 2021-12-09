@@ -1,0 +1,49 @@
+.entry-footer {
+  display: block;
+  > .display-flex {
+    align-items: center;
+    width: 100%;
+  }
+  .entry-tags {
+  }
+  .nova-sharing-single-posts {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+  .social--sharing {
+    justify-content: flex-start;
+    a {
+      color: #fff !important;
+      border: 0;
+      border-radius: 50%;
+      &.facebook {
+        background-color: #3b5998;
+      }
+      &.twitter {
+        background-color: #00aced;
+      }
+      &.linkedin {
+        background-color: #007bb6;
+      }
+      &.tumblr {
+        background-color: #32506d;
+      }
+      &.pinterest {
+        background-color: #cb2027;
+      }
+      &.network-line {
+        background-color: #00c300;
+      }
+      &.vk {
+        background-color: #45668e;
+      }
+      &.whatsapp {
+        background-color: #075e54;
+      }
+      &.telegram {
+        background-color: #0088cc;
+      }
+    }
+  }
+}

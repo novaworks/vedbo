@@ -1,0 +1,113 @@
+.nova-login-wrapper {
+  h2.page-title {
+    font-size: rem-calc(28);
+  }
+  .woocommerce-form-row {
+    margin-bottom: rem-calc(24);
+  }
+  .form-row {
+    margin-bottom: 0;
+    input {
+      margin-bottom: rem-calc(20);
+    }
+  }
+  .form-actions {
+    display: flex;
+    flex-direction: column;
+    &.extra {
+      flex-direction: row;
+      justify-content: center;
+      font-size: rem-calc(14);
+      a {
+        position: relative;
+        margin-left: rem-calc(5);
+        &:before {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 1px;
+          background-color: v(site-link-color);
+        }
+      }
+    }
+    .woocommerce-LostPassword {
+      margin-top: rem-calc(10);
+      a {
+        position: relative;
+        font-size: rem-calc(14);
+        padding-bottom: rem-calc(2);
+        &:before {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 1px;
+          background-color: v(site-link-color);
+        }
+      }
+    }
+  }
+  .woocommerce-privacy-policy-text {
+    p {
+      font-size: rem-calc(12) !important;
+    }
+    a {
+      text-decoration: underline;
+    }
+  }
+  &.no_popup {
+    .form-actions.extra {
+      display: none;
+    }
+  }
+  &.is_popup {
+    h2.page-title {
+      font-size: rem-calc(20);
+      text-transform: uppercase;
+      margin-bottom: rem-calc(40);
+    }
+    p {
+      font-size: rem-calc(14);
+    }
+    button {
+      width: 100%;
+    }
+    #nova-login-form,
+    #nova-register-form {
+      animation: login-anim .48s ease-in-out;
+    }
+    #nova-register-form {
+      display: none;
+      opacity: 0;
+      .form-actions.extra {
+        margin-top: rem-calc(24);
+      }
+    }
+    .register-box-active {
+      #nova-login-form {
+        display: none;
+        opacity: 0;
+      }
+      #nova-register-form {
+        display: block;
+        opacity: 1;
+      }
+    }
+  }
+}
+@keyframes login-anim {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  1% {
+    display: block;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

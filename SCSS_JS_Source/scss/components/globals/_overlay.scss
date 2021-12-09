@@ -1,0 +1,16 @@
+.nova-overlay-global {
+  position: fixed;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  background: #000;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 9;
+}
+
+.open-overlay .nova-overlay-global {
+  visibility: visible;
+  opacity: 0.8;
+}

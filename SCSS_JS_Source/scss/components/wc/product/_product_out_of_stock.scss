@@ -1,0 +1,7 @@
+.stock {
+  @include out_of_stock_single_product();
+  font-size: rem-calc(16);
+  &.in-stock {
+    background-color: #01841D;
+  }
+}

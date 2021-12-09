@@ -1,0 +1,12 @@
+.brands-wrap {
+	.brands-list {
+		.brands-list__item {
+			a {
+				display: block;
+				&:hover {
+					opacity: 0.5;
+				}
+			}
+		}
+	}
+}

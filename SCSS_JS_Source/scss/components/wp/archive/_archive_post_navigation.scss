@@ -1,0 +1,48 @@
+.posts-navigation {
+  padding-top: rem-calc(24);
+  border-top: 1px solid;
+  border-color: v(site-border-color);
+
+  .nav-links {
+    font-size: rem-calc(11);
+    line-height: rem-calc(11);
+    display: flex;
+    align-items: center;
+
+    .nav-next,
+    .nav-previous {
+      a {
+        padding: 0;
+        text-transform: uppercase;
+        display: flex;
+        align-content: center;
+      }
+    }
+
+    .nav-previous {
+      a {
+        &:before {
+          @include nova_icon('\ea11');
+          font-size: rem-calc(8);
+          line-height: 1.3;
+          margin-right: rem-calc(8);
+        }
+      }
+    }
+
+    .nav-next {
+      a {
+        &:after {
+          @include nova_icon('\ea04');
+          font-size: rem-calc(8);
+          line-height: 1.3;
+          margin-left: rem-calc(8);
+        }
+      }
+    }
+
+    .nav-next {
+      margin-left: auto;
+    }
+  }
+}

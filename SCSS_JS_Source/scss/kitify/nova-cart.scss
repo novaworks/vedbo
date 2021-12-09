@@ -1,0 +1,21 @@
+@import '../../_vendor/foundation/scss/foundation';
+.kitify-nova-cart {
+  padding: rem-calc(16);
+  .header-cart-box {
+    position: relative;
+    .count-badge {
+      position: absolute;
+      top: -15px;
+      right: -19px;
+      width: 20px;
+      height: 20px;
+      line-height: 20px;
+      border-radius: 50%;
+      text-align: center;
+      font-size: rem-calc(12);
+      font-weight: 500;
+      color: #FFF;
+      background-color: var(--site-accent-color);
+    }
+  }
+}

@@ -1,0 +1,92 @@
+.button,
+button,
+input[type="submit"] {
+  @include button;
+  @include global_transition;
+  background-color: v(site-primary-button-color);
+  border-width: 1px;
+  text-transform: capitalize;
+  font-family: inherit;
+  user-select: none;
+  font-size: map-get($button-sizes, default);
+  font-weight: 600;
+  color: #fff;
+  text-transform: capitalize;
+  &:hover {
+    background-color: v(site-secondary-button-color);
+  }
+
+  &.tiny {
+    border-width: 1px;
+  }
+
+  &.small,
+  &.tiny {
+    padding: rem-calc(8) rem-calc(16);
+  }
+
+  &.large {
+    padding: rem-calc(20) rem-calc(48);
+  }
+
+  &.hollow {
+    border-width: 2px;
+  }
+  &.rounded {
+    border-radius: rem-calc(50);
+  }
+  &.bordered {
+    background-color: transparent;
+    border: solid 1px;
+    border-color: rgba(255,255,255,0.5);
+    &:hover {
+      background-color: v(site-secondary-button-color);
+      border-color: transparent;
+    }
+    &.dark {
+      border-color: rgba(0,0,0,0.2);
+      color: v(site-heading-color);
+      &:hover {
+        color: white;
+        border-color: transparent;
+      }
+    }
+  }
+  &.special_hover {
+    &:hover {
+      @include button_pattent();
+    }
+  }
+  &:focus {
+    outline: none;
+  }
+}
+.custom-line-button {
+  a {
+    position: relative;
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: calc(50% - 30px);
+      width: rem-calc(60);
+      height: 1px;
+      background: v(site-accent-color);
+      @include global_transition();
+    }
+    &:hover {
+      &:after {
+        left: 0;
+        width: 100%;
+      }
+    }
+  }
+}
+.link-animation-icon,
+.elementor-button {
+  &:hover {
+    i  {
+      animation:hoverBtn ease-out .3s;
+    }
+  }
+}

@@ -1,0 +1,109 @@
+.woocommerce {
+  // Read-Only Stars
+  .star-rating,
+  .wc-block-grid__product-rating__stars
+  {
+      @include nova_icon('\ea03\ea03\ea03\ea03\ea03');
+      display: inline-block;
+      overflow: hidden;
+      position: relative;
+      height: 1em;
+      line-height: 1;
+      font-size: rem-calc(14);
+      width: 5em;
+      margin-right: rem-calc(1);
+
+      &:before
+      {
+          content: "\ea03\ea03\ea03\ea03\ea03";
+          position: absolute;
+          top: 0;
+          left: 0;
+          color: v(site-border-color);
+
+      }
+
+      span
+      {
+          overflow: hidden;
+          position: absolute;
+          top: 0;
+          left: 0;
+          padding-top: 1.5em;
+
+          &:before
+          {
+              content: "\ea03\ea03\ea03\ea03\ea03";
+              position: absolute;
+              top: 0;
+              left: 0;
+              color: $active-star-color;
+          }
+      }
+  }
+  // Clickable Stars
+  p.stars
+  {
+    display: inline-block;
+      font-size: rem-calc(30);
+      margin-bottom: 0;
+
+    span
+      {
+          display: block;
+          line-height: 1;
+      }
+
+      a
+      {
+          position: relative;
+          height: 1em;
+          width: 1em;
+          text-indent: -999em;
+          display: inline-block;
+          text-decoration: none;
+          transition: none;
+          border-bottom: none;
+
+          &:before
+          {
+              @include nova_icon('\ea03');
+              display: block;
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 1em;
+              height: 1em;
+              color: v(site-border-color);
+              line-height: 1;
+              text-indent: 0;
+              transition: all 0.3s ease;
+          }
+          &:hover~a:before {
+            color: v(site-border-color);
+          }
+      }
+      &:hover {
+        a:before {
+          color: $active-star-color;
+        }
+      }
+      &.selected {
+        a {
+          &.active {
+            &:before {
+              color: $active-star-color;
+            }
+          }
+        }
+        a:not(.active) {
+          &:before {
+            color: $active-star-color;
+          }
+        }
+        a.active~a:before {
+          color: v(site-border-color);
+        }
+      }
+  }
+}

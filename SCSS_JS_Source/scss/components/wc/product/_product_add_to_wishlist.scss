@@ -1,0 +1,142 @@
+.yith-wcwl-add-button {
+  text-align: left;
+  line-height: rem-calc(23);
+  @include breakpoint(medium down) {
+    display: inline-block;
+  }
+  span {
+    display: none;
+    @include breakpoint(medium down) {
+      display: inline-block;
+    }
+  }
+}
+.yith-wcwl-wishlistexistsbrowse {
+  text-align: left;
+  margin-bottom: rem-calc(15);
+}
+.yith-wcwl-add-to-wishlist .feedback {
+  font-size: 0;
+}
+.yith-wcwl-add-to-wishlist .feedback .yith-wcwl-icon {
+  color: #FF0201;
+  font-size: rem-calc(24);
+  @include breakpoint(medium down) {
+    font-size: rem-calc(16);
+  }
+}
+.cart .yith-wcwl-add-to-wishlist {
+  display: none;
+  @include breakpoint(small only) {
+    display: none;
+  }
+  @include breakpoint(large only) {
+    display: none;
+  }
+  padding: 10px 25px;
+  margin: 0 0 0 rem-calc(20);
+  border: solid 2px v(site-border-color);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.yith-wcwl-add-to-wishlist {
+  display: inline-block;
+  float: right;
+	font-size: rem-calc(12);
+  margin: 0;
+	.yith-wcwl-add-button {
+		&.show {
+			> img {
+				display: none !important;
+			}
+
+			.add_to_wishlist {
+				font-size: rem-calc(12);
+				line-height: rem-calc(16);
+				display: flex;
+				align-items: center;
+
+				&:before {
+					@include nova_icon('\ea21');
+					margin-right: rem-calc(5);
+					font-size: rem-calc(16);
+					display: inline-block;
+				}
+			}
+
+			&.loading {
+				.add_to_wishlist {
+					@include loader();
+
+					&:before {
+						border-top: 1px solid;
+					}
+				}
+			}
+		}
+	}
+
+	.yith-wcwl-wishlistaddedbrowse {
+		display: flex;
+		align-items: center;
+
+		&.show {
+			.feedback {
+				display: inline-flex;
+				align-items: center;
+				@include breakpoint(small only) {
+					justify-content: center;
+				}
+
+				&:before {
+					@include nova_icon('\ea22');
+					margin-right: rem-calc(5);
+					font-size: rem-calc(16);
+					display: inline-block;
+					color: v(site-accent-color);
+				}
+			}
+
+			a {
+				display: inline-block;
+				vertical-align: top;
+			}
+		}
+	}
+
+	.yith-wcwl-wishlistexistsbrowse {
+		.feedback {
+			font-size: 0;
+			i {
+				font-size: rem-calc(16);
+			}
+		}
+		&.show {
+			display: flex !important;
+
+			.feedback {
+				display: flex;
+				font-size: 0;
+				@include breakpoint(small only) {
+					justify-content: center;
+				}
+
+				&:before {
+					@include nova_icon('\ea22');
+					font-size: rem-calc(16);
+					display: inline-block;
+					color: v(site-accent-color);
+				}
+
+				& + a {
+					display: block;
+					padding-left: rem-calc(6);
+				}
+			}
+		}
+	}
+}
+.yith-wcwl-add-button>a i {
+  font-size: rem-calc(16);
+  margin-right: 0;
+}

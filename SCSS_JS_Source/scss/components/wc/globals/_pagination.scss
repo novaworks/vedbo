@@ -1,0 +1,109 @@
+.woocommerce-pagination {
+  text-align: center;
+  font-size: rem-calc(13);
+
+  body.shop-pagination-infinite_scroll &,
+  body.shop-pagination-load_more_button & {
+    display: none;
+  }
+
+  > ul {
+    list-style: none;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+    margin-right: rem-calc(12);
+
+    .page-numbers {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: v(site-heading-color);
+      border: solid 2px v(site-border-color);
+      width:40px;
+      height: 40px;
+
+      &.current {
+        background-color: v(site-heading-color);
+        border-color: v(site-heading-color);
+        color: $content-background;
+      }
+    }
+  }
+
+  .next,
+  .prev {
+    font-size: 0;
+  }
+
+  .prev:before {
+    @include nova_icon('\ea11');
+    font-size: rem-calc(10);
+  }
+
+  .next:after {
+    @include nova_icon('\ea04');
+    font-size: rem-calc(10);
+  }
+}
+
+.products_ajax_button {
+  text-align: center;
+  font-size: rem-calc(14);
+  font-weight: 600;
+  clear: both;
+  margin: rem-calc(24) auto;
+  padding: rem-calc(20) rem-calc(60);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  color: v(site-heading-color);
+  border: solid 1px v(site-accent-color);
+  text-transform: capitalize;
+  @include global-transition();
+  > span {
+    font-size: rem-calc(14);
+  }
+  .shop-pagination-infinite_scroll & {
+    &:before {
+      content: none;
+    }
+  }
+
+  &.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    overflow: hidden;
+    filter: contrast(5);
+    background-color: white;
+
+    &:before {
+      display: none;
+    }
+
+    span {
+      @include shuttle_loader();
+    }
+  }
+
+  &.disabled {
+    display: none !important;
+    cursor: default;
+    > span {
+      display: none;
+    }
+    &:before {
+      @include nova_icon('\ea17');
+      font-size: rem-calc(32);
+      color: v(site-text-color);
+    }
+  }
+}

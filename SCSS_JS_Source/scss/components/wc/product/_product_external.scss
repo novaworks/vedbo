@@ -1,0 +1,17 @@
+&.product-type-external {
+  .woocommerce-product-details__add-to-cart {
+    margin-bottom: rem-calc(24);
+  }
+
+  p.cart {
+    a.button {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: rem-calc(18);
+      color: #fff;
+      text-transform: uppercase;
+    }
+  }
+}

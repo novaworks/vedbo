@@ -1,0 +1,53 @@
+.author-info {
+  display: flex;
+  align-items: center;
+  border: solid 1px;
+  padding: rem-calc(30);
+  margin-top: rem-calc(34);
+
+  .author-vcard {
+    width: rem-calc(128);
+    margin-right: rem-calc(24);
+    text-align: center;
+
+    .author-avatar {
+      display: block;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-bottom: rem-calc(5);
+    }
+
+    .author-socials {
+      display: flex;
+      justify-content: center;
+
+      > a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: rem-calc(12);
+        width: rem-calc(25);
+        height: rem-calc(25);
+        margin: rem-calc(5);
+        border: solid 1px;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  .author-description {
+    width: 90%;
+    font-size: rem-calc(14);
+    line-height: rem-calc(26);
+
+    .author-name {
+      a {
+        font-size: rem-calc(16);
+        font-weight: 500;
+        color: v(site-heading-color);
+        text-transform: uppercase;
+        margin-bottom: rem-calc(20);
+      }
+    }
+  }
+}

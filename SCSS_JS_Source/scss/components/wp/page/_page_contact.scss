@@ -1,0 +1,62 @@
+.wpcf7 {
+.select2 {
+  text-align: left;
+}
+}
+.contact_form_light {
+  color: #fff;
+  .vc_column-inner {
+    padding-top: 0;
+  }
+  .wpcf7 {
+    max-width: rem-calc(500);
+    margin: 5% auto;
+    text-align: center;
+    h1 {
+      font-size: rem-calc(45);
+      color: #FFF;
+      margin-bottom: rem-calc(30);
+      text-align: center;
+    }
+    textarea,
+    input:not([type="submit"]) {
+      font-size: rem-calc(14);
+      color: #FFF;
+      padding-left: 0;
+      padding-right: 0;
+      border:0;
+      border-bottom: solid 1px;
+      border-color: rgba(255,255,255, 0.5);
+      &::placeholder {
+        color: #fff;
+      }
+      &:focus {
+        border-color: rgba(255,255,255, 1);
+      }
+    }
+    .select2 .select2-selection.select2_no_border {
+      padding: 0;
+      border-bottom-color: rgba(255,255,255, 0.5);
+    }
+    .select2-container--default .select2-selection--single .select2-selection__placeholder {
+      color: rgba(255,255,255, 1);
+    }
+    input.wpcf7-form-control.wpcf7-submit {
+      background-color: #fff;
+      color: v(site-heading-color);
+      width: inherit;
+      font-size: rem-calc(14);
+      padding: rem-calc(35) rem-calc(120);
+      margin: rem-calc(30) auto 0;
+      &:hover {
+        background-color: v(site-heading-color);
+        color: #FFF;
+      }
+    }
+  }
+}
+.contact_page_store {
+  .vc_column-inner {
+    padding-top: 0 !important;
+  }
+}

@@ -1,0 +1,40 @@
+.nova-countdown-timer {
+
+	.nova-countdown-timer__item {
+		margin: 10px;
+	}
+
+	.nova-countdown-timer__item-value {
+		font-size: 23px;
+	}
+
+	.nova-countdown-timer__item-label {
+		font-size: 13px;
+	}
+}
+.nova-countdown-timer {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+
+	&__item {
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: center;
+		align-items: stretch;
+		text-align: center;
+		margin: 5px;
+	}
+
+	&__separator {
+		display: none;
+		* + & {
+			display: block;
+		}
+	}
+
+	&__digit {
+		display: inline-block;
+	}
+}

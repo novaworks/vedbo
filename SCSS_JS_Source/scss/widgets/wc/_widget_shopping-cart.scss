@@ -1,0 +1,190 @@
+@mixin widget_shopping_cart {
+  font-size: rem-calc(13);
+  color: v(dropdown-text-color);
+  padding-bottom: 0;
+  border-bottom: 0;
+
+  .woocommerce-mini-cart__empty-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: rem-calc(18);
+
+    &:before {
+      background: v(site-border-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include nova_icon('\ea28');
+      font-size: rem-calc(24);
+      margin-right: rem-calc(8);
+      width: rem-calc(70);
+      height: rem-calc(70);
+      margin-bottom: rem-calc(15);
+      border-radius: 50%;
+    }
+  }
+
+  ul.woocommerce-mini-cart {
+    min-height: 60vh;
+    max-height: 60vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    @include breakpoint(large down)
+    {
+      min-height: 40vh;
+      max-height: 40vh;
+    }
+
+    &::-webkit-scrollbar {
+      width: 2px;
+    }
+
+    li.mini_cart_item {
+      display: block;
+      width: 100%;
+      padding-bottom: rem-calc(16);
+      border-bottom: solid 1px v(site-border-color);
+      &:last-child {
+        border: none;
+      }
+      &:hover {
+        a {
+          &.remove {
+            right: 15px;
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+      }
+
+      a {
+        font-size: rem-calc(14);
+        padding: 0;
+        &:not(.remove) {
+          white-space: inherit;
+          padding-right: rem-calc(30);
+          line-height: rem-calc(18);
+          margin-bottom: 3px;
+
+          &:hover {
+            opacity: 1;
+          }
+        }
+
+        &.remove {
+          opacity: 0;
+          visibility: hidden;
+          position: absolute;
+          top: 3px;
+          right: 0;
+          font-size: 0;
+          z-index: 99;
+          @include global-transition();
+
+          &:after {
+            @include nova_icon('\ea1d');
+            font-size: rem-calc(14);
+          }
+        }
+      }
+
+      .variation {
+        display: block;
+        float: left;
+        margin-top: 3px;
+        width: 100%;
+        margin-bottom: 5px;
+        font-size: rem-calc(12);
+
+        dd,
+        dl,
+        dt {
+          margin-bottom: 0;
+          line-height: rem-calc(18);
+        }
+
+        dd {
+          float: left;
+
+          > p {
+            margin-bottom: 0;
+            line-height: rem-calc(18);
+          }
+        }
+
+        dt {
+          margin-top: 0;
+          margin-right: 5px;
+          font-weight: normal;
+          float: left;
+          clear: both;
+        }
+      }
+
+      span.quantity {
+        display: block;
+        float: left;
+        margin-bottom: 3px;
+      }
+    }
+  }
+
+  .woocommerce-mini-cart__total.total {
+    font-size: rem-calc(16);
+    line-height: rem-calc(19);
+    padding: rem-calc(24) 0;
+    border-bottom: 1px solid;
+    border-color: v(dropdown-border-color);
+    margin-bottom: rem-calc(24);
+    strong {
+      text-transform: uppercase;
+    }
+    .woocommerce-Price-amount {
+      float: right;
+      font-weight: bold;
+    }
+  }
+
+  .woocommerce-mini-cart__buttons.buttons {
+    padding: 0;
+    display: flex;
+    text-align: center;
+    margin: 0;
+
+    .button {
+      flex: 1;
+      background-color: v(site-primary-button-color);
+      padding: rem-calc(15) rem-calc(45);
+      margin-bottom: rem-calc(16);
+      font-size: rem-calc(12);
+      text-transform: uppercase;
+      letter-spacing: 1.38px;
+      border-width: 1px;
+
+      &:hover {
+        background-color: v(site-secondary-button-color);
+      }
+      &.checkout {
+        margin-left: rem-calc(12);
+      }
+      &:not(.checkout) {
+        display: inline-block;
+        background: transparent;
+        color: v(site-heading-color);
+        border: solid 1px v(site-text-color);
+        margin-right: rem-calc(12);
+
+        &:hover {
+          background-color: v(site-primary-button-color);
+          border-color: transparent;
+          color: #fff;
+        }
+      }
+    }
+
+    .wcppec-cart-widget-button {
+      margin-bottom: rem-calc(16);
+    }
+  }
+}

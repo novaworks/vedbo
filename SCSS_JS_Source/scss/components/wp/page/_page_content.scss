@@ -1,0 +1,24 @@
+.entry-content {
+  .page-links {
+    display: flex;
+    align-items: center;
+    clear: both;
+    padding-top: rem-calc(40);
+    .post-page-numbers {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--site-heading-color);
+      border: solid 2px var(--site-border-color);
+      width: 40px;
+      height: 40px;
+      font-size: rem-calc(13);
+      margin-left: rem-calc(12);
+      &.current {
+        color: #fff;
+        border-color: var(--site-heading-color);
+        background-color: var(--site-heading-color);
+      }
+    }
+  }
+}

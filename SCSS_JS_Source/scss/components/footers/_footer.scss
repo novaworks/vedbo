@@ -1,0 +1,49 @@
+@import "prefooter";
+@import "footer-support";
+
+.site-footer {
+  font-size: rem-calc(14);
+  position: relative;
+  @import "footer-mixins";
+  @import "footer-type-1";
+
+  .footer-content {
+    @each $breakpoint, $padding in $content-padding {
+      @include breakpoint($breakpoint) {
+        padding-left: rem-calc($padding);
+        padding-right: rem-calc($padding);
+      }
+    }
+    @include large_side_paddings;
+    padding-top: rem-calc(40);
+    padding-bottom: rem-calc(40);
+    @include breakpoint(large) {
+      padding-top: rem-calc(80);
+      padding-bottom: rem-calc(80);
+    }
+  }
+}
+.nova-footer-builder {
+  h5 {
+    font-size: 18px;
+    font-weight: 600;
+  }
+  ul {
+    margin-left: 0;
+    li {
+      list-style: none;
+    }
+  }
+  .dark {
+    color: #fff;
+    h5 {
+      color: #fff;
+    }
+    a {
+      color: #E7E6E6;
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+}

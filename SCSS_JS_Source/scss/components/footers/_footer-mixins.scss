@@ -1,0 +1,153 @@
+@mixin footer-navigation() {
+	font-size: rem-calc(12);
+
+	.navigation-foundation {
+		display: inline-block;
+		margin: 0 auto;
+
+		> ul {
+			> li {
+				> a {
+					color: v(site-footer-heading-color);
+					padding: 0 1em;
+
+					> span {
+						padding: 0.5em 0;
+					}
+				}
+
+				> ul {
+					text-align: left !important;
+				}
+			}
+		}
+
+		.is-submenu-item a {
+			opacity: 1;
+		}
+
+		&:hover {
+			> ul {
+				> li {
+					> a {
+						opacity: 0.5;
+					}
+				}
+			}
+		}
+	}
+}
+@mixin footer-widgets() {
+	padding: 0;
+	border: none;
+	ul {
+		li {
+			padding: 0;
+			border: none;
+		}
+	}
+}
+@mixin footer-socials() {
+	text-align: center;
+
+	a {
+		margin-left: 20px;
+	}
+
+	img {
+		max-height: 32px;
+	}
+}
+@mixin footer-payment-method {
+	text-align: center;
+
+	img {
+		max-height: 32px;
+		padding-left: 20px;
+	}
+}
+@mixin footer-widget-area() {
+	.nova-footer__widgets {
+		.widget {
+			@include footer-widgets();
+			&:last-child {
+				@include breakpoint(large) {
+					margin-bottom: 0;
+				}
+			}
+		}
+		.widget li a {
+			color: v(site-footer-heading-color);
+			&:hover {
+				color: v(site-footer-heading-color);
+			}
+		}
+		.widget_yikes_easy_mc_widget {
+			position: relative;
+			max-width: rem-calc(500);
+			width: 100%;
+			margin: 0 auto;
+
+			label {
+				padding: 0;
+				margin: 0;
+			}
+
+			.edit-link {
+				display: none;
+			}
+		}
+
+		.yikes-easy-mc-form input[type=email],
+		.yikes-easy-mc-form input[type=number],
+		.yikes-easy-mc-form input[type=text],
+		.yikes-easy-mc-form input[type=url],
+		.yikes-easy-mc-form select {
+			background-color: transparent;
+			border-top: 0;
+			border-left: 0;
+			border-right: 0;
+			border-bottom: 1px solid;
+			border-color: v(site-footer-border-color);
+			padding: 0;
+			margin: 0;
+			outline: 0;
+		}
+
+		.yikes-easy-mc-form input[type=email]:focus,
+		.yikes-easy-mc-form input[type=number]:focus,
+		.yikes-easy-mc-form input[type=text]:focus,
+		.yikes-easy-mc-form input[type=url]:focus,
+		.yikes-easy-mc-form select:focus {
+			background-color: transparent;
+			border-top: 0;
+			border-left: 0;
+			border-right: 0;
+			border-bottom: 1px solid;
+			border-color: v(site-footer-heading-color);
+			box-shadow: none;
+		}
+
+		.yikes-easy-mc-submit-button {
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 40px;
+			height: 50px;
+			text-align: right;
+			padding: 0;
+			margin: 0;
+			background-color: transparent;
+
+			.yikes-mailchimp-submit-button-span-text {
+				font-size: 0;
+
+				&:after {
+					@include nova_icon('\ea25');
+					color: v(site-footer-heading-color);
+					font-size: 18px;
+				}
+			}
+		}
+	}
+}

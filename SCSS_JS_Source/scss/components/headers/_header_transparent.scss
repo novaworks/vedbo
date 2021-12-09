@@ -1,0 +1,38 @@
+.header-transparent {
+	position: absolute;
+	width: 100%;
+	margin-top: -1px;
+	z-index: 9;
+	box-shadow: 0 0 0 0;
+	@include global_transition;
+	&:not(.headroom--not-top):not(:hover) {
+			background-color: transparent !important;
+			@include global_transition;
+	}
+	&.transparency_light {
+		&:not(.headroom--not-top):not(:hover) {
+			.nova-header__branding {
+				.logo-dark {
+					display: none;
+				}
+				.logo-light {
+					display: block;
+				}
+			}
+			.site-title {
+				a {
+					color: #FFF;
+				}
+			}
+			.nova-header__navigation .navigation-foundation > ul > li > a {
+				color: #fff;
+			}
+			.nova-header__navigation .main-navigation > ul > li > a {
+				color: #fff;
+			}
+			.nova-header__right-action .actions li > a {
+				color: #fff;
+			}
+		}
+	}
+}

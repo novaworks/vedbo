@@ -1,0 +1,10 @@
+body.admin-bar {
+  .nova-product-filter-content {
+    @include breakpoint (783px up) {
+      top: 32px !important;
+    }
+    @include breakpoint(992px down) {
+      top: 46px !important;
+    }
+  }
+}
