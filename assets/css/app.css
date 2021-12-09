@@ -26305,6 +26305,8 @@ ul.products .product-category {
         padding-left: 0.75rem; }
     .widget li a {
       color: inherit; }
+      .widget li a:hover {
+        color: var(--site-link-hover-color); }
     .widget li ul li:last-child {
       padding-bottom: 0; }
   .widget_archive .screen-reader-text {

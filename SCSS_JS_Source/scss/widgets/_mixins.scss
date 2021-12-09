@@ -82,6 +82,9 @@ $links_list_item_margin_vertical: rem-calc(13) !default;
 
     a {
       color: inherit;
+      &:hover {
+        color: v(site-link-hover-color);
+      }
     }
 
     ul {
