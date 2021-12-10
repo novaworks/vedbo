@@ -23,6 +23,8 @@ ul.products {
         z-index: 1;
         overflow: visible;
       }
+      // Include Badges
+      @include shop_product_badges(0, 0);
       .product-item-footer {
         position: absolute;
         width: 100%;
@@ -56,7 +58,7 @@ ul.products {
            text-transform: none;
          }
          .star-rating {
-           margin: 0 auto;
+           margin: rem-calc(10) auto 0 auto;
          }
       }
       .product-item-hover {

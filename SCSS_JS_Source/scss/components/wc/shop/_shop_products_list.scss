@@ -25,8 +25,10 @@ body ul.products.product-list-display {
           .info-left {
             text-align: left !important;
             a.title .woocommerce-loop-product__title {
-              font-size: rem-calc(18);
-              font-weight: 600 !important;
+              @include breakpoint(medium up) {
+                font-size: rem-calc(18) !important;
+                font-weight: 600 !important;
+              }
             }
           }
           .info-right {
@@ -41,8 +43,14 @@ body ul.products.product-list-display {
               }
             }
           }
+          .star-rating{
+            margin-left: 0 !important;
+          }
         }
       }
+    }
+    .product-item-hover {
+      display: none;
     }
   }
 }
