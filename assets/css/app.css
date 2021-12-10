@@ -20827,15 +20827,6 @@ ul.products {
           z-index: 12;
           transition: all 0.3s ease-in-out;
           transform: translate(-50%, 0%); }
-          ul.products .product .product-item .product-item__thumbnail .product-item__description--button .button {
-            opacity: 0;
-            width: 100%;
-            padding: 0.875rem;
-            border-radius: 3px;
-            transform: translate3d(0, 15px, 0);
-            transition: all 0.3s ease-in-out; }
-          ul.products .product .product-item .product-item__thumbnail .product-item__description--button .added_to_cart {
-            display: none; }
       ul.products .product .product-item .nova_product_quick_view_btn,
       ul.products .product .product-item .nova_product_wishlist_btn,
       ul.products .product .product-item .product-item__description--actions .button {
@@ -21017,6 +21008,15 @@ ul.products {
         font-size: 0.6875rem;
         color: inherit;
         text-transform: uppercase; }
+    ul.products .product .product-item__description--button .button {
+      opacity: 1;
+      width: 100%;
+      padding: 0.875rem;
+      border-radius: 3px;
+      transform: translate3d(0, 15px, 0);
+      transition: all 0.3s ease-in-out; }
+    ul.products .product .product-item__description--button .added_to_cart {
+      display: none; }
 
 @media print, screen and (min-width: 64em) {
   body.woocommerce div:not(.kitify-products__list_wrapper) > ul.products.columns-1:not(.product-list-display) > .product {
@@ -21208,13 +21208,30 @@ ul.products.products-grid-2 {
   border-right-width: 0;
   margin: 0 !important; }
   ul.products.products-grid-2 .product {
-    padding: 1.25rem !important;
+    padding: 0 !important;
     border-color: var(--site-border-color);
     border-style: solid;
     border-top-width: 0;
     border-left-width: 0;
     border-bottom-width: 1px;
-    border-right-width: 1px; }
+    border-right-width: 1px;
+    z-index: 10; }
+    ul.products.products-grid-2 .product .product-item {
+      padding: 1.25rem;
+      z-index: 1;
+      overflow: visible; }
+    ul.products.products-grid-2 .product .product-item-footer {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      right: 0;
+      padding: 0 1.25rem 1.25rem 1.25rem;
+      opacity: 0;
+      visibility: hidden;
+      will-change: opacity;
+      -webkit-transition: all 0.2s cubic-bezier(0.28, 0.12, 0.22, 1);
+      transition: all 0.2s cubic-bezier(0.28, 0.12, 0.22, 1);
+      z-index: 1; }
     ul.products.products-grid-2 .product .product-item .product-item__description .product-item__description--info {
       flex-direction: column; }
       ul.products.products-grid-2 .product .product-item .product-item__description .product-item__description--info .info-left {
@@ -21232,10 +21249,27 @@ ul.products.products-grid-2 {
         text-transform: none; }
       ul.products.products-grid-2 .product .product-item .product-item__description .product-item__description--info .star-rating {
         margin: 0 auto; }
+    ul.products.products-grid-2 .product .product-item-hover {
+      position: absolute;
+      top: -1px;
+      left: -1px;
+      right: -1px;
+      bottom: -1px;
+      background-color: #fff;
+      border: 1px solid var(--site-border-color);
+      opacity: 0;
+      box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+      pointer-events: none;
+      will-change: opacity;
+      -webkit-transition: all 0.2s cubic-bezier(0.17, 0.62, 0.44, 0.99);
+      transition: all 0.2s cubic-bezier(0.17, 0.62, 0.44, 0.99); }
     ul.products.products-grid-2 .product:hover {
-      box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1); }
-      ul.products.products-grid-2 .product:hover .product-item {
-        transform: translateY(-5px) translateZ(0); }
+      z-index: 11; }
+      ul.products.products-grid-2 .product:hover .product-item-footer {
+        opacity: 1;
+        visibility: visible; }
+      ul.products.products-grid-2 .product:hover .product-item-hover {
+        opacity: 1; }
 
 body.woo-variation-swatches.wvs-style-squared .variable-items-wrapper .variable-item {
   border-radius: 0; }

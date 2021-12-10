@@ -524,4 +524,28 @@ $('.widget .widget-title').click(function(e){
 		$(this).toggleClass('close');
 		$(this).next('div,ul').slideToggle();
 });
+//===============================================================
+// Product Hover
+//===============================================================
+window.product_borderd_hover = function() {
+	var borderd_product = $( '.products.products-grid-2 .product' );
+	borderd_product.each( function(e) {
+		var fadeBlock = $(this).find( '.product-item-footer' );
+		var contentBlock = $(this).find( '.product-item-hover' );
+		var outerHeight = 0;
+
+		const parent = contentBlock.closest( '.product' );
+
+		parent.addClass( 'custom-hover' );
+
+		if ( fadeBlock.length ) {
+			fadeBlock.each( function(e) {
+				var self = $(this);
+				outerHeight += self.outerHeight();
+
+				contentBlock.css( 'marginBottom', -outerHeight );
+			});
+		}
+	});
+}
 })(jQuery);

@@ -119,17 +119,6 @@ ul.products {
            z-index: 12;
            @include global_transition;
            transform: translate(-50%, 0%);
-           .button {
-             opacity: 0;
-             width: 100%;
-             padding: rem-calc(14);
-             border-radius: 3px;
-             transform: translate3d(0, 15px, 0);
-             transition: all 0.3s ease-in-out;
-           }
-           .added_to_cart {
-             display: none;
-           }
         }
 
       }
@@ -344,6 +333,20 @@ ul.products {
           text-transform: uppercase;
         }
       }
+    }
+    .product-item__description--button {
+
+       .button {
+         opacity: 1;
+         width: 100%;
+         padding: rem-calc(14);
+         border-radius: 3px;
+         transform: translate3d(0, 15px, 0);
+         transition: all 0.3s ease-in-out;
+       }
+       .added_to_cart {
+         display: none;
+       }
     }
   }
 }
