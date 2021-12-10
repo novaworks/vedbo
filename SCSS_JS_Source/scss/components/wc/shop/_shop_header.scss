@@ -215,27 +215,16 @@
 
         .shop-display-grid,
         .shop-display-list {
-          background: #F6F6F6;
           display: flex;
           align-items: center;
           cursor: pointer;
           border-right: 1px solid;
           border-color: v(site-border-color);
-          @include form_items_sizes();
           @include global-transition();
-          font-size: inherit;
-          border-radius: 3px;
-          @include breakpoint(large) {
-            padding: 0 rem-calc(15);
-            border: 0;
-          }
-          @include breakpoint(small) {
-            padding: 0 rem-calc(5);
-          }
+
 
           &.active {
-            background: v(site-secondary-button-color);
-            color: #fff;
+            color: v(site-secondary-button-color);
           }
 
           svg.vedbo-grid-icon {
@@ -244,7 +233,7 @@
           }
 
           svg.vedbo-list-icon {
-            width: 21px;
+            width: 20px;
             height: 20px;
           }
         }

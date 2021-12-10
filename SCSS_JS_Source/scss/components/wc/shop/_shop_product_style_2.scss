@@ -7,9 +7,9 @@ ul.products {
     border-bottom-width: 0;
     border-right-width: 0;
     margin: 0 !important;
-    
+
     .product {
-      padding: rem-calc(15);
+      padding: rem-calc(30) !important;
       border-color: v(site-border-color);
       border-style: solid;
       border-top-width: 0;
@@ -26,10 +26,17 @@ ul.products {
         .info-right {
           width: 100%;
           text-align: center;
+          .price {
+            font-size: rem-calc(18);
+          }
         }
          a.title .woocommerce-loop-product__title {
-           font-weight: 400;
+           font-size: rem-calc(14);
+           font-weight: 500;
            text-transform: none;
+         }
+         .star-rating {
+           margin: 0 auto;
          }
       }
       &:hover {

@@ -12,9 +12,6 @@
 		setTimeout(function() {
 			$('#side-filters').toggleClass('opened-opacity');
 		}, 100);
-		// $('#side-filters').toggle(100, function() {
-		// 	$('#side-filters').toggleClass('opened');
-		// });
 	});
 
 })(jQuery);

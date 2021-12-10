@@ -8,7 +8,7 @@
 
 	var shop_display_grid_btn 	= $('.shop-display-type .shop-display-grid');
 	var shop_display_list_btn 	= $('.shop-display-type .shop-display-list');
-	var products_container 	= $('.site-main-content > ul.products');
+	var products_container 	= $('.post-type-archive-product ul.products');
 
 	function shop_display_grid() {
 		shop_display_list_btn.removeClass('active');

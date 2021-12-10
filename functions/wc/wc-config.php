@@ -10,6 +10,24 @@ add_action('kitify/products/before_render', 'vedbo_add_extra_hook_to_product_ite
 add_action('woocommerce_before_shop_loop',  'vedbo_setup_toolbar' , -999 );
 add_action('woocommerce_before_shop_loop',  'vedbo_add_toolbar_open' , 15 );
 add_action('woocommerce_before_shop_loop',  'vedbo_add_toolbar_close' , 35 );
+add_action( 'nova_woocommerce_catalog_ordering', 'vedbo_add_grid_list_display', 35, 0 );
+
+if ( ! function_exists( 'vedbo_add_grid_list_display' ) ) :
+function vedbo_add_grid_list_display() {
+  echo '<div class="shop-display-type">
+				<span class="shop-display-grid active">
+					<svg class="vedbo-grid-icon">
+					 <use xlink:href="#vedbo-grid"></use>
+					</svg>
+				</span>
+				<span class="shop-display-list">
+					<svg class="vedbo-list-icon">
+					 <use xlink:href="#vedbo-list"></use>
+					</svg>
+				</span>
+			</div>';
+}
+endif;
 
 //==============================================================================
 // Add Wishlist Icon in Product Card

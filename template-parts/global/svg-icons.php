@@ -100,10 +100,8 @@
           <path d="M.5.5h8v8h-8zM11.5.5h8v8h-8zM11.5 11.5h8v8h-8zM.5 11.5h8v8h-8z" />
         </g>
       </symbol>
-      <symbol id="vedbo-list" viewBox="0 0 20 17">
-        <g fill="currentColor" fill-rule="evenodd">
-          <path d="M0 0h20v1H0zM0 8h20v1H0zM0 16h20v1H0z" />
-        </g>
+      <symbol id="vedbo-list" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+         <path d="M9 2H2v7h7V2zM9 15H2v7h7v-7zM14 3h8M14 8h8M14 16h8M14 21h8" stroke="currentColor" stroke-width="1" stroke-miterlimit="10" stroke-linecap="square"/>
       </symbol>
       <symbol id="vedbo-product-wishlist-btn" viewBox="0 0 21 19">
         <path
