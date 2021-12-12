@@ -5766,17 +5766,6 @@
       "sC" : 3,
       "tS" : 0
     },
-    "\/js\/components\/shop\/_sidebar-sticky.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/js\/components\/shop\/_sidebar-sticky-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
     "\/js\/components\/vc\/instagram.js" : {
       "bF" : 0,
       "ft" : 64,

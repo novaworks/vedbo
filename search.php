@@ -5,7 +5,7 @@ $column_s = Nova_OP::getOption('blog_post_column_s');
 ?>
 <?php get_header(); ?>
 <div class="<?php echo ( 1 == Nova_OP::getOption('blog_wide_layout') ) ? 'nova-container-fluid' : 'nova-container' ?>">
-	<div class="blog-listing listing-search sidebar-status<?php if ( 1 == Nova_OP::getOption('blog_sidebar') && 1 == Nova_OP::getOption('blog_sticky_sidebar')) : ?> sidebar_sticky<?php endif; ?>">
+	<div class="blog-listing listing-search sidebar-status">
 		<div class="site-content">
 			<div class="grid-x">
 				<?php if ( 1 == Nova_OP::getOption('blog_sidebar') && 'left' == Nova_OP::getOption('blog_sidebar_position') ) : ?>

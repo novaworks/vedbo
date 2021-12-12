@@ -187,30 +187,6 @@ Kirki::add_field( 'vedbo', array(
     'type'        => 'separator',
     'settings'    => 'separator_'. $sep_id++,
     'section'     => $section,
-) );
-// ---------------------------------------------
-
-Kirki::add_field( 'vedbo', array(
-    'type'        => 'toggle',
-    'settings'    => 'blog_sticky_sidebar',
-    'label'       => esc_html__( 'Blog Sticky Sidebar', 'vedbo' ),
-    'section'     => $section,
-    'default'     => false,
-    'priority'    => 10,
-		'active_callback'    => array(
-				array(
-						'setting'  => 'blog_sidebar',
-						'operator' => '==',
-						'value'    => 1,
-				),
-		),
-) );
-
-// ---------------------------------------------
-Kirki::add_field( 'vedbo', array(
-    'type'        => 'separator',
-    'settings'    => 'separator_'. $sep_id++,
-    'section'     => $section,
 		'active_callback'    => array(
 				array(
 						'setting'  => 'blog_sidebar',

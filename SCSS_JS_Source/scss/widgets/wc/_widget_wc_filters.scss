@@ -9,6 +9,7 @@
 .wcapf-before-products .wcapf-before-update {
   background-image: none;
   background: rgba(255, 255, 255, 0.9) !important;
+  z-index: 999;
   /* Override plugin style */
 }
 
@@ -28,6 +29,7 @@
   border-radius: 100%;
   -webkit-animation: dotPulse .65s 0s infinite cubic-bezier(.21, .53, .56, .8);
   animation: dotPulse .65s 0s infinite cubic-bezier(.21, .53, .56, .8);
+  z-index: 999;
 }
 
 .widget.wcapf-ajax-term-filter ul li {

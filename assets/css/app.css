@@ -21260,6 +21260,7 @@ ul.products.products-grid-2 {
       right: -1px;
       bottom: -1px;
       background-color: #fff;
+      margin-bottom: -60px;
       border: 1px solid var(--site-border-color);
       opacity: 0;
       box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
@@ -26209,6 +26210,7 @@ ul.products .product-category {
 .wcapf-before-products .wcapf-before-update {
   background-image: none;
   background: rgba(255, 255, 255, 0.9) !important;
+  z-index: 999;
   /* Override plugin style */ }
 
 .wcapf-before-update:after {
@@ -26226,7 +26228,8 @@ ul.products .product-category {
   background-image: none;
   border-radius: 100%;
   -webkit-animation: dotPulse 0.65s 0s infinite cubic-bezier(0.21, 0.53, 0.56, 0.8);
-  animation: dotPulse 0.65s 0s infinite cubic-bezier(0.21, 0.53, 0.56, 0.8); }
+  animation: dotPulse 0.65s 0s infinite cubic-bezier(0.21, 0.53, 0.56, 0.8);
+  z-index: 999; }
 
 .widget.wcapf-ajax-term-filter ul li {
   margin-bottom: 0.625rem; }

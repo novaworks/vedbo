@@ -56,7 +56,6 @@
 //@codekit-prepend "components/shop/_product_appearance.js"
 //@codekit-prepend "components/shop/_product_card_animation.js"
 //@codekit-prepend "components/shop/_login-form.js"
-//@codekit-prepend "components/shop/_sidebar-sticky.js"
 
 
 // =============================================================================

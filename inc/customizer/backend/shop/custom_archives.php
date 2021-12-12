@@ -4,7 +4,7 @@ $sep_id  = 7439;
 $section = 'shop_custom_archives';
 
 Kirki::add_field( 'vedbo', array(
-    'settings'    => 'toolbar_section_heading',
+    'settings'    => 'general_section_heading',
     'section'     => $section,
     'type'        => 'custom',
     'default'     => wp_kses(__( '<span class="big-separator">General</span>', 'vedbo' ),'simple'),
@@ -86,6 +86,21 @@ Kirki::add_field( 'vedbo', array(
     'label'       => esc_html__( 'Product Image on Hover', 'vedbo' ),
     'section'     => $section,
     'default'     => false,
+    'priority'    => 10,
+) );
+Kirki::add_field( 'vedbo', array(
+    'settings'    => 'toolbar_section_heading',
+    'section'     => $section,
+    'type'        => 'custom',
+    'default'     => wp_kses(__( '<span class="big-separator">Toolbar</span>', 'vedbo' ),'simple'),
+) );
+
+Kirki::add_field( 'vedbo', array(
+    'type'        => 'toggle',
+    'settings'    => 'shop_toolbar_grid_list',
+    'label'       => esc_html__( 'Show Grid List Switch', 'vedbo' ),
+    'section'     => $section,
+    'default'     => true,
     'priority'    => 10,
 ) );
 

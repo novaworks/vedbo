@@ -4,7 +4,7 @@
 
 		<div class="cell small-12">
 
-			<div class="site-content single_post_content sidebar-status<?php if ( 1 == Nova_OP::getOption('blog_single_sidebar') && 1 == Nova_OP::getOption('single_sticky_sidebar')) : ?> sidebar_sticky<?php endif; ?>">
+			<div class="site-content single_post_content sidebar-status">
 				<div class="grid-x">
 
 					<?php if ( 1 == Nova_OP::getOption('blog_single_sidebar') && is_active_sidebar( 'blog-widget-area' ) && 'left' == Nova_OP::getOption('blog_single_sidebar_position') ) : ?>

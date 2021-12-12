@@ -25,7 +25,7 @@ $l40class = ( $sidebar && is_active_sidebar( 'shop-widget-area' ) ) ? 'large-9' 
 
 		<div class="cell large-12">
 
-			<div class="site-content<?php echo esc_attr($sidebar_class); ?>  sidebar-status<?php if ( 1 == Nova_OP::getOption('shop_sidebar') && 1 == Nova_OP::getOption('shop_sticky_sidebar')) : ?> sidebar_sticky<?php endif; ?>">
+			<div class="site-content<?php echo esc_attr($sidebar_class); ?>  sidebar-status">
 
 				<?php do_action( 'woocommerce_before_main_content' ); ?>
 				<div class="grid-x">

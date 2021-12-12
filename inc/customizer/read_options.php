@@ -137,6 +137,7 @@
 				'shop_product_columns'								=> 3,
 				'shop_product_per_page'								=> 12,
 				'product_per_page_allow'							=> '12,15,30',
+				'shop_toolbar_grid_list'       				=> true,
 				'shop_product_addtocart_button'       => true,
 				'shop_product_wishlist_button'      	=> true,
 				'shop_product_quickview_button'    		=> true,

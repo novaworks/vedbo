@@ -10,7 +10,9 @@ add_action('kitify/products/before_render', 'vedbo_add_extra_hook_to_product_ite
 add_action('woocommerce_before_shop_loop',  'vedbo_setup_toolbar' , -999 );
 add_action('woocommerce_before_shop_loop',  'vedbo_add_toolbar_open' , 15 );
 add_action('woocommerce_before_shop_loop',  'vedbo_add_toolbar_close' , 35 );
+if( 1 ==  Nova_OP::getOption('shop_toolbar_grid_list') ):
 add_action( 'nova_woocommerce_catalog_ordering', 'vedbo_add_grid_list_display', 35, 0 );
+endif;
 
 if ( ! function_exists( 'vedbo_add_grid_list_display' ) ) :
 function vedbo_add_grid_list_display() {
