@@ -19760,7 +19760,8 @@ body.elementor-editor-active #site-content .woocommerce-archive-header,
 body.woocommerce-shop #site-content .woocommerce-archive-header {
   position: relative;
   display: flex;
-  align-items: flex-end; }
+  align-items: flex-end;
+  padding-bottom: 0.9375rem; }
   @media print, screen and (min-width: 40em) {
     body.elementor-editor-active #site-content .woocommerce-archive-header,
     body.woocommerce-shop #site-content .woocommerce-archive-header {

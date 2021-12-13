@@ -3,6 +3,7 @@
   position: relative;
   display: flex;
   align-items: flex-end;
+  padding-bottom: rem-calc(15);
   @include breakpoint(medium) {
     padding-bottom: rem-calc(40);
   }
