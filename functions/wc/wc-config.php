@@ -87,7 +87,7 @@ function vedbo_add_toolbar_close(){
       do_action( 'nova_woocommerce_result_count' );
       echo '<div class="woocommerce-archive-toolbar sh--color">';
       echo '<div class="nova-product-filter">';
-        echo '<button data-toggle="side-filters" class="js-product-filters-toogle">';
+        echo '<button class="js-column-toogle">';
           echo '<span class="icon-filter"><i class="inova ic-options"></i></span>';
           echo '<span class="title-filter">'.esc_html__( 'Filters','vedbo' ).'</span>';
         echo '</button>';

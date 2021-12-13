@@ -704,7 +704,7 @@ $('.widget .widget-title').click(function(e){
 
 		window.nova_custom_scrollbar = function(el) {
 			var self = this,
-      		$scrollBars = el ? el : $('.nova_box_ps, .nova-product-filter-content .wcapf-layered-nav, .kitify-toggle-column .elementor-widget-container');
+      		$scrollBars = el ? el : $('.nova_box_ps, .nova-product-filter-content .wcapf-layered-nav, .kitify-toggle-column .elementor-element-populated');
 
       $scrollBars.each(function() {
         var that = $(this);

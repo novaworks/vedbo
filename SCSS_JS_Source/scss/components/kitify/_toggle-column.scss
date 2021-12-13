@@ -1,31 +1,57 @@
-@include breakpoint(769px down) {
+@include breakpoint(767px down) {
   .kitify-toggle-column {
     .elementor-element-populated {
-      display: inline-block !important;
       position: fixed;
       top: 0;
       bottom: 0;
       left: 0;
       background: #fff;
-      padding: 0;
+      padding: 60px 30px 30px 30px !important;
       max-width: none;
-      width: rem-calc(500);
+      overflow-y: visible;
+      width: 100%;
       z-index: 99999;
       transition: -webkit-transform 0.5s ease;
       transition: transform 0.5s ease;
       transition: transform 0.5s ease, -webkit-transform 0.5s ease;
       -webkit-transform: translate3d(-500px,0,0);
       transform: translate3d(-500px,0,0);
-    }
-    .elementor-widget-wrap {
-      flex-wrap: nowrap;
+      .elementor-widget-container {
+        width: 100%;
+      }
     }
     &.opened {
       .elementor-element-populated {
         transform: none;
         @include breakpoint(767px down) {
-          width: 85%;
+          width: 100%;
         }
+      }
+    }
+    .widget-area {
+      display: flex;
+      order: 2;
+    }
+    .toggle-column-btn {
+      position: fixed;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      order: 1;
+      top: 15px;
+      right: 15px;
+      width: 40px;
+      height: 40px;
+      transition: all .2s;
+      border: v(site-border-color) solid 1px;
+      background-color: #fff;
+      text-align: center;
+      border-radius: 50%;
+      &:before {
+        @include nova_icon('\ea13');
+        font-size: rem-calc(18);
+        color: v(site-heading-color);
+        line-height: 38px;
       }
     }
   }
