@@ -98,7 +98,7 @@ jQuery(function($) {
 	    },
 
 	    onfinish: function() {
-				product_borderd_hover();
+				
 	    },
 
 	    msieversion: function() {

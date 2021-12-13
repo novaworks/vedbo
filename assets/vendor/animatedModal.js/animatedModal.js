@@ -21,6 +21,7 @@
             left:'0px',
             zIndexIn: '99999',
             zIndexOut: '-99999',
+            visibility: 'hidden',
             opacityIn:'1',
             opacityOut:'0',
             animatedIn:'zoomIn',
@@ -59,6 +60,7 @@
             'overflow-y':settings.overflow,
             'z-index':settings.zIndexOut,
             'opacity':settings.opacityOut,
+            'visibility':settings.visibility,
             '-webkit-animation-duration':settings.animationDuration,
             '-moz-animation-duration':settings.animationDuration,
             '-ms-animation-duration':settings.animationDuration,
@@ -79,7 +81,7 @@
 
                  if (id.hasClass(settings.modalTarget+'-on')) {
                     settings.beforeOpen();
-                    id.css({'opacity':settings.opacityIn,'z-index':settings.zIndexIn});
+                    id.css({'opacity':settings.opacityIn, 'visibility':'visible','z-index':settings.zIndexIn});
                     id.addClass(settings.animatedIn);
                     id.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', afterOpen);
                 };

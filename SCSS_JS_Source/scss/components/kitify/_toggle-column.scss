@@ -1,0 +1,32 @@
+@include breakpoint(769px down) {
+  .kitify-toggle-column {
+    .elementor-element-populated {
+      display: inline-block !important;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      background: #fff;
+      padding: 0;
+      max-width: none;
+      width: rem-calc(500);
+      z-index: 99999;
+      transition: -webkit-transform 0.5s ease;
+      transition: transform 0.5s ease;
+      transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+      -webkit-transform: translate3d(-500px,0,0);
+      transform: translate3d(-500px,0,0);
+    }
+    .elementor-widget-wrap {
+      flex-wrap: nowrap;
+    }
+    &.opened {
+      .elementor-element-populated {
+        transform: none;
+        @include breakpoint(767px down) {
+          width: 85%;
+        }
+      }
+    }
+  }
+}

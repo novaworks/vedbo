@@ -6272,6 +6272,21 @@
       "pg" : 0,
       "sct" : 1
     },
+    "\/scss\/components\/child\/_child_theme.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/scss\/components\/child\/_child_theme.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
     "\/scss\/components\/elementor\/nova-adv-slider.scss" : {
       "aP" : 0,
       "bl" : 0,
@@ -7257,6 +7272,21 @@
       "ma" : 0,
       "oA" : 1,
       "oAP" : "\/scss\/components\/kitify\/_mixins.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/scss\/components\/kitify\/_toggle-column.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/scss\/components\/kitify\/_toggle-column.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,

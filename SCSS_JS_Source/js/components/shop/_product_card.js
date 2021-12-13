@@ -67,7 +67,4 @@
 		});
 	});
 
-	//Product hover
-	product_borderd_hover();
-
 })(jQuery);

@@ -244,12 +244,7 @@ ul.products {
             @include loader(45px, 45px);
 
             &:before {
-              border-top: 1px solid;
-              border-color: v(site-secondary-button-color) #FFF #FFF #FFF;
-              position: absolute;
-              left: 1px;
-              top: 1px;
-              z-index: 1;
+              display: none;
             }
           }
         }
@@ -287,11 +282,20 @@ ul.products {
             margin-left: auto;
             text-align: right;
           }
+          .product-short-description {
+            display: none;
+            font-size: rem-calc(14);
+            ul {
+              li {
+                padding: 0;
+                margin: 0;
+              }
+            }
+          }
 
           a.title {
             .woocommerce-loop-product__title {
               @include product_title(16, 0, v(site-heading-font), 500);
-              text-transform: uppercase;
 
               &:hover {
                 color: v(site-accent-color);

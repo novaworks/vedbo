@@ -22,6 +22,9 @@ ul.products {
         padding: rem-calc(20);
         z-index: 1;
         overflow: visible;
+        @include breakpoint(small down) {
+          padding: rem-calc(8);
+        }
       }
       // Include Badges
       @include shop_product_badges(0, 0);

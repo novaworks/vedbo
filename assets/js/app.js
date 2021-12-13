@@ -524,30 +524,7 @@ $('.widget .widget-title').click(function(e){
 		$(this).toggleClass('close');
 		$(this).next('div,ul').slideToggle();
 });
-//===============================================================
-// Product Hover
-//===============================================================
-window.product_borderd_hover = function() {
-	var borderd_product = $( '.products.products-grid-2 .product' );
-	borderd_product.each( function(e) {
-		var fadeBlock = $(this).find( '.product-item-footer' );
-		var contentBlock = $(this).find( '.product-item-hover' );
-		var outerHeight = 0;
 
-		const parent = contentBlock.closest( '.product' );
-
-		parent.addClass( 'custom-hover' );
-
-		if ( fadeBlock.length ) {
-			fadeBlock.each( function(e) {
-				var self = $(this);
-				outerHeight += self.outerHeight();
-
-				contentBlock.css( 'marginBottom', -outerHeight );
-			});
-		}
-	});
-}
 })(jQuery);
 
 
@@ -727,7 +704,7 @@ window.product_borderd_hover = function() {
 
 		window.nova_custom_scrollbar = function(el) {
 			var self = this,
-      		$scrollBars = el ? el : $('.nova_box_ps, .nova-product-filter-content .wcapf-layered-nav');
+      		$scrollBars = el ? el : $('.nova_box_ps, .nova-product-filter-content .wcapf-layered-nav, .kitify-toggle-column .elementor-widget-container');
 
       $scrollBars.each(function() {
         var that = $(this);
@@ -1228,9 +1205,6 @@ jQuery(function($) {
 			}
 		});
 	});
-
-	//Product hover
-	product_borderd_hover();
 
 })(jQuery);
 
@@ -2095,7 +2069,7 @@ jQuery(function($) {
 	    },
 
 	    onfinish: function() {
-				product_borderd_hover();
+				
 	    },
 
 	    msieversion: function() {
@@ -2834,7 +2808,7 @@ jQuery(function($) {
 jQuery(function($) {
 
 	"use strict";
-	
+
 	$(document).on('click', '#sidebar_primary .js-sidebar-toogle', function() {
 		$(this).closest('#sidebar_primary').toggleClass('opened');
 	});
