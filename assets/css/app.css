@@ -13631,8 +13631,10 @@ html.mobile-reveal-open {
   transition-delay: 0.05s;
   transition-duration: 0.35s; }
 
-@media screen and (max-width: 47.9375em) {
-  .kitify-toggle-column .elementor-element-populated {
+.kitify-toggle-sidebar.kitify-active-sidebar-toggle {
+  position: relative; }
+  .kitify-toggle-sidebar.kitify-active-sidebar-toggle .kitify-toggle-sidebar__container {
+    position: relative;
     position: fixed;
     top: 0;
     bottom: 0;
@@ -13641,40 +13643,37 @@ html.mobile-reveal-open {
     padding: 60px 30px 30px 30px !important;
     max-width: none;
     overflow-y: visible;
-    width: 100%;
+    width: 400px;
     z-index: 99999;
     transition: -webkit-transform 0.5s ease;
     transition: transform 0.5s ease;
     transition: transform 0.5s ease, -webkit-transform 0.5s ease;
-    -webkit-transform: translate3d(-500px, 0, 0);
-    transform: translate3d(-500px, 0, 0); }
-    .kitify-toggle-column .elementor-element-populated .elementor-widget-container {
-      width: 100%; }
-  .kitify-toggle-column.opened .elementor-element-populated {
-    transform: none; } }
-  @media screen and (max-width: 47.9375em) and (max-width: 47.9375em) {
-    .kitify-toggle-column.opened .elementor-element-populated {
-      width: 100%; } }
-@media screen and (max-width: 47.9375em) {
-  .kitify-toggle-column .widget-area {
-    display: flex;
-    order: 2; }
-  .kitify-toggle-column .toggle-column-btn {
+    -webkit-transform: translate3d(-400px, 0, 0);
+    transform: translate3d(-400px, 0, 0); }
+  .kitify-toggle-sidebar.kitify-active-sidebar-toggle .toggle-column-btn__wrap {
     position: fixed;
+    top: 0;
+    left: 0;
+    width: 400px;
+    background-color: #fff;
+    padding: 0.9375rem; }
+    @media print, screen and (max-width: 39.99875em) {
+      .kitify-toggle-sidebar.kitify-active-sidebar-toggle .toggle-column-btn__wrap {
+        width: 100%; } }
+  .kitify-toggle-sidebar.kitify-active-sidebar-toggle .toggle-column-btn {
     display: flex;
     align-items: center;
     justify-content: center;
     order: 1;
-    top: 15px;
-    right: 15px;
     width: 40px;
     height: 40px;
+    margin-left: auto;
     transition: all .2s;
     border: var(--site-border-color) solid 1px;
     background-color: #fff;
     text-align: center;
     border-radius: 50%; }
-    .kitify-toggle-column .toggle-column-btn:before {
+    .kitify-toggle-sidebar.kitify-active-sidebar-toggle .toggle-column-btn:before {
       font-family: "iNova" !important;
       font-style: normal !important;
       font-weight: normal !important;
@@ -13689,7 +13688,16 @@ html.mobile-reveal-open {
       content: "";
       font-size: 1.125rem;
       color: var(--site-heading-color);
-      line-height: 38px; } }
+      line-height: 38px; }
+
+.kitify-toggle-sidebar.opened .kitify-toggle-sidebar__container {
+  transform: none; }
+  @media print, screen and (max-width: 39.99875em) {
+    .kitify-toggle-sidebar.opened .kitify-toggle-sidebar__container {
+      width: 100%; } }
+.nova-overlay-global.opened {
+  opacity: .3;
+  visibility: visible; }
 
 .nova-fullscreen-menu {
   position: fixed;
@@ -19838,11 +19846,14 @@ body.woocommerce-shop .woocommerce-archive-header {
           flex: inherit; } }
       body.elementor-editor-active .woocommerce-archive-header .woocommerce-archive-header-inside .woocommerce-archive-toolbar .nova-product-filter,
       body.woocommerce-shop .woocommerce-archive-header .woocommerce-archive-header-inside .woocommerce-archive-toolbar .nova-product-filter {
-        display: flex;
+        display: none;
         align-items: center;
         padding-right: 1.25rem;
         margin-right: 1.25rem;
         border-right: solid 1px var(--site-border-color); }
+        body.elementor-editor-active .woocommerce-archive-header .woocommerce-archive-header-inside .woocommerce-archive-toolbar .nova-product-filter.kitify-active-sidebar-toggle,
+        body.woocommerce-shop .woocommerce-archive-header .woocommerce-archive-header-inside .woocommerce-archive-toolbar .nova-product-filter.kitify-active-sidebar-toggle {
+          display: flex; }
         body.elementor-editor-active .woocommerce-archive-header .woocommerce-archive-header-inside .woocommerce-archive-toolbar .nova-product-filter button,
         body.woocommerce-shop .woocommerce-archive-header .woocommerce-archive-header-inside .woocommerce-archive-toolbar .nova-product-filter button {
           display: flex;

@@ -73,11 +73,14 @@
         flex: inherit;
       }
       .nova-product-filter {
-        display: flex;
+        display: none;
         align-items: center;
         padding-right: rem-calc(20);
         margin-right: rem-calc(20);
         border-right: solid 1px v(site-border-color);
+        &.kitify-active-sidebar-toggle {
+          display: flex;
+        }
         button {
           display: flex;
           align-items: center;

@@ -7,13 +7,6 @@ if ( ! function_exists( 'vedbo_add_extra_hook_to_product_item' ) ) :
 endif;
 add_action('kitify/products/before_render', 'vedbo_add_extra_hook_to_product_item' );
 
-add_action('woocommerce_before_shop_loop',  'vedbo_setup_toolbar' , -999 );
-add_action('woocommerce_before_shop_loop',  'vedbo_add_toolbar_open' , 15 );
-add_action('woocommerce_before_shop_loop',  'vedbo_add_toolbar_close' , 35 );
-if( 1 ==  Nova_OP::getOption('shop_toolbar_grid_list') ):
-add_action( 'nova_woocommerce_catalog_ordering', 'vedbo_add_grid_list_display', 35, 0 );
-endif;
-
 if ( ! function_exists( 'vedbo_add_grid_list_display' ) ) :
 function vedbo_add_grid_list_display() {
   echo '<div class="shop-display-type">
@@ -86,13 +79,7 @@ function vedbo_add_toolbar_close(){
       echo '<div class="woocommerce-archive-header-inside">';
       do_action( 'nova_woocommerce_result_count' );
       echo '<div class="woocommerce-archive-toolbar sh--color">';
-      echo '<div class="nova-product-filter">';
-        echo '<button class="js-column-toggle">';
-          echo '<span class="icon-filter"><i class="inova ic-options"></i></span>';
-          echo '<span class="title-filter">'.esc_html__( 'Filters','vedbo' ).'</span>';
-        echo '</button>';
-      echo '</div>';
-
+      do_action( 'kitify/products/toolbar/filter' );
       if(!empty($per_page_array)):
         echo '<div class="nova-custom-view">';
         echo '<label>'.esc_html__( 'Show','vedbo' ).'</label>';
