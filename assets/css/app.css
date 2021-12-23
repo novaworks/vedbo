@@ -12303,8 +12303,8 @@ body > .select2-container {
 /* Arrows */
 .slick-prev,
 .slick-next {
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   background-color: var(--site-border-color);
   z-index: 10; }
   .slick-prev:focus,
