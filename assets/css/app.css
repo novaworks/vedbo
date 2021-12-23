@@ -17671,7 +17671,8 @@ body.single.single-post .post .entry-meta {
         text-transform: capitalize;
         font-size: 0.75rem !important;
         line-height: 1.33334;
-        background-color: var(--site-border-color); }
+        background-color: var(--site-border-color);
+        border-radius: 3px; }
         body.single.single-post .post .entry-meta__item--tags a:hover {
           opacity: 1;
           color: #fff;
@@ -26272,7 +26273,8 @@ ul.products .product-category {
       text-transform: capitalize;
       font-size: 0.75rem !important;
       line-height: 1.33334;
-      background-color: var(--site-border-color); }
+      background-color: var(--site-border-color);
+      border-radius: 3px; }
       .widget_tag_cloud .tagcloud a:hover {
         opacity: 1;
         color: #fff;
@@ -26827,7 +26829,8 @@ ul.products .product-category {
       text-transform: capitalize;
       font-size: 0.75rem !important;
       line-height: 1.33334;
-      background-color: var(--site-border-color); }
+      background-color: var(--site-border-color);
+      border-radius: 3px; }
       .widget.woocommerce.widget_layered_nav_filters ul a:hover {
         opacity: 1;
         color: #fff;
@@ -26953,7 +26956,8 @@ ul.products .product-category {
     text-transform: capitalize;
     font-size: 0.75rem !important;
     line-height: 1.33334;
-    background-color: var(--site-border-color); }
+    background-color: var(--site-border-color);
+    border-radius: 3px; }
     .widget.woocommerce.widget_product_tag_cloud .tagcloud a:hover {
       opacity: 1;
       color: #fff;
