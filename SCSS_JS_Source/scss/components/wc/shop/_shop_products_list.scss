@@ -56,10 +56,13 @@ body ul.products.product-list-display {
           padding-left: rem-calc(30);
         }
         &--info {
+          flex-direction: column;
           .info-left {
             display: flex;
+            flex-direction: column;
             order: 1;
             text-align: left !important;
+            width: 100% !important;
             a.title .woocommerce-loop-product__title {
               @include breakpoint(medium up) {
                 font-size: rem-calc(18) !important;
@@ -72,6 +75,7 @@ body ul.products.product-list-display {
             order: 4;
             text-align: left !important;
             margin-top: rem-calc(12);
+            margin-left: 0 !important;
             span.price {
               bdi,
               ins {
@@ -85,15 +89,36 @@ body ul.products.product-list-display {
             order: 2;
             margin: 0 !important;
           }
-          .product-short-description {
-            display: flex !important;
-            order: 3;
+          @include breakpoint(medium) {
+            .product-short-description {
+              display: flex !important;
+              order: 3;
+            }
           }
         }
       }
     }
     .product-item-hover {
       display: none;
+    }
+  }
+}
+body ul.products.products-grid-1.product-list-display {
+  .product-item__description--info .info-left a.title .woocommerce-loop-product__title {
+    margin-bottom: rem-calc(10);
+  }
+  @include breakpoint(medium) {
+    .product-item .product-item__thumbnail .product-item__description--button {
+      opacity: 1;
+      width: auto;
+      left: auto;
+      bottom: auto;
+      top: 60px;
+      right: 0;
+      transform: translate(0%, 0%);
+      .button {
+        transform: translate3d(0, 0, 0);
+      }
     }
   }
 }

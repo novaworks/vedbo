@@ -177,6 +177,7 @@
 	display: block;
 	font-size: 12px;
 	line-height: 1;
+  border-radius: 3px;
 }
 @mixin shop_product_badges($left, $top) {
 	.product-item__badges {
@@ -196,7 +197,7 @@
       left: 0;
 			background-color: v(site-accent-color);
 			color: $content-background;
-      text-transform: uppercase;
+      border-radius: 3px;
 		}
 
 		.onsale {
@@ -205,7 +206,7 @@
       left: 0;
 			background-color: $content-background;
 			color: v(site-heading-color);
-      text-transform: uppercase;
+      border-radius: 3px;
 		}
 	}
 }
