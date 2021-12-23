@@ -47,9 +47,7 @@ add_action( 'nova_qv_product_images', 'nova_show_qv_product_images' );
 					<div class="small-12 large-7 columns">
 						<div class="before-product-summary-wrapper">
 
-							<?php //do_action( 'nova_qv_product_images' ); ?>
-							<?php do_action( 'woocommerce_before_single_product_summary' ); ?>
-
+							<?php do_action( 'nova_qv_product_images' ); ?>
 						</div>
 					</div>
 
