@@ -64,7 +64,7 @@ add_filter( 'woocommerce_single_product_image_gallery_classes','nova_woo_gallery
 <div id="product-<?php the_ID(); ?>" <?php function_exists('wc_product_class')? wc_product_class('product') : post_class('product'); ?>>
 	<div class="product_infos product-infor-detail product-single-layout-<?php echo Nova_OP::getOption('product_preset')?>">
 		<div class="grid-x">
-			<div class="cell small-12 large-8">
+			<div class="cell small-12 large-7">
 
 				<div class="before-product-summary-wrapper">
 
@@ -82,7 +82,7 @@ add_filter( 'woocommerce_single_product_image_gallery_classes','nova_woo_gallery
 
 			</div>
 
-			<div class="cell small-12 large-4">
+			<div class="cell small-12 large-5">
 				<div class="summary entry-summary">
 					<?php do_action( 'vedbo/action/wc_product_title' ); ?>
 					<div class="nova-custom__price-rating-box">

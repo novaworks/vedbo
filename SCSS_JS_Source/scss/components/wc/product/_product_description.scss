@@ -5,10 +5,6 @@
   font-size: rem-calc(14);
   line-height: rem-calc(22);
   margin-bottom: rem-calc(24);
-  padding-top: rem-calc(24);
-  padding-bottom: rem-calc(24);
-  border-top: solid 1px v(site-border-color);
-  border-bottom: solid 1px v(site-border-color);
 
   > p {
     &:last-of-type {

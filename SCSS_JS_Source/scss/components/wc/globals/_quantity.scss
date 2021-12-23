@@ -14,22 +14,23 @@ form.cart
 		input.qty
 		{
 			width: rem-calc(120);
-			height: 59px;
+			height: 50px;
 			font-size: rem-calc(19);
 			margin: 0;
 			text-align: center;
-			line-height: 59px;
+			line-height: 50px;
 			padding-top: rem-calc(3);
 			padding-left: rem-calc(38);
 			padding-right: rem-calc(38);
+			border-radius: 5px;
 		}
 		.qty-button {
 			position: absolute;
 			top: 0;
 			width: 38px;
-			height: 61px;
+			height: 50px;
 			font-size: 0;
-			line-height: 59px;
+			line-height: 50px;
 			text-align: center;
 			cursor: pointer;
 			&.dec {

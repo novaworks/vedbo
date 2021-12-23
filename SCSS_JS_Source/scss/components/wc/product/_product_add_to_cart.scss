@@ -69,12 +69,12 @@
 		display: block;
 		position: relative;
 		text-align: center;
-		border: solid 2px v(site-border-color);
+		border: solid 1px v(site-border-color);
+		border-radius: 5px;
 		input {
 			border: none;
 			font-size: rem-calc(16);
 			font-weight: 500;
-			width: 100%;
 		}
 		.qty-button.inc:after,
 		.qty-button.dec:after {
@@ -82,9 +82,7 @@
 		}
 	}
 	.button {
-		line-height: rem-calc(30);
 		background-color: v(site-primary-button-color);
-		width: 100%;
 
 		&:hover {
 			@include button_pattent();

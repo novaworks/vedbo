@@ -12,6 +12,7 @@ input[type="submit"] {
   font-weight: 600;
   color: #fff;
   text-transform: capitalize;
+  border-radius: 5px;
   &:hover {
     background-color: v(site-secondary-button-color);
   }
