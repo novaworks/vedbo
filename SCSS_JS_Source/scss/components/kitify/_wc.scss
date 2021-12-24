@@ -1,0 +1,18 @@
+.kitify-product-images {
+	.onsale {
+		position: absolute;
+		left: 15px;
+		top: 15px;
+		background: v(site-accent-color);
+		color: #fff;
+		font-size: rem-calc(12);
+		line-height: 1;
+		padding: rem-calc(4) rem-calc(8);
+		z-index: 10;
+	}
+	.woocommerce-product-gallery {
+		.flex-control-thumbs {
+			list-style: none;
+		}
+	}
+}
