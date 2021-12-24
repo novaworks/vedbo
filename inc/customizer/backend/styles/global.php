@@ -168,3 +168,38 @@ Kirki::add_field( 'vedbo', array(
     'section'     => $section,
 ) );
 // ---------------------------------------------
+
+Kirki::add_field( 'vedbo', array(
+    'type'        => 'number',
+    'settings'    => 'button_radius',
+    'label'       => esc_html__( 'Button Radius', 'vedbo' ),
+    'section'     => $section,
+    'default'     => 3,
+    'priority'    => 10,
+    'choices'     => array(
+        'min'  => 0,
+        'max'  => 100,
+        'step' => 1
+    ),
+) );
+// ---------------------------------------------
+Kirki::add_field( 'vedbo', array(
+    'type'        => 'separator',
+    'settings'    => 'separator_'. $sep_id++,
+    'section'     => $section,
+) );
+// ---------------------------------------------
+
+Kirki::add_field( 'vedbo', array(
+    'type'        => 'number',
+    'settings'    => 'field_radius',
+    'label'       => esc_html__( 'Field Radius', 'vedbo' ),
+    'section'     => $section,
+    'default'     => 5,
+    'priority'    => 10,
+    'choices'     => array(
+        'min'  => 0,
+        'max'  => 100,
+        'step' => 1
+    ),
+) );

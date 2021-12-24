@@ -90,6 +90,10 @@
 				'pager_header_font_color' => '#616161',
 				'pager_header_heading_color' => '#000',
 
+				//form
+				'button_radius' 						=> '3',
+				'field_radius' 							=> '5',
+
 				// Fonts
 				'font_size' 							=> '16',
 				'secondary_font_weight' 	=> '400',

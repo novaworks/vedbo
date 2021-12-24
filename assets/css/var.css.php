@@ -86,7 +86,10 @@ if($main_font == 'Muli') {
   --site-footer-heading-color: <?php echo esc_html(Nova_OP::getOption('footer_headings_color')) ?>;
   --site-footer-border-color: <?php echo "rgba(" . nova_hex2rgb(esc_html(Nova_OP::getOption('footer_headings_color'))) 	. ",0.15)";?>;
 
-  --site-filter-widget-height: <?php echo esc_html(Nova_OP::getOption('shop_filter_height')) ?>px;;
+  --site-filter-widget-height: <?php echo esc_html(Nova_OP::getOption('shop_filter_height')) ?>px;
+
+  --site-button-radius: <?php echo esc_html(Nova_OP::getOption('button_radius')) ?>px;
+  --site-field-radius: <?php echo esc_html(Nova_OP::getOption('field_radius')) ?>px;
 }
 .styling__quickview {
   --qv-bg-color: <?php echo esc_html(Nova_OP::getOption('qv_bg_color')) ?>;

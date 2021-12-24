@@ -14,6 +14,7 @@
 [type='color'],
 textarea {
   border-color: $form_border_color;
+  border-radius: v(site-field-radius);
   &:focus {
     background-color: transparent;
     border-color: v(site-heading-color);

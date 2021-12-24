@@ -1,14 +1,9 @@
 .yith-wcwl-add-button {
   text-align: left;
-  line-height: rem-calc(23);
+  line-height: rem-calc(50);
+  margin-left: rem-calc(10);
   @include breakpoint(medium down) {
     display: inline-block;
-  }
-  span {
-    display: none;
-    @include breakpoint(medium down) {
-      display: inline-block;
-    }
   }
 }
 .yith-wcwl-wishlistexistsbrowse {

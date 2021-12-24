@@ -142,7 +142,7 @@
 		font-size: rem-calc(12) !important;
 		line-height: 1.33334;
 		background-color: v(site-border-color);
-    border-radius: 3px;
+    border-radius: v(site-button-radius);
 
 		&:hover {
 			opacity: 1;

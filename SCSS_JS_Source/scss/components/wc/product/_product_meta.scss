@@ -25,6 +25,7 @@
 		background: v(site-border-color);
 		padding: rem-calc(2) rem-calc(8);
 		margin: 0 rem-calc(3) rem-calc(6) rem-calc(3);
+		border-radius: v(site-button-radius);
 		&:hover {
 			background: v(site-accent-color);
 			color: #fff;

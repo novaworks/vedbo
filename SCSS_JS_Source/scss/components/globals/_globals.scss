@@ -143,6 +143,7 @@ select {
   background-size: 10px 10px;
   color: v(site-heading-color);
   border-color: v(site-border-color);
+  border-radius: v(site-field-radius);
   /* for Firefox */
   -moz-appearance: none;
   /* for Chrome */
