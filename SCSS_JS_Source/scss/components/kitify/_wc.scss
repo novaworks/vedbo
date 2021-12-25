@@ -59,13 +59,14 @@
   .yith-wcwl-add-button {
     text-align: left;
     line-height: rem-calc(50);
-    margin-left: rem-calc(10);
+    margin-left: rem-calc(15);
     @include breakpoint(medium down) {
       display: inline-block;
     }
   }
   .yith-wcwl-wishlistexistsbrowse {
     text-align: left;
+		margin-left: rem-calc(15);
   }
   .yith-wcwl-add-to-wishlist .feedback {
     font-size: 0;

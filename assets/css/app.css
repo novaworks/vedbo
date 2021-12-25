@@ -13763,12 +13763,13 @@ html.mobile-reveal-open {
 .kitify .yith-wcwl-add-button {
   text-align: left;
   line-height: 3.125rem;
-  margin-left: 0.625rem; }
+  margin-left: 0.9375rem; }
   @media print, screen and (max-width: 47.99875em) {
     .kitify .yith-wcwl-add-button {
       display: inline-block; } }
 .kitify .yith-wcwl-wishlistexistsbrowse {
-  text-align: left; }
+  text-align: left;
+  margin-left: 0.9375rem; }
 
 .kitify .yith-wcwl-add-to-wishlist .feedback {
   font-size: 0; }
@@ -22566,6 +22567,8 @@ ul.products.products-grid-2 {
   .single-product .nova-woocommerce-tabs .accordion {
     margin-bottom: 0; }
   .single-product .nova-woocommerce-tabs .tabs {
+    display: flex;
+    justify-content: center;
     border-color: var(--site-border-color);
     border-width: 0 0 1px 0;
     margin: 0 0 2.5rem; }
