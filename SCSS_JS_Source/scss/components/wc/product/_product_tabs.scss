@@ -1,5 +1,8 @@
 .nova-woocommerce-tabs {
-	margin-bottom: rem-calc(80);
+	margin-bottom: rem-calc(30);
+	@include breakpoint(medium) {
+		margin-bottom: rem-calc(60);
+	}
 	.accordion {
 		margin-bottom: 0;
 	}

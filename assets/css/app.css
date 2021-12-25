@@ -13762,15 +13762,18 @@ html.mobile-reveal-open {
 
 .kitify .yith-wcwl-add-button {
   text-align: left;
-  line-height: 3.125rem;
-  margin-left: 0.9375rem; }
+  line-height: 3.125rem; }
+  @media print, screen and (min-width: 40em) {
+    .kitify .yith-wcwl-add-button {
+      margin-left: 0.9375rem; } }
   @media print, screen and (max-width: 47.99875em) {
     .kitify .yith-wcwl-add-button {
       display: inline-block; } }
 .kitify .yith-wcwl-wishlistexistsbrowse {
-  text-align: left;
-  margin-left: 0.9375rem; }
-
+  text-align: left; }
+  @media print, screen and (min-width: 40em) {
+    .kitify .yith-wcwl-wishlistexistsbrowse {
+      margin-left: 0.9375rem; } }
 .kitify .yith-wcwl-add-to-wishlist .feedback {
   font-size: 0; }
 
@@ -22563,7 +22566,10 @@ ul.products.products-grid-2 {
     margin-bottom: 5rem; } }
 
 .single-product .nova-woocommerce-tabs {
-  margin-bottom: 5rem; }
+  margin-bottom: 1.875rem; }
+  @media print, screen and (min-width: 40em) {
+    .single-product .nova-woocommerce-tabs {
+      margin-bottom: 3.75rem; } }
   .single-product .nova-woocommerce-tabs .accordion {
     margin-bottom: 0; }
   .single-product .nova-woocommerce-tabs .tabs {
