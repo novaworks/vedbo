@@ -13781,8 +13781,7 @@ html.mobile-reveal-open {
 .kitify .yith-wcwl-add-to-wishlist {
   display: inline-block;
   font-size: 0.75rem;
-  margin: 0;
-  width: 100%; }
+  margin: 0; }
   .kitify .yith-wcwl-add-to-wishlist .yith-wcwl-add-button.show > img {
     display: none !important; }
   .kitify .yith-wcwl-add-to-wishlist .yith-wcwl-add-button.show .add_to_wishlist {
@@ -13921,7 +13920,6 @@ html.mobile-reveal-open {
 
 .single-product .product.product-type-variable .kitify .variations_form .single_variation_wrap {
   position: relative;
-  top: -24px;
   margin-top: 0; }
   .single-product .product.product-type-variable .kitify .variations_form .single_variation_wrap .woocommerce-variation-availability .stock {
     margin-bottom: 15px;
@@ -19434,13 +19432,16 @@ body.progress {
         background-color: #01841D; }
     #nova_wc_quickview .nova_wc_quickview__content .site-content .product .cart {
       display: flex;
+      flex-direction: column;
       margin-bottom: 0;
       width: 100%; }
+      @media print, screen and (min-width: 64em) {
+        #nova_wc_quickview .nova_wc_quickview__content .site-content .product .cart {
+          flex-direction: row; } }
       #nova_wc_quickview .nova_wc_quickview__content .site-content .product .cart.variations_form {
         display: block; }
       #nova_wc_quickview .nova_wc_quickview__content .site-content .product .cart .woocommerce-product-details__add-to-cart {
-        display: flex;
-        width: 100%; }
+        display: flex; }
         #nova_wc_quickview .nova_wc_quickview__content .site-content .product .cart .woocommerce-product-details__add-to-cart.stripe-button {
           flex-direction: column; }
           #nova_wc_quickview .nova_wc_quickview__content .site-content .product .cart .woocommerce-product-details__add-to-cart.stripe-button .quantity {
@@ -22025,13 +22026,16 @@ ul.products.products-grid-2 {
 
 .single-product .product .cart {
   display: flex;
+  flex-direction: column;
   margin-bottom: 0;
   width: 100%; }
+  @media print, screen and (min-width: 64em) {
+    .single-product .product .cart {
+      flex-direction: row; } }
   .single-product .product .cart.variations_form {
     display: block; }
   .single-product .product .cart .woocommerce-product-details__add-to-cart {
-    display: flex;
-    width: 100%; }
+    display: flex; }
     .single-product .product .cart .woocommerce-product-details__add-to-cart.stripe-button {
       flex-direction: column; }
       .single-product .product .cart .woocommerce-product-details__add-to-cart.stripe-button .quantity {

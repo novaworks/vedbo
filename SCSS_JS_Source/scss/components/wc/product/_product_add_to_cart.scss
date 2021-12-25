@@ -1,14 +1,16 @@
 .cart {
 	display: flex;
+	flex-direction: column;
 	margin-bottom: 0;
 	width: 100%;
-
+	@include breakpoint(large) {
+		flex-direction: row;
+	}
 	&.variations_form {
 		display: block;
 	}
 	.woocommerce-product-details__add-to-cart {
 		display: flex;
-		width: 100%;
 
 		&.stripe-button {
 			flex-direction: column;
