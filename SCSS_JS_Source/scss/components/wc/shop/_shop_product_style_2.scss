@@ -91,5 +91,8 @@ ul.products {
         }
       }
     }
+    &.product-list-display {
+        @include shop_product_badges(15px, 15px);
+    }
   }
 }

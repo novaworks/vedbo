@@ -63,7 +63,7 @@ ul.products {
       @include vedbo_addtocart_button('product-item__description--actions', button, 11, 16);
     }
     // Include Badges
-    @include shop_product_badges(0, 15px);
+    @include shop_product_badges(15px, 15px);
 
     .product-item {
       transition: opacity 1s ease, transform 1.5s ease;

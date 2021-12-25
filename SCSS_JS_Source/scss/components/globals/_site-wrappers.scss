@@ -3,6 +3,7 @@
 
   .site-content-wrapper {
     position: relative;
+    z-index: 1;
     .site-content {
       @each $breakpoint, $padding in $content-padding {
         @include breakpoint($breakpoint) {
