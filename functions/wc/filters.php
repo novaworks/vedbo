@@ -381,8 +381,8 @@ endif;
 //==============================================================================
 add_filter( 'woocommerce_get_image_size_gallery_thumbnail', function( $size ) {
 	return array(
-		'width' => 130,
-		'height' => 98,
+		'width' => 250,
+		'height' => 250,
 		'crop' => 1,
 	);
 } );

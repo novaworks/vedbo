@@ -27535,8 +27535,7 @@ ul.products .product-category {
     text-decoration: none; }
 
 .elementor-location-header .kitify--transparency-yes.elementor-section.elementor-sticky:not(.elementor-sticky--effects) {
-  position: absolute !important;
-  top: 0 !important;
+  position: absolute;
   left: 0;
   width: 100%; }
 
