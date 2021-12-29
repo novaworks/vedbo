@@ -13,6 +13,11 @@
 	.woocommerce-product-gallery {
 		.flex-control-thumbs {
 			list-style: none;
+			img {
+				&.flex-active {
+					border: solid 1px v(site-accent-color) !important;
+				}
+			}
 		}
 	}
   .woocommerce-product-gallery__trigger {
