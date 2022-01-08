@@ -1,4 +1,5 @@
 <?php
+define( 'NOVA_DEBUG', true );
 // Vendors
 require_once( get_template_directory() . '/functions/admin-setup.php' );
 

@@ -99,10 +99,10 @@ jQuery(function($) {
             slickOptions = $.extend( {}, defaultOptions, options );
 
             if(typeof slickOptions.prevArrow !== "undefined"){
-                slickOptions.prevArrow = slickOptions.prevArrow.replace('<button class="lastudio-arrow prev-arrow slick-prev"><i class="lastudioicon-svgleft"></i></button>', '<button class="lastudio-arrow prev-arrow slick-prev">'+svg_arrow.left+'</button>');
+                slickOptions.prevArrow = slickOptions.prevArrow.replace('<button class="novaworks-arrow prev-arrow slick-prev"><i class="novaworksicon-svgleft"></i></button>', '<button class="novaworks-arrow prev-arrow slick-prev">'+svg_arrow.left+'</button>');
             }
             if(typeof slickOptions.nextArrow !== "undefined"){
-                slickOptions.nextArrow = slickOptions.nextArrow.replace('<button class="lastudio-arrow next-arrow slick-next"><i class="lastudioicon-svgright"></i></button>', '<button class="lastudio-arrow next-arrow slick-next">'+svg_arrow.right+'</button>');
+                slickOptions.nextArrow = slickOptions.nextArrow.replace('<button class="novaworks-arrow next-arrow slick-next"><i class="novaworksicon-svgright"></i></button>', '<button class="novaworks-arrow next-arrow slick-next">'+svg_arrow.right+'</button>');
             }
 
             $slider.on('init', function(e, slick){
