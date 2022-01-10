@@ -35,7 +35,7 @@ if ( ! function_exists( 'nova_theme_setup' ) ) :
 						'floating-effects'  => false,
 						'wrapper-links'     => false,
 						'kitify-icon'     	=> true,
-						'custom-fonts'      => true,
+						'custom-fonts'      => false,
 						'mega-menu'         => false,
 				],
 		]);
