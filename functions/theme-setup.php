@@ -30,13 +30,14 @@ if ( ! function_exists( 'nova_theme_setup' ) ) :
 		add_theme_support('novaworks', [
 				'kitify'    => true,
 				'elementor'       => [
-						'ajax-templates'    => false,
-						'css-transform'     => false,
-						'floating-effects'  => false,
-						'wrapper-links'     => false,
-						'kitify-icon'     	=> true,
-						'custom-fonts'      => false,
-						'mega-menu'         => false,
+						'ajax-templates'    			=> false,
+						'kitify-hamburger-panel'  => false,
+						'css-transform'     			=> false,
+						'floating-effects'  			=> false,
+						'wrapper-links'     			=> false,
+						'kitify-icon'     				=> true,
+						'custom-fonts'      			=> false,
+						'mega-menu'         			=> false,
 				],
 		]);
 		add_editor_style('editor-style.css');
