@@ -91,7 +91,7 @@ function vedbo_add_toolbar_close(){
           }else {
             $active_a = '';
           }
-          echo '<li'.$active_a.'><a href="'.esc_url(add_query_arg('per_page', $page_val, $current_url)).'">'.esc_html( $page_val ).'</a></li></li>';
+          echo '<li'.$active_a.'><a href="'.esc_url(add_query_arg('per_page', $page_val, $current_url)).'">'.esc_html( $page_val ).'</a></li>';
         }
         echo '</ul>';
         echo '</div>';
