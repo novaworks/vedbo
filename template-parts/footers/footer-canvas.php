@@ -46,7 +46,31 @@ $size_content = Nova_OP::getOption('sizeguide_content');
 						</div>
 					<?php endif; ?>
 				<?php endif; ?>
-
+				<?php if ( !nova_elementor_has_location( 'header' ) &&  has_nav_menu( 'nova_menu_primary' ) ): ?>
+				<div class="site-canvas-menu off-canvas position-left" id="MenuOffCanvas" data-off-canvas data-transition="overlap">
+						<div class="row has-scrollbar">
+							<div class="header-mobiles-primary-menu">
+								<?php
+									wp_nav_menu(array(
+										'theme_location'    => 'nova_menu_primary',
+										'container'         => false,
+										'menu_class'        => 'vertical menu drilldown mobile-menu',
+										'items_wrap'        => '<ul id="%1$s" class="%2$s" data-drilldown data-auto-height="true" data-animate-height="true" data-parent-link="true">%3$s</ul>',
+										'link_before'       => '<span>',
+										'link_after'        => '</span>',
+										'fallback_cb'     	=> '',
+										'walker'            => new Foundation_Drilldown_Menu_Walker(),
+									));
+								?>
+								<button class="close-button" aria-label="Close menu" type="button" data-close>
+									<svg class="vedbo-close-canvas">
+										<use xlink:href="#vedbo-close-canvas"></use>
+									</svg>
+								</button>
+							</div>
+						</div>
+				</div>
+				<?php endif; ?>
 				<?php if ( NOVA_WOOCOMMERCE_IS_ACTIVE && 'modal' == Nova_OP::getOption('product_tab_preset') ) : ?>
 					<?php if ( is_product() ) : ?>
 						<?php $tabs = apply_filters( 'woocommerce_product_tabs', array() );?>

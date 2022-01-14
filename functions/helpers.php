@@ -12,6 +12,7 @@ define( 'NOVA_WISHLIST_IS_ACTIVE', 		class_exists( 	'YITH_WCWL' ) );
 define( 'NOVA_KIRKI_IS_ACTIVE', 			class_exists( 	'Kirki' ) );
 define( 'NOVA_GERMANIZED_IS_ACTIVE', 		class_exists( 	'WooCommerce_Germanized' ) );
 define( 'NOVA_RWMB_IS_ACTIVE', 		class_exists( 	'RWMB_Core' ) );
+define( 'KITIFY_IS_ACTIVE', 		class_exists( 	'Kitify' ) );
 
 
 // -----------------------------------------------------------------------------
@@ -688,4 +689,18 @@ function nova_load_menu_location($location) {
 	}
 
 	return $menu;
+}
+
+function nova_elementor_has_location( $location ) {
+	if ( ! KITIFY_IS_ACTIVE  ) {
+		return false;
+	}
+	if(kitify()->has_elementor_pro()){
+			$conditions_manager = \ElementorPro\Modules\ThemeBuilder\Module::instance()->get_conditions_manager();
+	}
+	else{
+			$conditions_manager = \KitifyThemeBuilder\Modules\ThemeBuilder\Module::instance()->get_conditions_manager();
+	}
+	$documents = $conditions_manager->get_documents_for_location( $location );
+	return !empty( $documents );
 }
