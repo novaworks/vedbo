@@ -46,7 +46,7 @@ $size_content = Nova_OP::getOption('sizeguide_content');
 						</div>
 					<?php endif; ?>
 				<?php endif; ?>
-				<?php if ( has_nav_menu( 'nova_menu_primary' ) ): ?>
+				<?php if ( ( ! function_exists( 'elementor_theme_do_location' ) || ! elementor_theme_do_location( 'header' ) ) && has_nav_menu( 'nova_menu_primary' ) ): ?>
 				<div class="site-canvas-menu off-canvas position-left" id="MenuOffCanvas" data-off-canvas data-transition="overlap">
 						<div class="row has-scrollbar">
 							<div class="header-mobiles-primary-menu">
