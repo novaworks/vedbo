@@ -23,8 +23,8 @@ add_action( 'nova_qv_product_images', 'nova_show_qv_product_images' );
 ?>
 <?php while ( have_posts() ) : the_post(); ?>
 <button class="close-button" data-close aria-label="Close reveal" type="button">
-	<svg class="vedbo-close-canvas">
-		<use xlink:href="#vedbo-close-canvas"></use>
+	<svg class="nova-close-canvas">
+		<use xlink:href="#nova-close-canvas"></use>
 	</svg>
 </button>
 <div class="row small-collapse">

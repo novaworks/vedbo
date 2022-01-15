@@ -10,8 +10,8 @@ $size_content = Nova_OP::getOption('sizeguide_content');
 						<?php echo nova_remove_js_autop($size_content); ?>
 					</div>
 					<button class="close-button" aria-label="Close menu" type="button" data-close>
-						<svg class="vedbo-close-canvas">
-							<use xlink:href="#vedbo-close-canvas"></use>
+						<svg class="nova-close-canvas">
+							<use xlink:href="#nova-close-canvas"></use>
 						</svg>
 					</button>
 				</div>
@@ -25,8 +25,8 @@ $size_content = Nova_OP::getOption('sizeguide_content');
 							</div>
 							<?php if ( class_exists( 'WC_Widget_Cart' ) ) { the_widget( 'WC_Widget_Cart' ); } ?>
 							<button class="close-button" aria-label="Close menu" type="button" data-close>
-								<svg class="vedbo-close-canvas">
-									<use xlink:href="#vedbo-close-canvas"></use>
+								<svg class="nova-close-canvas">
+									<use xlink:href="#nova-close-canvas"></use>
 								</svg>
 							</button>
 						</div>
@@ -39,8 +39,8 @@ $size_content = Nova_OP::getOption('sizeguide_content');
 								<?php wc_get_template( 'myaccount/form-login.php', array( 'is_popup' => true ) ); ?>
 							</div>
 							<button class="close-button" aria-label="Close menu" type="button" data-close>
-								<svg class="vedbo-close-canvas">
-									<use xlink:href="#vedbo-close-canvas"></use>
+								<svg class="nova-close-canvas">
+									<use xlink:href="#nova-close-canvas"></use>
 								</svg>
 							</button>
 						</div>
@@ -63,8 +63,8 @@ $size_content = Nova_OP::getOption('sizeguide_content');
 									));
 								?>
 								<button class="close-button" aria-label="Close menu" type="button" data-close>
-									<svg class="vedbo-close-canvas">
-										<use xlink:href="#vedbo-close-canvas"></use>
+									<svg class="nova-close-canvas">
+										<use xlink:href="#nova-close-canvas"></use>
 									</svg>
 								</button>
 							</div>
@@ -82,8 +82,8 @@ $size_content = Nova_OP::getOption('sizeguide_content');
 											<?php call_user_func( $tab['callback'], $key, $tab ); ?>
 										</div>
 									<button class="close-button" aria-label="Close menu" type="button" data-close>
-										<svg class="vedbo-close-canvas">
-											<use xlink:href="#vedbo-close-canvas"></use>
+										<svg class="nova-close-canvas">
+											<use xlink:href="#nova-close-canvas"></use>
 										</svg>
 									</button>
 								</div>
