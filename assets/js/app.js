@@ -554,6 +554,28 @@ $(window).scroll(function (event) {
 }(jQuery));
 
 
+jQuery(function($) {
+
+	"use strict";
+
+  Novaworks.core.DomLoadEvent = function () {
+    function LoadLazyScripts() {
+        if (!Novaworks.global.isPageSpeed()) {
+            $('body').addClass('body-completely-loaded');
+        }
+    }
+    if( document.readyState !== 'loading' ) {
+      LoadLazyScripts();
+    } else {
+        document.addEventListener('DOMContentLoaded', function () {
+            LoadLazyScripts();
+        });
+    }
+  };
+  Novaworks.core.DomLoadEvent();
+});
+
+
 (function($){
 
 	"use strict";
@@ -3338,6 +3360,12 @@ jQuery(function($) {
 // =============================================================================
 
 //@codekit-prepend "globals/_even_manager.js"
+
+// =============================================================================
+// Before Load
+// =============================================================================
+
+//@codekit-prepend "globals/_before_load_site.js"
 
 // =============================================================================
 // Preloader

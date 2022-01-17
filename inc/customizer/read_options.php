@@ -193,7 +193,7 @@
 				'footer_background_color' 		=> '#000',
 				'footer_font_color' 					=> '#fff',
 				'footer_headings_color'             	=> '#fff',
-				'footer_text' 							=> esc_html__( '© 2021 Vedbo All rights reserved. Designed by Novaworks', 'vedbo' ),
+				'footer_text' 							=> esc_html__( '© 2022 Vedbo All rights reserved. Designed by Novaworks', 'vedbo' ),
 
 				//Support list
 				'site_chat_link' 						=> 'https://novaworks.ticksy.com/',

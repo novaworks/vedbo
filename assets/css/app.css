@@ -27534,6 +27534,11 @@ ul.products .product-category {
   .widget.woocommerce .product_list_widget li ins {
     text-decoration: none; }
 
+body:not(.body-completely-loaded) .elementor-top-section,
+body:not(.body-completely-loaded) .elementor-location-footer {
+  content-visibility: hidden;
+  padding: 0; }
+
 .elementor-location-header .kitify--transparency-yes.elementor-section.elementor-sticky:not(.elementor-sticky--effects) {
   position: absolute;
   left: 0;

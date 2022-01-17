@@ -591,7 +591,7 @@ msgstr ""
 
 #: inc/customizer/backend/footer/index.php:62
 #: inc/customizer/read_options.php:190
-msgid "© 2021 Vedbo All rights reserved. Designed by Novaworks"
+msgid "© 2022 Vedbo All rights reserved. Designed by Novaworks"
 msgstr ""
 
 #: inc/customizer/backend/global/index.php:15

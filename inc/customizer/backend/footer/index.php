@@ -29,6 +29,6 @@ Kirki::add_field( 'vedbo', array(
     'settings' => 'footer_text',
     'label'    => esc_html__( 'Copyright Text', 'vedbo' ),
     'section'  => $section,
-    'default'  => esc_html__( '© 2021 Vedbo All rights reserved. Designed by Novaworks', 'vedbo' ),
+    'default'  => esc_html__( '© 2022 Vedbo All rights reserved. Designed by Novaworks', 'vedbo' ),
     'priority' => 10,
 ) );

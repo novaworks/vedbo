@@ -1,3 +1,10 @@
+body:not(.body-completely-loaded){
+  .elementor-top-section,
+  .elementor-location-footer{
+    content-visibility: hidden;
+    padding: 0;
+  }
+}
 .elementor-location-header .kitify--transparency-yes.elementor-section.elementor-sticky:not(.elementor-sticky--effects) {
   position: absolute;
   left: 0;
