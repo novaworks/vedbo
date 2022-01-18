@@ -220,6 +220,9 @@
           }
       };
   };
+	Novaworks.global.isPageSpeed = function () {
+		return typeof navigator !== "undefined" && (/(lighthouse|gtmetrix)/i.test(navigator.userAgent.toLocaleLowerCase()) || /mozilla\/5\.0 \(x11; linux x86_64\)/i.test(navigator.userAgent.toLocaleLowerCase()));
+	};
 	Novaworks.global.loadDependencies = function( dependencies, callback ) {
 			var _callback = callback || function() {};
 

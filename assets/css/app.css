@@ -25481,7 +25481,8 @@ body.woocommerce-checkout.woocommerce-order-received .woocommerce-order {
     border-left: 0;
     border-right: 0;
     border-bottom: 1px solid;
-    padding: 0; }
+    padding: 0;
+    border-radius: 0; }
     .woocommerce-message .button:after,
     .woocommerce-message a:after,
     .woocommerce-message button:after {
