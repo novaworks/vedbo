@@ -13660,7 +13660,8 @@ html.mobile-reveal-open {
     left: 0;
     width: 400px;
     background-color: #fff;
-    padding: 0.9375rem; }
+    padding: 0.9375rem;
+    z-index: 1; }
     @media print, screen and (max-width: 39.99875em) {
       .kitify-toggle-sidebar.kitify-active-sidebar-toggle .toggle-column-btn__wrap {
         width: 100%; } }
@@ -13677,6 +13678,9 @@ html.mobile-reveal-open {
     background-color: #fff;
     text-align: center;
     border-radius: 50%; }
+    @media print, screen and (max-width: 39.99875em) {
+      .kitify-toggle-sidebar.kitify-active-sidebar-toggle .toggle-column-btn {
+        margin-right: 0.9375rem; } }
     .kitify-toggle-sidebar.kitify-active-sidebar-toggle .toggle-column-btn:before {
       font-family: "iNova" !important;
       font-style: normal !important;

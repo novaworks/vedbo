@@ -31,6 +31,7 @@
         width: 100%;
       }
       padding: rem-calc(15);
+      z-index: 1;
     }
 
     .toggle-column-btn {
@@ -46,6 +47,9 @@
       background-color: #fff;
       text-align: center;
       border-radius: 50%;
+      @include breakpoint(small down) {
+        margin-right: rem-calc(15);
+      }
 
       &:before {
         @include nova_icon('\ea13');
