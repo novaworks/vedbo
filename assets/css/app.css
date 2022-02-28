@@ -11788,8 +11788,7 @@ hr {
 .site-wrapper {
   position: relative; }
   .site-wrapper .site-content-wrapper {
-    position: relative;
-    z-index: 1; }
+    position: relative; }
     .site-wrapper .site-content-wrapper .site-content {
       padding: 1.6875rem 0; }
       .single-product .site-wrapper .site-content-wrapper .site-content {
