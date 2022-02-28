@@ -13672,7 +13672,7 @@ html.mobile-reveal-open {
     width: 40px;
     height: 40px;
     margin-left: auto;
-    transition: all .2s;
+    transition: all 0.2s;
     border: var(--site-border-color) solid 1px;
     background-color: #fff;
     text-align: center;
@@ -13694,13 +13694,29 @@ html.mobile-reveal-open {
       color: var(--site-heading-color);
       line-height: 38px; }
 
+.kitify-toggle-sidebar__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1112;
+  opacity: 0;
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity 0.5s ease, visibility 0.5s ease; }
+
+.kitify-toggle-sidebar.opened .kitify-toggle-sidebar__overlay {
+  opacity: 1;
+  visibility: visible; }
+
 .kitify-toggle-sidebar.opened .kitify-toggle-sidebar__container {
   transform: none; }
   @media print, screen and (max-width: 39.99875em) {
     .kitify-toggle-sidebar.opened .kitify-toggle-sidebar__container {
       width: 100%; } }
 .nova-overlay-global.opened {
-  opacity: .3;
+  opacity: 0.3;
   visibility: visible; }
 
 .kitify-product-images .onsale {
