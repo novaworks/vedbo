@@ -528,10 +528,4 @@ $('.widget .widget-title').click(function(e){
 		$(this).next('div,ul').slideToggle();
 });
 
-$(window).scroll(function (event) {
-    var scroll = $(window).scrollTop();
-    if( scroll == 0 ) {
-			//$(".elementor-sticky").removeAttr("style");
-		}
-});
 })(jQuery);
