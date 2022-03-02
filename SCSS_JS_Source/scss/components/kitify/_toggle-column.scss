@@ -77,6 +77,25 @@
       height: 98%;
     }
   }
+  &__toggle {
+  display: block;
+  position: absolute;
+  top: 40%;
+  right: -40px;
+  width: 40px;
+  height: 40px;
+  transition: all .2s;
+  border: #ccc solid 1px;
+  border-left-width: 0;
+  background-color: #fff;
+  text-align: center;
+  &:before {
+    @include nova_icon('\ea37');
+    font-size: rem-calc(24);
+    color: v(site-heading-color);
+    line-height: 38px;
+  }
+}
   &.opened {
     .kitify-toggle-sidebar__overlay {
       opacity: 1;

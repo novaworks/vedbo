@@ -13715,6 +13715,35 @@ html.mobile-reveal-open {
   @media print, screen and (max-width: 39.99875em) {
     .kitify-toggle-sidebar__inner {
       height: 98%; } }
+.kitify-toggle-sidebar__toggle {
+  display: block;
+  position: absolute;
+  top: 40%;
+  right: -40px;
+  width: 40px;
+  height: 40px;
+  transition: all .2s;
+  border: #ccc solid 1px;
+  border-left-width: 0;
+  background-color: #fff;
+  text-align: center; }
+  .kitify-toggle-sidebar__toggle:before {
+    font-family: "iNova" !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    speak: none;
+    line-height: 1;
+    vertical-align: -.125em;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "";
+    font-size: 1.5rem;
+    color: var(--site-heading-color);
+    line-height: 38px; }
+
 .kitify-toggle-sidebar.opened .kitify-toggle-sidebar__overlay {
   opacity: 1;
   visibility: visible; }
