@@ -13711,18 +13711,16 @@ html.mobile-reveal-open {
   transition: opacity 0.5s ease, visibility 0.5s ease; }
 
 .kitify-toggle-sidebar__inner {
-  height: 80%; }
-  @media print, screen and (max-width: 39.99875em) {
-    .kitify-toggle-sidebar__inner {
-      height: 98%; } }
+  height: 98%; }
+
 .kitify-toggle-sidebar__toggle {
-  display: block;
+  display: none;
   position: absolute;
   top: 40%;
   right: -40px;
   width: 40px;
   height: 40px;
-  transition: all .2s;
+  transition: all 0.2s;
   border: #ccc solid 1px;
   border-left-width: 0;
   background-color: #fff;
@@ -13743,6 +13741,9 @@ html.mobile-reveal-open {
     font-size: 1.5rem;
     color: var(--site-heading-color);
     line-height: 38px; }
+
+.kitify-toggle-sidebar.kitify-active-sidebar-toggle .kitify-toggle-sidebar__toggle {
+  display: block; }
 
 .kitify-toggle-sidebar.opened .kitify-toggle-sidebar__overlay {
   opacity: 1;

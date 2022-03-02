@@ -20,6 +20,7 @@
       -webkit-transform: translate3d(-400px,0,0);
       transform: translate3d(-400px,0,0);
     }
+
     .toggle-column-btn__wrap {
       position: fixed;
       top: 0;
@@ -71,31 +72,38 @@
     background-color: rgba(0, 0, 0, 0.2);
     transition: opacity 0.5s ease, visibility 0.5s ease;
   }
+
   &__inner {
-    height: 80%;
-    @include breakpoint(small down) {
-      height: 98%;
+    height: 98%;
+  }
+
+  &__toggle {
+    display: none;
+    position: absolute;
+    top: 40%;
+    right: -40px;
+    width: 40px;
+    height: 40px;
+    transition: all 0.2s;
+    border: #ccc solid 1px;
+    border-left-width: 0;
+    background-color: #fff;
+    text-align: center;
+
+    &:before {
+      @include nova_icon('\ea37');
+      font-size: rem-calc(24);
+      color: v(site-heading-color);
+      line-height: 38px;
     }
   }
-  &__toggle {
-  display: block;
-  position: absolute;
-  top: 40%;
-  right: -40px;
-  width: 40px;
-  height: 40px;
-  transition: all .2s;
-  border: #ccc solid 1px;
-  border-left-width: 0;
-  background-color: #fff;
-  text-align: center;
-  &:before {
-    @include nova_icon('\ea37');
-    font-size: rem-calc(24);
-    color: v(site-heading-color);
-    line-height: 38px;
+
+  &.kitify-active-sidebar-toggle {
+    .kitify-toggle-sidebar__toggle {
+      display: block;
+    }
   }
-}
+
   &.opened {
     .kitify-toggle-sidebar__overlay {
       opacity: 1;
