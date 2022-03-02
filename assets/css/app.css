@@ -13711,8 +13711,10 @@ html.mobile-reveal-open {
   transition: opacity 0.5s ease, visibility 0.5s ease; }
 
 .kitify-toggle-sidebar__inner {
-  height: 100%; }
-
+  height: 80%; }
+  @media print, screen and (max-width: 39.99875em) {
+    .kitify-toggle-sidebar__inner {
+      height: 98%; } }
 .kitify-toggle-sidebar.opened .kitify-toggle-sidebar__overlay {
   opacity: 1;
   visibility: visible; }
