@@ -60,8 +60,8 @@ function nova_product_quick_view_button() {
 }
 endif;
 
-if ( !function_exists('vedbo_add_toolbar_open')):
-function vedbo_add_toolbar_open(){
+if ( !function_exists('kitify_add_toolbar_open')):
+function kitify_add_toolbar_open(){
     if(wc_get_loop_prop('kitify_loop_allow_extra_filters')){
         echo '<div class="shop_header_placeholder kitify-active">';
         echo '<header class="woocommerce-archive-header">';
@@ -69,8 +69,8 @@ function vedbo_add_toolbar_open(){
 }
 endif;
 
-if ( !function_exists('vedbo_add_toolbar_close')):
-function vedbo_add_toolbar_close(){
+if ( !function_exists('kitify_add_toolbar_close')):
+function kitify_add_toolbar_close(){
     if(wc_get_loop_prop('kitify_loop_allow_extra_filters')){
       $per_page_array = nova_woo_get_product_per_page_array();
       $per_page = nova_woo_get_product_per_page();
