@@ -29,7 +29,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 $tabs = apply_filters( 'woocommerce_product_tabs', array() );
 if ( ! empty( $tabs ) ) : ?>
 <div class="nova-woocommerce-tabs">
-	<ul class="tabs" data-responsive-accordion-tabs="tabs small-accordion medium-accordion large-tabs" data-allow-all-closed="true" id="single_product_tab">
+	<ul class="tabs" data-responsive-accordion-tabs="tabs large-accordion" data-allow-all-closed="true" id="single_product_tab">
 		<?php $i = 0 ?>
 		<?php foreach ( $tabs as $key => $tab ) : ?>
 	  <li class="tabs-title<?php if($i == 0):?> is-active<?php endif ?>"><a href="#panel_<?php echo esc_attr( $key ); ?>"<?php if($i == 0):?> aria-selected="true"<?php endif ?>><span><?php echo apply_filters( 'woocommerce_product_' . $key . '_tab_title', esc_html( $tab['title'] ), $key ); ?></span></a></li>

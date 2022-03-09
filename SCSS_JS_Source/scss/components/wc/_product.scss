@@ -34,11 +34,11 @@
 
   }
   @import 'product/product_infos';
-  @import 'product/product_tabs';
   @import 'product/product_related';
   @import 'product/product_preset';
 }
 @import 'product/product_sidebar';
+@import 'product/product_tabs';
 .woocommerce .elementor-widget-woocommerce-product-images span.onsale {
     position: absolute;
     background: v(site-accent-color);

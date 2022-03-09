@@ -177,7 +177,6 @@
 
 			    // Product Page
 				'product_preset'											=> 'style_1',
-				'product_tab_style'										=> 'style_1',
 				'product_image_zoom'									=> 1,
 				'product_image_lightbox'							=> 1,
 				'upsell_products' 										=> 1,
