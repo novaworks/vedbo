@@ -15779,7 +15779,7 @@ html.mobile-reveal-open {
 
 .main-navigation .mega-menu .hide-link > span,
 .main-navigation .mega-menu .hide-link > a {
-  display: none; }
+  display: none !important; }
 
 .main-navigation .mega-menu .hide-link > ul {
   margin-top: -10px; }
