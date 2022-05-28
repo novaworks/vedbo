@@ -69,7 +69,7 @@ article {
         .entry-title {
           font-size: rem-calc(24);
           margin-bottom: rem-calc(12);
-          font-weight: 700;
+          text-transform: uppercase;
           @include breakpoint( large  ) {
             font-size: rem-calc(32);
           }

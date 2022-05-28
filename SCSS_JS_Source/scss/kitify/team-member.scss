@@ -386,6 +386,7 @@
     .kitify-team-member__content {
       display: flex;
       flex-direction: column;
+      align-items: center;
       .kitify-team-member__name {
         order: 2;
         font-size: rem-calc(18);
