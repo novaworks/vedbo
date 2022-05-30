@@ -2998,7 +2998,7 @@ ul.no-bullet, ol.no-bullet {
 .cite-block, cite {
   display: block;
   color: inherit;
-  font-size: 1.125rem;
+  font-size: 0.875rem;
 }
 
 .cite-block:before, cite:before {
@@ -25384,6 +25384,7 @@ html.mobile-reveal-open {
   margin-bottom: 1.5rem;
   text-transform: uppercase;
   letter-spacing: 1px;
+  text-align: left;
 }
 
 .page-header-content h1 {
@@ -29711,9 +29712,9 @@ p.wp-block-subhead {
 
 blockquote.wp-block-quote {
   position: relative;
+  background-color: var(--site-accent-color);
   font-family: var(--site-secondary-font);
-  color: var(--site-heading-color);
-  font-weight: 600;
+  color: #fff;
   text-align: left;
 }
 
@@ -29729,16 +29730,10 @@ blockquote.wp-block-quote cite {
 }
 
 blockquote.wp-block-quote {
-  padding: 3.75rem 1.875rem 2.8125rem 1.875rem;
-  font-size: 1.125rem;
-  text-align: left;
+  padding: 2.8125rem;
+  font-size: 1.25rem;
+  text-align: center;
   border: 0;
-}
-
-blockquote.wp-block-quote:before {
-  content: url(../images/quotes48.svg);
-  position: absolute;
-  top: 0;
 }
 
 blockquote.wp-block-quote p {
@@ -29749,14 +29744,30 @@ blockquote.wp-block-quote p {
 blockquote.wp-block-quote cite {
   position: relative;
   display: block;
-  text-align: left;
-  font-size: 1.125rem;
+  text-align: center;
+  font-size: 0.875rem;
   font-family: var(--site-main-font);
-  color: #919296 !important;
+}
+
+blockquote.wp-block-quote a {
+  color: #fff !important;
 }
 
 .wp-block-quote.is-large, .wp-block-quote.is-style-large {
-  padding: 1.875rem 1.875rem 2.8125rem 7.5rem;
+  padding: 2.8125rem !important;
+  font-size: 1.5rem;
+}
+
+.wp-block-quote.is-large cite, .wp-block-quote.is-style-large cite {
+  font-size: 1rem;
+}
+
+.wp-block-quote.has-text-align-right {
+  text-align: right;
+}
+
+.wp-block-quote.has-text-align-right cite {
+  text-align: right;
 }
 
 .wp-block-button__link,

@@ -247,9 +247,9 @@ p.wp-block-subhead {
 
 blockquote.wp-block-quote {
     position: relative;
+    background-color: v(site-accent-color);
     font-family: v(site-secondary-font);
-    color: v(site-heading-color);
-    font-weight: 600;
+    color: #fff;
     text-align: left;
     p {
       font-size: rem-calc(24);
@@ -260,16 +260,10 @@ blockquote.wp-block-quote {
   }
 }
 blockquote.wp-block-quote {
-  padding: rem-calc(60) rem-calc(30) rem-calc(45) rem-calc(30);
-  font-size: rem-calc(18);
-  text-align: left;
+  padding: rem-calc(45);
+  font-size: rem-calc(20);
+  text-align: center;
   border: 0;
-
-  &:before {
-    content: url(../images/quotes48.svg);
-    position: absolute;
-    top: rem-calc(0);
-  }
   p {
     line-height: 1.625 !important;
     margin-bottom: rem-calc(15);
@@ -277,15 +271,27 @@ blockquote.wp-block-quote {
   cite {
     position: relative;
     display: block;
-    text-align: left;
+    text-align: center;
     font-size: $cite-font-size;
     font-family: v(site-main-font);
-    color:#919296 !important;
+  }
+  a {
+    color: #fff !important;
   }
 }
 
 .wp-block-quote.is-large, .wp-block-quote.is-style-large {
-  padding: rem-calc(30) rem-calc(30) rem-calc(45) rem-calc(120);
+  padding: rem-calc(45) !important;
+  font-size: rem-calc(24);
+  cite {
+    font-size: rem-calc(16);
+  }
+}
+.wp-block-quote.has-text-align-right {
+  text-align: right;
+  cite {
+    text-align: right;
+  }
 }
 .wp-block-button__link,
 .wp-block-file__button {
