@@ -1,7 +1,9 @@
 <?php if (get_post_meta( nova_get_page_id(), 'meta_box_page_header_enable', true ) != 'off' && 'mini' == Nova_OP::getOption('page_header_style') ) : ?>
 <div class="page-header-content">
 <?php
-nova_site_breadcrumb();
+if ( !is_home() ) {
+  nova_site_breadcrumb();
+}
 if( is_realy_woocommerce_page() && ( NOVA_WOOCOMMERCE_IS_ACTIVE ) ) {
   printf( '<h1 class="page-title woocommerce-page-title">%s</h1>', woocommerce_page_title('', false) );
 } else {
