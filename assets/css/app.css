@@ -18001,6 +18001,18 @@ body.single.single-post .post .entry-tags .entry-meta__item span {
   color: var(--site-heading-color);
   font-weight: 500; }
 
+body.single.single-post .post .vedbo-meta-post {
+  display: flex;
+  flex-direction: column;
+  color: #888;
+  font-size: 0.875rem; }
+  body.single.single-post .post .vedbo-meta-post a {
+    color: #888; }
+    body.single.single-post .post .vedbo-meta-post a.author-all-posts {
+      color: var(--site-heading-color);
+      font-size: 1rem;
+      margin-bottom: 0.3125rem; }
+
 body.single.single-post .post .entry-content {
   font-size: 1rem;
   margin-bottom: 1.875rem; }

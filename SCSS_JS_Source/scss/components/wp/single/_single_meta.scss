@@ -88,3 +88,17 @@
     }
   }
 }
+.vedbo-meta-post {
+  display: flex;
+  flex-direction: column;
+  color: #888;
+  font-size: rem-calc(14);
+  a {
+    color: #888;
+    &.author-all-posts {
+      color: v(site-heading-color);
+      font-size: rem-calc(16);
+      margin-bottom: rem-calc(5);
+    }
+  }
+}

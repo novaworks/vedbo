@@ -16,8 +16,9 @@
 					</figure>
 					<span><?php echo get_the_author_meta( 'nickname' ) ?></span>
 				</a>
-				<div class="dot"></div>
-				<?php echo nova_posted_on(); ?>
+				<div class="vedbo-meta-post">
+					<?php echo nova_posted_on(); ?>
+				</div>
 				<?php if(has_category()): ?>
 					<?php
 					$categories = get_the_category();
