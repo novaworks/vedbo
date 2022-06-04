@@ -18006,6 +18006,16 @@ body.single.single-post .post .vedbo-meta-post {
   flex-direction: column;
   color: #888;
   font-size: 0.875rem; }
+  body.single.single-post .post .vedbo-meta-post__time {
+    display: flex;
+    align-items: center; }
+    body.single.single-post .post .vedbo-meta-post__time .dot {
+      width: 3px;
+      height: 3px;
+      display: inline-block;
+      background: #888;
+      border-radius: 50%;
+      margin: 0 0.5rem; }
   body.single.single-post .post .vedbo-meta-post a {
     color: #888; }
     body.single.single-post .post .vedbo-meta-post a.author-all-posts {

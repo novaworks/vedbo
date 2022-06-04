@@ -2,6 +2,7 @@
   display: flex;
   align-items: center;
   font-size: rem-calc(14);
+
   a.author-all-posts {
     position: relative;
     top: 2px;
@@ -29,17 +30,21 @@
     border-radius: 50%;
     margin: 0 15px;
   }
+
   &__item {
     font-size: rem-calc(12);
+
     a {
       text-transform: uppercase;
       font-weight: 500;
     }
+
     &--cat {
       margin-left: rem-calc(8);
       padding-left: rem-calc(8);
       border-left: solid 1px v(site-accent-color);
     }
+
     &--tags {
       @include tag_links;
       align-items: center;
@@ -47,18 +52,22 @@
       @include breakpoint(large) {
         display: flex;
       }
+
       &.for-cat {
         margin-top: 0;
         margin-bottom: rem-calc(4);
-         a {
-           background-color: v(site-accent-color);
-           color: #fff;
-           &:hover {
-             background-color: v(site-border-color);
-             color: v(site-heading-color);
-           }
-         }
+
+        a {
+          background-color: v(site-accent-color);
+          color: #fff;
+
+          &:hover {
+            background-color: v(site-border-color);
+            color: v(site-heading-color);
+          }
+        }
       }
+
       span {
         display: block;
         margin-bottom: rem-calc(24);
@@ -78,6 +87,7 @@
     }
   }
 }
+
 .entry-tags {
   .entry-meta__item {
     span {
@@ -88,13 +98,28 @@
     }
   }
 }
+
 .vedbo-meta-post {
   display: flex;
   flex-direction: column;
   color: #888;
   font-size: rem-calc(14);
+  &__time {
+    display: flex;
+    align-items: center;
+    .dot {
+      width: 3px;
+      height: 3px;
+      display: inline-block;
+      background: #888;
+      border-radius: 50%;
+      margin: 0 rem-calc(8);
+    }
+  }
+
   a {
     color: #888;
+
     &.author-all-posts {
       color: v(site-heading-color);
       font-size: rem-calc(16);
