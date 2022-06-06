@@ -105,7 +105,7 @@ $l40class = ( $sidebar && is_active_sidebar( 'shop-widget-area' ) ) ? 'large-9' 
 												<?php while ( have_posts() ) : the_post(); ?>
 
 													<?php do_action( 'woocommerce_shop_loop' ); ?>
-													<?php wc_get_template_part( 'content', 'product-default' ); ?>
+													<?php wc_get_template_part( 'content', 'product' ); ?>
 
 												<?php endwhile; ?>
 											<?php } ?>

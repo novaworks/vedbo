@@ -47,20 +47,20 @@ add_filter('kitify/banner/control/animation_effect', 'vedbo_kitify_add_banner_an
 if(!function_exists('vedbo_kitify_add_banner_animation_effect')){
     function vedbo_kitify_add_banner_animation_effect(){
         return [
-          'none'   => esc_html__( 'None', 'kitify' ),
-          'hidden-content'   => esc_html__( 'Hidden Content', 'kitify' ),
-          'vedbo-1'   => esc_html__( 'Vedbo', 'kitify' ),
-					'lily'   => esc_html__( 'Lily', 'kitify' ),
-					'sadie'  => esc_html__( 'Sadie', 'kitify' ),
-					'layla'  => esc_html__( 'Layla', 'kitify' ),
-					'oscar'  => esc_html__( 'Oscar', 'kitify' ),
-					'marley' => esc_html__( 'Marley', 'kitify' ),
-					'ruby'   => esc_html__( 'Ruby', 'kitify' ),
-					'roxy'   => esc_html__( 'Roxy', 'kitify' ),
-					'bubba'  => esc_html__( 'Bubba', 'kitify' ),
-					'romeo'  => esc_html__( 'Romeo', 'kitify' ),
-					'sarah'  => esc_html__( 'Sarah', 'kitify' ),
-					'chico'  => esc_html__( 'Chico', 'kitify' ),
+          'none'   => esc_html__( 'None', 'vedbo' ),
+          'hidden-content'   => esc_html__( 'Hidden Content', 'vedbo' ),
+          'vedbo-1'   => esc_html__( 'Vedbo', 'vedbo' ),
+					'lily'   => esc_html__( 'Lily', 'vedbo' ),
+					'sadie'  => esc_html__( 'Sadie', 'vedbo' ),
+					'layla'  => esc_html__( 'Layla', 'vedbo' ),
+					'oscar'  => esc_html__( 'Oscar', 'vedbo' ),
+					'marley' => esc_html__( 'Marley', 'vedbo' ),
+					'ruby'   => esc_html__( 'Ruby', 'vedbo' ),
+					'roxy'   => esc_html__( 'Roxy', 'vedbo' ),
+					'bubba'  => esc_html__( 'Bubba', 'vedbo' ),
+					'romeo'  => esc_html__( 'Romeo', 'vedbo' ),
+					'sarah'  => esc_html__( 'Sarah', 'vedbo' ),
+					'chico'  => esc_html__( 'Chico', 'vedbo' ),
         ];
     }
 }

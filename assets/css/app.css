@@ -19200,9 +19200,7 @@ body.progress {
       #nova_wc_quickview .nova_wc_quickview__content .site-content .product .elementor-widget-woocommerce-product-images .woocommerce-product-gallery .flex-direction-nav {
         display: none; }
     #nova_wc_quickview .nova_wc_quickview__content .site-content .product .product_title {
-      font-family: inherit;
       font-size: 1.5rem;
-      font-weight: 600;
       text-align: left;
       margin-bottom: 1.5rem; }
       @media print, screen and (max-width: 79.99875em) {
@@ -20812,6 +20810,72 @@ body.woocommerce div:not(.kitify-products__list_wrapper) > ul.products .product 
       flex-direction: column;
       text-align: left;
       width: calc(100% / 4); } }
+body.woocommerce div:not(.kitify-products__list_wrapper) > ul.products .product,
+body.woocommerce section:not(.kitify-products__list_wrapper) > ul.products .product {
+  width: 50%; }
+  @media print, screen and (min-width: 40em) {
+    body.woocommerce div:not(.kitify-products__list_wrapper) > ul.products .product,
+    body.woocommerce section:not(.kitify-products__list_wrapper) > ul.products .product {
+      width: calc(100% / 3); } }
+  @media screen and (min-width: 80em) {
+    body.woocommerce div:not(.kitify-products__list_wrapper) > ul.products .product,
+    body.woocommerce section:not(.kitify-products__list_wrapper) > ul.products .product {
+      padding: 0 0.9375rem 1.875rem;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      width: calc(100% / 4); } }
+  body.woocommerce div:not(.kitify-products__list_wrapper) > ul.products .product img.attachment-woocommerce_thumbnail.size-woocommerce_thumbnail,
+  body.woocommerce section:not(.kitify-products__list_wrapper) > ul.products .product img.attachment-woocommerce_thumbnail.size-woocommerce_thumbnail {
+    width: 100%; }
+  body.woocommerce div:not(.kitify-products__list_wrapper) > ul.products .product span.onsale,
+  body.woocommerce section:not(.kitify-products__list_wrapper) > ul.products .product span.onsale {
+    position: absolute;
+    background: #fff;
+    font-size: 0.8125rem;
+    padding: 0.3125rem 0.625rem;
+    margin: 0.625rem; }
+  body.woocommerce div:not(.kitify-products__list_wrapper) > ul.products .product .woocommerce-loop-product__title,
+  body.woocommerce section:not(.kitify-products__list_wrapper) > ul.products .product .woocommerce-loop-product__title {
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem; }
+  body.woocommerce div:not(.kitify-products__list_wrapper) > ul.products .product .product-item__description--button,
+  body.woocommerce section:not(.kitify-products__list_wrapper) > ul.products .product .product-item__description--button {
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    left: 50%;
+    top: 50%;
+    padding: 0 1.5625rem;
+    text-align: center;
+    z-index: 12;
+    transition: all 0.3s ease-in-out;
+    transform: translate(-50%, -50%); }
+    body.woocommerce div:not(.kitify-products__list_wrapper) > ul.products .product .product-item__description--button .button,
+    body.woocommerce section:not(.kitify-products__list_wrapper) > ul.products .product .product-item__description--button .button {
+      width: auto; }
+  body.woocommerce div:not(.kitify-products__list_wrapper) > ul.products .product span.price,
+  body.woocommerce section:not(.kitify-products__list_wrapper) > ul.products .product span.price {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 0px;
+    font-weight: 500;
+    line-height: 1.4;
+    color: var(--site-wc-price);
+    display: block; }
+    body.woocommerce div:not(.kitify-products__list_wrapper) > ul.products .product span.price ins,
+    body.woocommerce section:not(.kitify-products__list_wrapper) > ul.products .product span.price ins {
+      text-decoration: none; }
+  body.woocommerce div:not(.kitify-products__list_wrapper) > ul.products .product .star-rating,
+  body.woocommerce section:not(.kitify-products__list_wrapper) > ul.products .product .star-rating {
+    margin: 0 auto; }
+  body.woocommerce div:not(.kitify-products__list_wrapper) > ul.products .product:hover .product-item__description--button,
+  body.woocommerce section:not(.kitify-products__list_wrapper) > ul.products .product:hover .product-item__description--button {
+    opacity: 1; }
+
 ul.products {
   list-style: none;
   margin: 0 -0.75rem 2.5rem;
@@ -22036,9 +22100,7 @@ ul.products.products-grid-2 {
     display: none; }
 
 .single-product .product .product_title {
-  font-family: inherit;
   font-size: 1.5rem;
-  font-weight: 600;
   text-align: left;
   margin-bottom: 1.5rem; }
   @media print, screen and (max-width: 79.99875em) {
@@ -22659,7 +22721,6 @@ ul.products.products-grid-2 {
     position: relative;
     display: inline-block;
     font-size: 1.5rem;
-    font-weight: 600;
     line-height: 1;
     margin: 0 auto 3.75rem auto;
     text-transform: uppercase;

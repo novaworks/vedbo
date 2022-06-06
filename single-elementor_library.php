@@ -46,7 +46,7 @@ if ( ! function_exists( 'elementor_theme_do_location' ) || ! elementor_theme_do_
                     <?php
 
                     wp_link_pages( array(
-                        'before' => '<div class="clearfix"></div><div class="page-links">' . esc_html__( 'Pages:', 'bakerfresh' ),
+                        'before' => '<div class="clearfix"></div><div class="page-links">' . esc_html__( 'Pages:', 'vedbo' ),
                         'after'  => '</div>',
                     ) );
                     ?>
