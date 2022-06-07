@@ -1,7 +1,5 @@
 .product_title {
-  font-family: inherit;
   font-size: rem-calc(24);
-  font-weight: 600;
   text-align: left;
   margin-bottom: rem-calc(24);
   @include breakpoint(large down) {

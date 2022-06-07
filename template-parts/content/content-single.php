@@ -37,10 +37,17 @@
 					<figure>
 						<?php echo get_avatar( get_the_author_meta( 'ID' ), 80 ); ?>
 					</figure>
-					<span><?php echo get_the_author_meta( 'nickname' ) ?></span>
 				</a>
-				<div class="dot"></div>
-				<?php echo nova_posted_on(); ?>
+				<div class="vedbo-meta-post">
+					<a class="author-all-posts" href="<?php echo get_author_posts_url( get_the_author_meta('ID') ) ?>">
+					<span><?php echo get_the_author_meta( 'nickname' ) ?></span>
+					</a>
+					<div class="vedbo-meta-post__time">
+						<?php echo nova_posted_on(); ?>
+						<div class="dot"></div>
+						<?php echo do_shortcode('[read_meter]'); ?>
+					</div>
+				</div>
 		</div>
 	</header><!-- .entry-header -->
 

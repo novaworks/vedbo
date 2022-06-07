@@ -159,7 +159,9 @@ if(!empty($item_sizes[$loop_index2]['border_right'])) {
 			<div class="product-item__description--info">
 				<div class="info-left">
 					<?php do_action( 'woocommerce_before_shop_loop_item_title'); ?>
-					<a href="<?php echo get_the_permalink() ?>" class="title"><?php do_action( 'woocommerce_shop_loop_item_title' ); ?></a>
+					<a href="<?php echo get_the_permalink() ?>" class="title">
+						<?php do_action( 'woocommerce_shop_loop_item_title' ); ?>
+					</a>
 				</div>
 				<div class="info-right">
 					<?php do_action( 'woocommerce_after_shop_loop_item_title' ); ?>

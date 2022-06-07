@@ -13,6 +13,15 @@ function vedbo_theme_register_required_plugins() {
       'demo_required'      => true,
       'version'            => '1.0.0'
     ),
+    'kitify' => array(
+      'name'               => esc_html__('Kitify','vedbo'),
+      'slug'               => 'kitify',
+      'source'             => 'http://assets.novaworks.net/plugins/kitify.zip',
+      'required'           => true,
+      'description'        => esc_html__('A perfect plugin for Elementor','vedbo'),
+      'demo_required'      => true,
+      'version'            => '1.0.1'
+    ),
     'wc-ajax-product-filter' => array(
       'name'               => esc_html__('WC Ajax Product Filters','vedbo'),
       'slug'               => 'wc-ajax-product-filter',

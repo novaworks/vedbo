@@ -253,7 +253,9 @@ blockquote.wp-block-quote {
     text-align: left;
     p {
       font-size: rem-calc(32);
-      line-height: rem-calc(40) !important;
+      @include breakpoint(large down) {
+        font-size: rem-calc(24);
+      }
     }
   cite {
     position: relative;
@@ -262,10 +264,11 @@ blockquote.wp-block-quote {
 }
 blockquote.wp-block-quote {
   padding: rem-calc(45);
-  font-size: rem-calc(32);
+  font-size: rem-calc(24);
   text-align: center;
   border: 0;
   p {
+    line-height: 1.2 !important;
     margin-bottom: rem-calc(15);
   }
   cite {
