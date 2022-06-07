@@ -252,7 +252,8 @@ blockquote.wp-block-quote {
     color: #fff;
     text-align: left;
     p {
-      font-size: rem-calc(24);
+      font-size: rem-calc(32);
+      line-height: rem-calc(40) !important;
     }
   cite {
     position: relative;
@@ -261,11 +262,10 @@ blockquote.wp-block-quote {
 }
 blockquote.wp-block-quote {
   padding: rem-calc(45);
-  font-size: rem-calc(20);
+  font-size: rem-calc(32);
   text-align: center;
   border: 0;
   p {
-    line-height: 1.625 !important;
     margin-bottom: rem-calc(15);
   }
   cite {
@@ -282,7 +282,7 @@ blockquote.wp-block-quote {
 
 .wp-block-quote.is-large, .wp-block-quote.is-style-large {
   padding: rem-calc(45) !important;
-  font-size: rem-calc(24);
+  font-size: rem-calc(32);
   cite {
     font-size: rem-calc(16);
   }
