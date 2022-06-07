@@ -24,7 +24,7 @@
 				padding: rem-calc(10) 0;
 
 				&.woocommerce-grouped-product-list-item__quantity {
-					width: rem-calc(120);
+					width: rem-calc(150);
 					padding-right: rem-calc(16);
 					padding-left: 0;
 
@@ -176,10 +176,6 @@
 		display: block;
 	}
 	form.cart {
-		.button {
-			padding: rem-calc(16) rem-calc(32) rem-calc(15);
-			width: 100%;
-		}
 		.yith-wcwl-add-to-wishlist {
 			border: none;
 			margin: rem-calc(15) 0 0 0;
