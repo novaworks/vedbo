@@ -22,6 +22,15 @@ function vedbo_theme_register_required_plugins() {
       'demo_required'      => true,
       'version'            => '1.0.1'
     ),
+    'demo-importer' => array(
+      'name'               => esc_html__('Vedbo Package Demo Data','juliette'),
+      'slug'               => 'vedbo-demo-data',
+      'source'             => 'http://assets.novaworks.net/plugins/vedbo/vedbo-demo-data.zip',
+      'required'           => false,
+      'description'        => esc_html__('This plugin use only for Novaworks Theme.','juliette'),
+      'demo_required'      => true,
+      'version'            => '1.0.0'
+    ),
     'wc-ajax-product-filter' => array(
       'name'               => esc_html__('WC Ajax Product Filters','vedbo'),
       'slug'               => 'wc-ajax-product-filter',
